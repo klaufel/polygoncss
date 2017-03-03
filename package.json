@@ -1,0 +1,30 @@
+{
+  "name": "structure-itcss-bemit",
+  "version": "1.0.0",
+  "description": "Structured for a project based in ITCSS: Scalable and Maintainable CSS Architecture and BEMIT (BEM) Methodology.",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klaufel/structure-itcss-bemit.git"
+  },
+  "keywords": [
+    "itcss",
+    "bemit",
+    "bem",
+    "css",
+    "sass",
+    "scss"
+  ],
+  "author": "Juan Carlos Ruiz <juancarlos@droolstudio.com>",
+   "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-sass": "*",
+    "gulp-watch": "^4.3.11"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klaufel/structure-itcss-bemit/issues"
+  },
+  "homepage": "https://github.com/klaufel/structure-itcss-bemit#readme"
+}

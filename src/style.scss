@@ -1,0 +1,37 @@
+//
+// Styles for SASS Project / Main file to compile
+// --------------------------------------------------
+
+//## Imports all styles (scss) to the main file for compile.
+//## This project uses ITCSS: Scalable and Maintainable CSS Architecture and BEMIT (BEM) Methodology.
+
+@charset "utf-8";
+
+//== Settings
+@import "settings/settings.fonts";
+@import "settings/settings.variables";
+
+
+//== Tools
+//@import "tools/tools.";
+
+
+//== Generic
+@import "generic/generic.normalize";
+
+
+//== Elements
+//@import "elements/elements.";
+
+
+//== Objects
+//@import "objects/objects.";
+
+
+//== Components
+@import "components/components.buttons";
+@import "components/components.forms";
+
+
+//== Trumps
+//@import "trumps/trumps.";
