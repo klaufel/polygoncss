@@ -13,7 +13,7 @@
 
 
 //== Tools
-//@import "tools/tools.";
+@import "tools/tools.tools";
 
 
 //== Generic
@@ -21,11 +21,11 @@
 
 
 //== Elements
-//@import "elements/elements.";
+@import "elements/elements.elements";
 
 
 //== Objects
-//@import "objects/objects.";
+@import "objects/objects.objects";
 
 
 //== Components
@@ -34,4 +34,4 @@
 
 
 //== Trumps
-//@import "trumps/trumps.";
+@import "trumps/trumps.trumps";
