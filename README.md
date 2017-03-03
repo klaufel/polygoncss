@@ -17,6 +17,6 @@ $ git clone https://github.com/klaufel/structure-itcss-bemit.git
 
 ```
 $ npm install
-$ grunt
+$ gulp
 
 ```
