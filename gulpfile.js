@@ -1,29 +1,37 @@
 'use strict';
- 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
 
+// Includes packages
+var gulp 				= require('gulp');
+var sass 				= require('gulp-sass');
+var autoprefixer 		= require('gulp-autoprefixer');
+var mergeMediaQueries 	= require('gulp-merge-media-queries');
+var cleanCss 			= require('gulp-clean-css');
+var notify 				= require('gulp-notify');
+
+// Paths variables
+var paths = {
+	dist		: 'dist',
+	mainsass 	: ['src/style.scss'],
+	scss 		: ['src/**/*.scss' ]
+};
+
+
+// Compile SASS
 gulp.task('sass', function () {
-	return gulp.src('./src/**/*.scss')
+	return gulp.src(paths.scss)
 		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./dist'));
+		.pipe(autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions']}))
+		.pipe(mergeMediaQueries())
+		.pipe(cleanCss())
+		.pipe(gulp.dest(paths.dist))
+		.pipe(notify({ message: 'Task SASS. Compiled successful. Happy Code!', onLast: true}));
+});
+
+// Rerun the task when a file changes
+gulp.task('watch', function() {
+	gulp.watch(paths.scss, ['sass']);
 });
 
 
-
-gulp.task('autoprefixer', function () {
-	return gulp.src('./dist/style.css')
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
-		}))
-		.pipe(gulp.dest('./dist'))
-});
-
- 
-gulp.task('sass:watch', function () {
-	gulp.watch('./src/scss/**/*.scss', ['sass']);
-});
-
-gulp.task("default", ["sass", "sass:watch"]);
+// Run default task
+gulp.task('default', ['sass', 'watch']);
