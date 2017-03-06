@@ -20,8 +20,8 @@
 
 
 //== Generic
-//@import "03_generic/generic.normalize";
-//@import "03_generic/generic.print";
+@import "03_generic/generic.normalize";
+@import "03_generic/generic.print";
 
 
 //== Elements
@@ -39,8 +39,3 @@
 
 //== Trumps
 @import "07_trumps/trumps.trumps";
-
-
-.test {
-	display: flex;
-}

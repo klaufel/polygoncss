@@ -1,24 +1,24 @@
 'use strict';
 
 // Includes packages
-var gulp 				= require('gulp');
-var sass 				= require('gulp-sass');
-var autoprefixer 		= require('gulp-autoprefixer');
-var mergeMediaQueries 	= require('gulp-merge-media-queries');
-var cleanCss 			= require('gulp-clean-css');
-var notify 				= require('gulp-notify');
+var gulp				= require('gulp');
+var sass				= require('gulp-sass');
+var autoprefixer		= require('gulp-autoprefixer');
+var mergeMediaQueries	= require('gulp-merge-media-queries');
+var cleanCss			= require('gulp-clean-css');
+var notify				= require('gulp-notify');
 
 // Paths variables
 var paths = {
 	dist		: 'dist',
 	mainsass 	: ['src/style.scss'],
-	scss 		: ['src/**/*.scss' ]
+	sass 		: ['src/**/*.scss' ]
 };
 
 
 // Compile SASS
 gulp.task('sass', function () {
-	return gulp.src(paths.scss)
+	return gulp.src(paths.sass)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions']}))
 		.pipe(mergeMediaQueries())
@@ -29,7 +29,7 @@ gulp.task('sass', function () {
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-	gulp.watch(paths.scss, ['sass']);
+	gulp.watch(paths.sass, ['sass']);
 });
 
 
