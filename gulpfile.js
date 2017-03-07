@@ -24,7 +24,7 @@ gulp.task('sass', function () {
         .pipe(mergeMediaQueries())
         .pipe(cleanCss())
         .pipe(gulp.dest(paths.dist))
-        .pipe(notify({ message: 'Task SASS. Compiled successful.', onLast: true}));
+        .pipe(notify({ title: 'SASS', message: 'Compiled successfully.', onLast: true}));
 });
 
 // Rerun the task when a file changes

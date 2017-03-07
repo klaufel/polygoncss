@@ -3,3 +3,53 @@
 // --------------------------------------------------
 
 //## Buttons...
+
+$c-button-font-weight:		20px !default;
+$c-button-font-size-base:	20px !default;
+$c-button-line-height:		20px !default;
+$c-button-border-width:		2px !default;
+$c-button-border-radius:	20px !default;
+
+$c-button-padding-x:		20px !default;
+$c-button-padding-y:		10px !default;
+
+
+$cursor-disabled: "not-allowed";
+
+
+.button {
+	display: inline-block;
+	font-weight: em($c-button-font-weight);
+	line-height: em($c-button-line-height);
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	user-select: none;
+	border: $c-button-border-width solid transparent;
+	//@include button-size($c-button-padding-y, $c-button-padding-x, $font-size-base, $c-button-border-radius);
+	//@include transition($c-button-transition);
+
+	// Share hover and focus styles
+	@include hover-focus {
+		text-decoration: none;
+	}
+	&:focus,
+	&.focus {
+		outline: 0;
+		@include box-shadow(none);
+	}
+
+	// Disabled comes first so active can properly restyle
+	&.disabled,
+	&:disabled {
+		cursor: $cursor-disabled;
+		opacity: .65;
+		@include box-shadow(none);
+	}
+
+	&:active,
+	&.active {
+		background-image: none;
+		@include box-shadow(none);
+	}
+}
