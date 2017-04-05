@@ -34,21 +34,21 @@ $cursor-disabled: "not-allowed";
 		text-decoration: none;
 	}
 	&:focus,
-	&.focus {
+	&.is-focus {
 		outline: 0;
 		@include box-shadow(none);
 	}
 
 	// Disabled comes first so active can properly restyle
-	&.disabled,
-	&:disabled {
+	&:disabled,
+	&.is-disabled {
 		cursor: $cursor-disabled;
 		opacity: .65;
 		@include box-shadow(none);
 	}
 
 	&:active,
-	&.active {
+	&.is-active {
 		background-image: none;
 		@include box-shadow(none);
 	}

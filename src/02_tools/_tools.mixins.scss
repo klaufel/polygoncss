@@ -38,7 +38,9 @@ $browser-context: 16px; // Default
 
 
 @mixin hover {
-	&:hover { @content }
+	&:hover {
+		@content;
+	}
 }
 
 
@@ -46,7 +48,7 @@ $browser-context: 16px; // Default
 @mixin hover-focus {
 	&:focus,
 	&:hover {
-		@content
+		@content;
 	}
 }
 

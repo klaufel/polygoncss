@@ -1,12 +1,13 @@
 'use strict';
 
 // Includes packages
-var gulp                = require('gulp');
-var sass                = require('gulp-sass');
-var autoprefixer        = require('gulp-autoprefixer');
-var mergeMediaQueries   = require('gulp-merge-media-queries');
-var cleanCss            = require('gulp-clean-css');
-var notify              = require('gulp-notify');
+var gulp                = require('gulp'),
+    sass                = require('gulp-sass'),
+    autoprefixer        = require('gulp-autoprefixer'),
+    mergeMediaQueries   = require('gulp-merge-media-queries'),
+    cleanCss            = require('gulp-clean-css'),
+    notify              = require('gulp-notify');
+
 
 // Paths variables
 var paths = {
@@ -14,7 +15,6 @@ var paths = {
     mainsass   : ['src/style.scss'],
     sass       : ['src/**/*.scss' ]
 };
-
 
 // Compile SASS
 gulp.task('sass', function () {
