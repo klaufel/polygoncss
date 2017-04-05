@@ -29,20 +29,27 @@ src/
 │   ├── _settings.config.scss
 │   ├── _settings.fonts.scss
 │   └── _settings.variables.scss
+│ 
 ├── 02_tools/
 │   ├── _tools.mixins.scss
 │   └── _tools.tools.scss
+│ 
 ├── 03_generic/
 │   ├── _generic.normalize.scss
 │   └── _generic.print.scss
+│ 
 ├── 04_elements/
 │   └── _elements.elements.scss
+│ 
 ├── 05_objects/
 │   └── _objects.objects.scss
+│ 
 ├── 06_components/
 │   ├── _components.buttons.scss
 │   └── _components.forms.scss
+│ 
 ├── 07_trumps/
 │   └── _trumps.trumps.scss
+│ 
 └── style.scss
 ```
