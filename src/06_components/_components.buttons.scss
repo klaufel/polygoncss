@@ -19,8 +19,8 @@ $cursor-disabled: "not-allowed";
 
 .button {
 	display: inline-block;
-	font-weight: em($c-button-font-weight);
-	line-height: em($c-button-line-height);
+	font-weight: rem($c-button-font-weight);
+	line-height: rem($c-button-line-height);
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
