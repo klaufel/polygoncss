@@ -1,12 +1,12 @@
 //
-// Elements: Print
+// Generic: Print
 // --------------------------------------------------
 
 //## Print styles
+//
+//   See var $config-enable-print in "settings/_settings.config.scss"
 
-// See var $config-enable-print in "config/_generic.print.scss"
-
-@if $s-enable-print {
+@if $config-enable-print {
 
 	@media print {
 

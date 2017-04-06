@@ -4,7 +4,6 @@
 var gulp                = require('gulp'),
     sass                = require('gulp-sass'),
     autoprefixer        = require('gulp-autoprefixer'),
-    mergeMediaQueries   = require('gulp-merge-media-queries'),
     cleanCss            = require('gulp-clean-css'),
     notify              = require('gulp-notify');
 
@@ -21,8 +20,7 @@ gulp.task('sass', function () {
     return gulp.src(paths.sass)
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions']}))
-        //.pipe(mergeMediaQueries())
-        //.pipe(cleanCss())
+        .pipe(cleanCss())
         .pipe(gulp.dest(paths.dist))
         .pipe(notify({ title: 'SASS', message: 'Compiled successfully.', onLast: true}));
 });

@@ -2,7 +2,6 @@
 
 Basic blank structure of a project based on ITCSS (Scalable and Maintainable CSS Architecture) and BEMIT (BEM) Methodology.
 
-
 ## Installation
 
 Clone the repository in local and install the dependencies, then run gulp.

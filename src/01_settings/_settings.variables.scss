@@ -4,11 +4,23 @@
 
 //## Variables...
 
+$font-size-base: 16px !default; // Default
+
+$base-font-size: 16px !default;
+$base-line-height: 20px !default;
 
 
 //## Breakpoints
 
-$s-breakpoint-sm:	35.5rem;	// ≥ 568px
-$s-breakpoint-md:	48rem;		// ≥ 768px
-$s-breakpoint-lg:	64rem;		// ≥ 1024px
-$s-breakpoint-xl:	80rem;		// ≥ 1280px
+$breakpoint-sm:		35.5rem;	// Small ≥ 568px 
+$breakpoint-md:		48rem;		// Medium ≥ 768px
+$breakpoint-lg:		64rem;		// Large ≥ 1024px
+$breakpoint-xl:		80rem;		// Extra large ≥ 1280px
+
+
+//## Spacing
+
+$global-spacing-unit-tiny:		5px;
+$global-spacing-unit-small:		10px;
+$global-spacing-unit-large:		15px;
+$global-spacing-unit-huge:		20px;

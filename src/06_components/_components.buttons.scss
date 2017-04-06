@@ -4,35 +4,60 @@
 
 //## Buttons...
 
-$c-button-font-weight:		20px !default;
-$c-button-font-size-base:	20px !default;
-$c-button-line-height:		20px !default;
-$c-button-border-width:		2px !default;
-$c-button-border-radius:	20px !default;
+$button-font-weight:		20px !default;
+$button-font-size-base:		20px !default;
+$button-line-height:		20px !default;
 
-$c-button-padding-x:		20px !default;
-$c-button-padding-y:		10px !default;
+$button-border-width:		0 !default;
+$button-border-color:		transparent !default;
+$button-border-radius:		10px !default;
+
+$button-cursor-default:		pointer !default;
+$button-cursor-disabled:	not-allowed !default;
+
+$button-padding-x:			40px !default;
+$button-padding-y:			20px !default;
+
+$button-color:				#ffffff !default;
+$button-background:			#00aeef !default;
 
 
-$cursor-disabled: "not-allowed";
+$button-color-hover:		#ffffff !default;
+$button-background-hover:	#404044 !default;
+
+$button-color-active:		#ffffff !default;
+$button-background-active:	#27272a !default;
 
 
-.button {
+.c-button {
+	font-family: inherit;
 	display: inline-block;
-	font-weight: rem($c-button-font-weight);
-	line-height: rem($c-button-line-height);
+	font-weight: rem($button-font-weight);
+	line-height: rem($button-line-height);
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
 	user-select: none;
-	border: $c-button-border-width solid transparent;
-	//@include button-size($c-button-padding-y, $c-button-padding-x, $font-size-base, $c-button-border-radius);
-	//@include transition($c-button-transition);
-
+	border: $button-border-width solid $button-border-color;	
+	border-radius: $button-border-radius;
+	cursor: $button-cursor-default;
+	padding: $button-padding-y $button-padding-x;	
+	background: $button-background;
+	color: $button-color;
+	@include font-size(20px);
+	@include transition(background .2s);
 	// Share hover and focus styles
-	@include hover-focus {
+	&:hover,
+	&:focus {
 		text-decoration: none;
 	}
+
+	&:hover {
+		background-color: $button-background-hover;
+		color: $button-color-hover;
+	}
+
+
 	&:focus,
 	&.is-focus {
 		outline: 0;
@@ -42,7 +67,7 @@ $cursor-disabled: "not-allowed";
 	// Disabled comes first so active can properly restyle
 	&:disabled,
 	&.is-disabled {
-		cursor: $cursor-disabled;
+		cursor: $button-cursor-disabled;
 		opacity: .65;
 		@include box-shadow(none);
 	}
@@ -50,6 +75,8 @@ $cursor-disabled: "not-allowed";
 	&:active,
 	&.is-active {
 		background-image: none;
+		background-color: $button-background-active;
+		color: $button-color-active;	
 		@include box-shadow(none);
 	}
 }

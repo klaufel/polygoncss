@@ -1,0 +1,48 @@
+//
+// Objects: Tables
+// --------------------------------------------------
+
+//## Tables...
+
+.o-table {
+	width: 100%;
+
+	&--fixed {
+		table-layout: fixed;
+	}
+
+
+	&--tiny {
+		th,
+		td {
+			padding: $global-spacing-unit-tiny;
+		}
+	}
+
+	&--small {
+		th,
+		td {
+			padding: $global-spacing-unit-small;
+		}
+	}
+
+	&--large {
+		th,
+		td {
+			padding: $global-spacing-unit-large;
+		}
+	}
+
+	&--huge {
+		th,
+		td {
+			padding: $global-spacing-unit-huge;
+		}
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+//
+// Trumps: Debug
+// --------------------------------------------------
+
+//## Debug...
+//
+//   See var $config-enable-debug in "settings/_settings.config.scss"
+
+@if $config-enable-debug == true {
+
+	// Remove inline styles if posible
+	[style] {
+		outline: 5px solid yellow;
+	}
+
+	// No ID's for CSS
+	[id] {
+		outline: 5px solid yellow;
+	}
+
+	[class^="o-"],
+	[class*=" o-"] {
+		outline: 5px solid orange;
+	}
+
+	[class^="c-"],
+	[class*=" c-"] {
+		outline: 5px solid cyan;
+	}
+
+	[class^="u-"],
+	[class*=" u-"] {
+		outline: 5px solid violet;
+	}
+
+	[class^="__"],
+	[class*="__"] {
+		outline: 5px solid red;
+	}
+
+}

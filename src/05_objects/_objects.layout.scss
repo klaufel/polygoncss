@@ -1,0 +1,112 @@
+//
+// Objects: Layout
+// --------------------------------------------------
+
+//## Layout...
+
+.o-wrapper {
+	margin: 0 auto;
+	max-width: 80rem;
+	background: #d2d2d2;
+    padding: 2rem;
+    width: 100%;
+}
+
+
+
+
+.o-layout {
+	display: flex;
+	flex: 0 1 auto;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 0;
+	width: 100%;
+	margin-bottom: .5rem;
+
+	@include media-query($breakpoint-md) {
+		flex-direction: row;	
+	}
+	/*&--no-padding {
+		padding: 0;
+
+		& > .column {
+			padding: 0;
+		}
+	}*/
+
+	&--wrap {
+		flex-wrap: wrap;
+	}
+
+	// Vertically Align Columns
+	&--top {
+		align-items: flex-start;
+	}
+
+	&--bottom {
+		align-items: flex-end;
+	}
+
+	&--center {
+		align-items: center;
+	}
+
+	&--stretch {
+		align-items: stretch;
+	}
+
+	&--baseline {
+		align-items: baseline;
+	}
+}
+
+
+
+@function f-flex($f-limit, $f-i) {
+	@return (100% / $f-limit) * $f-i;
+}
+
+
+
+.o-layout__col {
+	display: block;
+	flex: 1 1 auto;
+	margin-left: 0;
+	max-width: 100%;
+	width: 100%;
+	color: #fff;
+	font-size: em(14px);
+	padding: 1rem;position: relative;
+
+	&--top {
+		align-self: flex-start;
+	}	
+
+	&--bottom {
+		align-self: flex-end;
+	}
+
+	&--center {
+		align-self: center;
+	}
+
+	@include media-query($breakpoint-md) {
+
+		@for $i from 1 through $config-layout-cols {
+			&--#{$i} {
+				flex: 0 0 f-flex($config-layout-cols, $i);
+				width: f-flex($config-layout-cols, $i);
+			}
+
+			&--offset-#{$i} {
+				margin-left: f-flex($config-layout-cols, $i);
+
+			}
+		}
+
+		
+	} // End @media (medium)
+	
+}
+
