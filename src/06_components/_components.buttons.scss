@@ -4,23 +4,23 @@
 
 //## Buttons...
 
+
+$button-font-size:			16px !default;
+$button-line-height:		auto !default;
 $button-font-weight:		20px !default;
-$button-font-size-base:		20px !default;
-$button-line-height:		20px !default;
 
 $button-border-width:		0 !default;
 $button-border-color:		transparent !default;
-$button-border-radius:		10px !default;
+$button-border-radius:		30px !default;
 
-$button-cursor-default:		pointer !default;
-$button-cursor-disabled:	not-allowed !default;
-
-$button-padding-x:			40px !default;
-$button-padding-y:			20px !default;
+$button-padding-x:			26px !default;
+$button-padding-y:			17px !default;
 
 $button-color:				#ffffff !default;
 $button-background:			#00aeef !default;
 
+$button-cursor-default:		pointer !default;
+$button-cursor-disabled:	not-allowed !default;
 
 $button-color-hover:		#ffffff !default;
 $button-background-hover:	#404044 !default;
@@ -29,11 +29,9 @@ $button-color-active:		#ffffff !default;
 $button-background-active:	#27272a !default;
 
 
-.c-button {
+.#{$confic-namespace-components}button {
 	font-family: inherit;
 	display: inline-block;
-	font-weight: rem($button-font-weight);
-	line-height: rem($button-line-height);
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
@@ -44,11 +42,19 @@ $button-background-active:	#27272a !default;
 	padding: $button-padding-y $button-padding-x;	
 	background: $button-background;
 	color: $button-color;
-	@include font-size(20px);
+	font-weight: $button-font-weight;
+	@include font-size($button-font-size, $button-line-height);
 	@include transition(background .2s);
+
+
+	min-width: 208px;
+
+
 	// Share hover and focus styles
+	&,
 	&:hover,
-	&:focus {
+	&:focus,
+	&:active {
 		text-decoration: none;
 	}
 
@@ -57,10 +63,15 @@ $button-background-active:	#27272a !default;
 		color: $button-color-hover;
 	}
 
-
-	&:focus,
-	&.is-focus {
+	&:focus{
 		outline: 0;
+		@include box-shadow(none);
+	}
+
+	&:active {
+		background-image: none;
+		background-color: $button-background-active;
+		color: $button-color-active;	
 		@include box-shadow(none);
 	}
 
@@ -68,15 +79,9 @@ $button-background-active:	#27272a !default;
 	&:disabled,
 	&.is-disabled {
 		cursor: $button-cursor-disabled;
-		opacity: .65;
+		opacity: .5;
 		@include box-shadow(none);
 	}
 
-	&:active,
-	&.is-active {
-		background-image: none;
-		background-color: $button-background-active;
-		color: $button-color-active;	
-		@include box-shadow(none);
-	}
+	
 }

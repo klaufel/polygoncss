@@ -12,3 +12,9 @@ $config-enable-print:	true !default;
 
 // See trumps/_trumps.debug.scss
 $config-enable-debug:	false !default;
+
+
+$confic-namespace-elements:		"e-" !default;
+$confic-namespace-objects:		"o-" !default;
+$confic-namespace-components:	"c-" !default;
+$confic-namespace-trumps:		"t-" !default;

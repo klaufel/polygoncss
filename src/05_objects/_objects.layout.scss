@@ -4,18 +4,17 @@
 
 //## Layout...
 
-.o-wrapper {
+.#{$confic-namespace-objects}container {
 	margin: 0 auto;
 	max-width: 80rem;
-	background: #d2d2d2;
+	background: #f0f0f0;
     padding: 2rem;
     width: 100%;
 }
 
 
 
-
-.o-layout {
+.#{$confic-namespace-objects}row {
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: column;
@@ -25,7 +24,7 @@
 	margin-bottom: .5rem;
 
 	@include media-query($breakpoint-md) {
-		flex-direction: row;	
+		flex-direction: row;
 	}
 	/*&--no-padding {
 		padding: 0;
@@ -69,7 +68,7 @@
 
 
 
-.o-layout__col {
+.#{$confic-namespace-objects}col {
 	display: block;
 	flex: 1 1 auto;
 	margin-left: 0;
@@ -81,7 +80,7 @@
 
 	&--top {
 		align-self: flex-start;
-	}	
+	}
 
 	&--bottom {
 		align-self: flex-end;
@@ -105,8 +104,7 @@
 			}
 		}
 
-		
-	} // End @media (medium)
-	
-}
 
+	} // End @media (medium)
+
+}

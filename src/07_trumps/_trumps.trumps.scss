@@ -4,12 +4,12 @@
 
 //## Trumps...
 
-.o-layout {
-	> .o-layout__col:nth-child(odd) {
+.o-row {
+	> .o-col:nth-child(odd) {
 		background: #63a7d2;
 		
 	}
-	> .o-layout__col:nth-child(even) {
+	> .o-col:nth-child(even) {
 		background: #64c3ff;
 	}
 }
