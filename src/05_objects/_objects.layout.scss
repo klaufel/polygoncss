@@ -4,7 +4,7 @@
 
 //## Layout...
 
-.#{$confic-namespace-objects}container {
+.o-container {
 	margin: 0 auto;
 	max-width: 80rem;
 	background: #f0f0f0;
@@ -14,7 +14,7 @@
 
 
 
-.#{$confic-namespace-objects}row {
+.o-row {
 	display: flex;
 	flex: 0 1 auto;
 	flex-direction: column;
@@ -68,7 +68,7 @@
 
 
 
-.#{$confic-namespace-objects}col {
+.o-col {
 	display: block;
 	flex: 1 1 auto;
 	margin-left: 0;

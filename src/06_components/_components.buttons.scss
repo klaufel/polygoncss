@@ -4,46 +4,45 @@
 
 //## Buttons...
 
+$c-button__font-size:						16px !default;
+$c-button__line-height:					auto !default;
+$c-button__font-weight:					20px !default;
 
-$button-font-size:			16px !default;
-$button-line-height:		auto !default;
-$button-font-weight:		20px !default;
+$c-button__border-width:				0 !default;
+$c-button__border-color:				transparent !default;
+$c-button__border-radius:				30px !default;
 
-$button-border-width:		0 !default;
-$button-border-color:		transparent !default;
-$button-border-radius:		30px !default;
+$c-button__padding-x:						20px !default;
+$c-button__padding-y:						15px !default;
 
-$button-padding-x:			26px !default;
-$button-padding-y:			17px !default;
+$c-button__color:								#ffffff !default;
+$c-button__background:					#00aeef !default;
 
-$button-color:				#ffffff !default;
-$button-background:			#00aeef !default;
+$c-button__cursor-default:			pointer !default;
+$c-button__cursor-disabled:			not-allowed !default;
 
-$button-cursor-default:		pointer !default;
-$button-cursor-disabled:	not-allowed !default;
+$c-button__color-hover:					#ffffff !default;
+$c-button__background-hover:		#404044 !default;
 
-$button-color-hover:		#ffffff !default;
-$button-background-hover:	#404044 !default;
-
-$button-color-active:		#ffffff !default;
-$button-background-active:	#27272a !default;
+$c-button__color-active:				#ffffff !default;
+$c-button__background-active:		#27272a !default;
 
 
-.#{$confic-namespace-components}button {
+.c-button {
 	font-family: inherit;
 	display: inline-block;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
 	user-select: none;
-	border: $button-border-width solid $button-border-color;	
-	border-radius: $button-border-radius;
-	cursor: $button-cursor-default;
-	padding: $button-padding-y $button-padding-x;	
-	background: $button-background;
-	color: $button-color;
-	font-weight: $button-font-weight;
-	@include font-size($button-font-size, $button-line-height);
+	border: $c-button__border-width solid $c-button__border-color;
+	border-radius: $c-button__border-radius;
+	cursor: $c-button__cursor-default;
+	padding: $c-button__padding-y $c-button__padding-x;
+	background: $c-button__background;
+	color: $c-button__color;
+	font-weight: $c-button__font-weight;
+	@include font-size($c-button__font-size, $c-button__line-height);
 	@include transition(background .2s);
 
 
@@ -59,8 +58,8 @@ $button-background-active:	#27272a !default;
 	}
 
 	&:hover {
-		background-color: $button-background-hover;
-		color: $button-color-hover;
+		background-color: $c-button__background-hover;
+		color: $c-button__color-hover;
 	}
 
 	&:focus{
@@ -70,18 +69,18 @@ $button-background-active:	#27272a !default;
 
 	&:active {
 		background-image: none;
-		background-color: $button-background-active;
-		color: $button-color-active;	
+		background-color: $c-button__background-active;
+		color: $c-button__color-active;
 		@include box-shadow(none);
 	}
 
 	// Disabled comes first so active can properly restyle
 	&:disabled,
 	&.is-disabled {
-		cursor: $button-cursor-disabled;
+		cursor: $c-button__cursor-disabled;
 		opacity: .5;
 		@include box-shadow(none);
 	}
 
-	
+
 }

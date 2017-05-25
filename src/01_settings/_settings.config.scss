@@ -14,7 +14,15 @@ $config-enable-print:	true !default;
 $config-enable-debug:	false !default;
 
 
-$confic-namespace-elements:		"e-" !default;
-$confic-namespace-objects:		"o-" !default;
-$confic-namespace-components:	"c-" !default;
-$confic-namespace-trumps:		"t-" !default;
+$s-namespace--elements:		  "e-" !default;
+$s-namespace--objects:		  "o-" !default;
+$s-namespace--components:   "c-" !default;
+$s-namespace--utilities:    "t-" !default;
+
+
+$s-namespaces: (
+  'elements':     $s-namespace--elements,
+  'objects':      $s-namespace--objects,
+  'components':   $s-namespace--components,
+  'utilities':    $s-namespace--utilities
+) !default;
