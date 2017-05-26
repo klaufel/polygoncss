@@ -25,30 +25,41 @@ $ gulp
 ```
 src/
 ├── 01_settings/
-│   ├── _settings.config.scss
-│   ├── _settings.fonts.scss
-│   └── _settings.variables.scss
+│   ├── _settings.scss
+│   ├── _settings__config.scss
+│   ├── _settings__fonts.scss
+│   └── _settings__variables.scss
 │ 
 ├── 02_tools/
-│   ├── _tools.mixins.scss
-│   └── _tools.tools.scss
+│   ├── _tools.scss
+│   ├── _tools__media-queries.scss
+│   ├── _tools__mixins.scss
 │ 
 ├── 03_generic/
-│   ├── _generic.normalize.scss
-│   └── _generic.print.scss
+│   ├── _generic.scss
+│   ├── _generic__box-sizing.scss
+│   ├── _generic__global.scss
+│   ├── _generic__normalize.scss
+│   └── _generic__print.scss
 │ 
 ├── 04_elements/
-│   └── _elements.elements.scss
+│   ├── _elements.scss
+│   └── _elements__elements.scss
 │ 
 ├── 05_objects/
-│   └── _objects.objects.scss
+│   ├── _objects.scss
+│   ├── _objects__layout.scss
+│   └── _objects__tables.scss
 │ 
 ├── 06_components/
-│   ├── _components.buttons.scss
-│   └── _components.forms.scss
+│   ├── _components.scss
+│   ├── _components__buttons.scss
+│   └── _components__forms.scss
 │ 
-├── 07_trumps/
-│   └── _trumps.trumps.scss
+├── 07_utilities/
+│   ├── _utilities.scss
+│   ├── _utilities__debug.scss
+│   └── _utilities__trumps.scss
 │ 
 └── style.scss
 ```
