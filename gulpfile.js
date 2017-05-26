@@ -7,7 +7,6 @@ var gulp                = require('gulp'),
     cleanCss            = require('gulp-clean-css'),
     notify              = require('gulp-notify');
 
-
 // Paths variables
 var paths = {
     dist       : 'dist',
@@ -15,12 +14,13 @@ var paths = {
     sass       : ['src/**/*.scss' ]
 };
 
+
 // Compile SASS
 gulp.task('sass', function () {
     return gulp.src(paths.sass)
         .pipe(sass().on('error', sass.logError))
-        //.pipe(autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions']}))
-        //.pipe(cleanCss())
+        .pipe(autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions']}))
+        .pipe(cleanCss())
         .pipe(gulp.dest(paths.dist))
         .pipe(notify({ title: 'SASS', message: 'Compiled successfully.', onLast: true}));
 });

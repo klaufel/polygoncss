@@ -8,30 +8,26 @@
 @charset "utf-8";
 
 //== Settings
-@import "01_settings/settings.config";
-@import "01_settings/settings.variables";
-@import "01_settings/settings.fonts";
+@import "01_settings/settings";
 
 //== Tools
-@import "02_tools/tools.mixins";
-@import "02_tools/tools.media-queries";
+@import "02_tools/tools";
+
+
+// --------------------------------------------------
+// Output CSS
 
 //== Generic
-@import "03_generic/generic.normalize";
-@import "03_generic/generic.global";
-@import "03_generic/generic.print";
+@import "03_generic/generic";
 
 //== Elements
-@import "04_elements/elements.elements";
+@import "04_elements/elements";
 
 //== Objects
-@import "05_objects/objects.layout";
-@import "05_objects/objects.tables";
+@import "05_objects/objects";
 
 //== Components
-@import "06_components/components.buttons";
-@import "06_components/components.forms";
+@import "06_components/components";
 
-//== Trumps
-@import "07_trumps/trumps.trumps";
-@import "07_trumps/trumps.debug";
+//== Utilities
+@import "07_utilities/utilities";
