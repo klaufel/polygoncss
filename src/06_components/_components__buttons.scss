@@ -1,31 +1,41 @@
-//
-// Components: Buttons
-// --------------------------------------------------
+/*
+|
+| Components: Buttons
+|--------------------------------------------------------------------------
+|
+| The Laravel configuration loader is responsible for returning an array
+| of configuration options for a given bundle and file. By default, we
+| use the files provided with Laravel; however, you are free to use
+| your own storage mechanism for configuration arrays.
+|
+*/
 
-//## Buttons...
 
-$c-button__font-size:						16px !default;
-$c-button__line-height:					auto !default;
-$c-button__font-weight:					20px !default;
+$c-button__font-size:				16px !default;
+$c-button__line-height:				auto !default;
+$c-button__font-weight:				20px !default;
 
-$c-button__border-width:				0 !default;
-$c-button__border-color:				transparent !default;
-$c-button__border-radius:				30px !default;
+$c-button__border-width:			0 !default;
+$c-button__border-color:			transparent !default;
+$c-button__border-radius:			30px !default;
 
-$c-button__padding-x:						20px !default;
-$c-button__padding-y:						15px !default;
+$c-button__padding-x:				20px !default;
+$c-button__padding-y:				15px !default;
 
-$c-button__color:								#ffffff !default;
-$c-button__background:					#00aeef !default;
+$c-button__color:					#ffffff !default;
+$c-button__background:				#00aeef !default;
 
 $c-button__cursor-default:			pointer !default;
 $c-button__cursor-disabled:			not-allowed !default;
 
-$c-button__color-hover:					#ffffff !default;
+$c-button__color-hover:				#ffffff !default;
 $c-button__background-hover:		#404044 !default;
 
-$c-button__color-active:				#ffffff !default;
+$c-button__color-active:			#ffffff !default;
 $c-button__background-active:		#27272a !default;
+
+
+// --------------------------------------------------------------------------
 
 
 .c-button {

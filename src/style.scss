@@ -1,33 +1,40 @@
-//
-// Styles for SASS Project / Main file to compile
-// --------------------------------------------------
-
-//## Imports all styles (scss) to the main file for compile.
-//## This project uses ITCSS: Scalable and Maintainable CSS Architecture and BEMIT (BEM) Methodology.
+/*
+|--------------------------------------------------------------------------
+| Styles for SASS Project / Main file to compile
+|--------------------------------------------------------------------------
+|
+| Imports all styles (scss) to the main file for compile.
+|
+| This project uses ITCSS: Scalable and Maintainable CSS Architecture 
+| and BEMIT (BEM) Methodology.
+|
+*/
 
 @charset "utf-8";
 
-//== Settings
+
+// Settings
 @import "01_settings/settings";
 
-//== Tools
+// Tools
 @import "02_tools/tools";
 
 
-// --------------------------------------------------
-// Output CSS
 
-//== Generic
+// Output CSS
+// --------------------------------------------------------------------------
+
+// Generic
 @import "03_generic/generic";
 
-//== Elements
+// Elements
 @import "04_elements/elements";
 
-//== Objects
+// Objects
 @import "05_objects/objects";
 
-//== Components
+// Components
 @import "06_components/components";
 
-//== Utilities
+// Utilities
 @import "07_utilities/utilities";
