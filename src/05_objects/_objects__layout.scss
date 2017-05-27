@@ -23,7 +23,7 @@
 	width: 100%;
 	margin-bottom: .5rem;
 
-	@include media-query($breakpoint-md) {
+	@include media-query('md') {
 		flex-direction: row;
 	}
 	/*&--no-padding {
@@ -90,7 +90,7 @@
 		align-self: center;
 	}
 
-	@include media-query($breakpoint-md) {
+	@include media-query('md') {
 
 		@for $i from 1 through $config-layout-cols {
 			&--#{$i} {

@@ -10,17 +10,25 @@ $base-font-size: 16px !default;
 $base-line-height: 20px !default;
 
 
-//## Breakpoints
+//## Breakpoints (s-breakpoint)
 
-$breakpoint-sm:		35.5rem;	// Small ≥ 568px 
-$breakpoint-md:		48rem;		// Medium ≥ 768px
-$breakpoint-lg:		64rem;		// Large ≥ 1024px
-$breakpoint-xl:		80rem;		// Extra large ≥ 1280px
+$s-breakpoint--xs:		600px;	 // Extra small
+$s-breakpoint--sm:		768px;	 // Small
+$s-breakpoint--md:		992px;   // Medium
+$s-breakpoint--lg:		1299px;  // Large
+$s-breakpoint--xl:		1400px;	 // Extra large
 
+$s-breakpoint:  (
+  'xs': $s-breakpoint--xs,
+  'sm': $s-breakpoint--sm,
+  'md': $s-breakpoint--md,
+  'lg': $s-breakpoint--lg,
+  'xl': $s-breakpoint--xl
+) !default;
 
 //## Spacing
 
-$global-spacing-unit-tiny:		5px;
-$global-spacing-unit-small:		10px;
-$global-spacing-unit-large:		15px;
-$global-spacing-unit-huge:		20px;
+$s-spacing--tiny:		5px;
+$s-spacing--small:	10px;
+$s-spacing--large:	15px;
+$s-spacing--huge:		20px;
