@@ -42,6 +42,14 @@ $s-config__path--fonts:             "../fonts" !default;
 
 
 /*
+| BREAKPOINT SEPARATOR
+| Define the breakpoint separator
+*/
+
+$s-config__breakpoint-separator:   "\@" !default;
+
+
+/*
 | NAMESPACING
 | Define assets paths here
 */
