@@ -20,7 +20,7 @@ gulp.task('sass', function () {
     return gulp.src(paths.sass)
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions']}))
-        .pipe(cleanCss())
+        //.pipe(cleanCss())
         .pipe(gulp.dest(paths.dist))
         .pipe(notify({ title: 'SASS', message: 'Compiled successfully.', onLast: true}));
 });

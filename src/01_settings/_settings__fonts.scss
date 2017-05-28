@@ -7,7 +7,6 @@
 |
 */
 
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 $s-fonts__font-family:      'Montserrat', sans-serif !default;
@@ -19,6 +18,7 @@ $s-fonts__line-height--sm:      20px !default;
 
 $s-fonts__font-size--md:        16px !default;
 $s-fonts__line-height--md:      20px !default;
+
 
 $s-fonts: (
   'font-family':    $s-fonts__font-family,
@@ -40,7 +40,7 @@ $s-fonts--viewport: (
   ),
   'medium': (
     'font-family':    $s-fonts__font-family,
-    'font-size':      $s-fonts__font-size-md,
+    'font-size':      $s-fonts__font-size--md,
     'line-height':    $s-fonts__line-height--md
   )
 ) !default;

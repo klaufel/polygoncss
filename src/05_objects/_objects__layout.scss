@@ -2,37 +2,86 @@
 // Objects: Layout
 // --------------------------------------------------
 
-//## Layout...
+//== Layout...
+
+$o-layout__container
+
+$o-layout__grid-gutter:
+$grid-max-width:			1206px !default;
+$grid-max-width-inner:		874px !default;
+
+$grid-gutter:				16px !default;
+$grid-gutter--sm:			30px !default;
+$grid-gutter--md:			$grid-gutter--sm !default;
+$grid-gutter--lg:			$grid-gutter--sm !default;
+
+$grid-max-width--sm:			768px - ($grid-gutter--sm/2) !default;
+$grid-max-width--md:			992px - ($grid-gutter--md/2) !default;
+$grid-max-width--lg:			1146px + ($grid-gutter--lg*2) !default;
+
+$o-layout__max-width:
+$o-layout__max-width--sm
 
 .o-container {
-	margin: 0 auto;
-	max-width: 80rem;
-	background: #f0f0f0;
-    padding: 2rem;
-    width: 100%;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-right: $grid-gutter;
+	padding-left: $grid-gutter;
+
+	&--intern {
+		padding-right: $grid-gutter/2;
+		padding-left: $grid-gutter/2;
+	}
+
+	&--inner {
+		max-width: $grid-max-width-inner;
+	}
+
+	@include media-query($breakpoint-sm) {
+		max-width: $grid-max-width--sm;
+		padding-right: $grid-gutter--sm;
+		padding-left: $grid-gutter--sm;
+		&--intern {
+			padding-right: $grid-gutter--sm/2;
+			padding-left: $grid-gutter--sm/2;
+		}
+	}
+	@include media-query($breakpoint-md) {
+		max-width: $grid-max-width--md;
+	}
+	@include media-query($breakpoint-lg) {
+		max-width: $grid-max-width--lg;
+	}
 }
 
 
+$o-layout__gutter: 10px !default;
 
-.o-row {
+.o-layout {
 	display: flex;
-	flex: 0 1 auto;
-	flex-direction: column;
 	flex-wrap: wrap;
+	flex-direction: row;
 	padding: 0;
-	width: 100%;
-	margin-bottom: .5rem;
+	margin-right: -($grid-gutter / 2);
+	margin-left: -($grid-gutter / 2);
 
-	@include media-query('md') {
-		flex-direction: row;
+	&--intern {
+		margin-right: inherit;
+		margin-left: inherit;
 	}
-	/*&--no-padding {
-		padding: 0;
 
-		& > .column {
-			padding: 0;
-		}
-	}*/
+	@include media-query($breakpoint-sm) {
+		margin-right: -($grid-gutter--sm / 2);
+		margin-left: -($grid-gutter--sm / 2);
+		//flex-direction: row;
+	}
+
+
+	&--no-padding {
+		padding: 0;
+	}
 
 	&--wrap {
 		flex-wrap: wrap;
@@ -67,6 +116,35 @@
 }
 
 
+$breakpoint-separator: \@ !default;
+
+
+
+@mixin layout-columns() {
+
+	@for $i from 1 through $config-layout-cols {
+		&--#{$i} {
+			flex: 0 0 $i;
+			width: f-flex($config-layout-cols, $i);
+			max-width: f-flex($config-layout-cols, $i);
+		}
+	}
+
+	@each $breakpoint-name, $breakpoint-unit in $breakpoints {
+		@include media-query($breakpoint-unit) {
+			@for $i from 1 through $config-layout-cols {
+				&--#{$i}#{$breakpoint-separator}#{$breakpoint-name} {
+					flex: 0 0 $i;
+					width: f-flex($config-layout-cols, $i);
+					max-width: f-flex($config-layout-cols, $i);
+				}
+			}
+		}
+	}
+
+}
+
+
 
 .o-col {
 	display: block;
@@ -74,10 +152,9 @@
 	margin-left: 0;
 	max-width: 100%;
 	width: 100%;
-	color: #fff;
 	font-size: em(14px);
-	padding: 1rem;position: relative;
-
+	padding: 0 ($grid-gutter/2);
+	position: relative;
 	&--top {
 		align-self: flex-start;
 	}
@@ -90,21 +167,15 @@
 		align-self: center;
 	}
 
-	@include media-query('md') {
+	&--no-padding {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 
-		@for $i from 1 through $config-layout-cols {
-			&--#{$i} {
-				flex: 0 0 f-flex($config-layout-cols, $i);
-				width: f-flex($config-layout-cols, $i);
-			}
+	@include layout-columns();
 
-			&--offset-#{$i} {
-				margin-left: f-flex($config-layout-cols, $i);
-
-			}
-		}
-
-
-	} // End @media (medium)
-
+	@include media-query($breakpoint-sm) {
+		padding-left: $grid-gutter--sm/2;
+		padding-right: $grid-gutter--sm/2;
+	}
 }

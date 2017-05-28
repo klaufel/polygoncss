@@ -6,134 +6,54 @@
 //
 //   See var $config-enable-debug in "settings/_settings.config.scss"
 
-@if $s-config__debug {
+$u-debug__outline-size:										2px !default;
 
-	// Remove inline styles if posible
-	[style] {
-		outline: 5px solid yellow;
+$u-debug__color__style: 									yellow !default;
+$u-debug__color__id:											blue !default;
+$u-debug__color__class: 									lightgrey !default;
+
+$u-debug__color__namespace--objects: 			blue !default;
+$u-debug__color__namespace--components: 	blue !default;
+$u-debug__color__namespace--utilities: 		blue !default;
+
+$u-debug__color__bem--element:						black !default;
+$u-debug__color__bem--modifier:						black !default;
+
+$u-debug__color__breakpoint-separator: 		red !default;
+$u-debug__color__hack-class:					 		red !default;
+
+$u-debug: (
+	'[style]': 																					$u-debug__color__style,
+	'[id]': 																						$u-debug__color__id,
+	'[class]':  																				$u-debug__color__class,
+
+	'[class^="#{$s-config__namespace--objects}"]':			$u-debug__color__namespace--objects,
+	'[class*=" #{$s-config__namespace--objects}"]': 		$u-debug__color__namespace--objects,
+	'[class^="#{$s-config__namespace--components}"]':		$u-debug__color__namespace--components,
+	'[class*=" #{$s-config__namespace--components}"]':	$u-debug__color__namespace--components,
+	'[class^="#{$s-config__namespace--utilities}"]':		$u-debug__color__namespace--utilities,
+	'[class*=" #{$s-config__namespace--utilities}"]': 	$u-debug__color__namespace--utilities,
+
+	'[class*="#{$s-config__bem--element}"]': 						$u-debug__color__bem--element,
+	'[class*="#{$s-config__bem--modifier}"]': 					$u-debug__color__bem--modifier,
+
+	'[class*="@"]':																			$u-debug__color__breakpoint-separator,
+	'[class^="_"]':																			$u-debug__color__hack-class
+) !default;
+
+
+@mixin u-debug() {
+	@each $u-debug__element, $u-debug__color in $u-debug {
+		#{$u-debug__element} {
+			outline: $u-debug__outline-size solid $u-debug__color !important;
+		}
 	}
-
-	// No ID's for CSS
-	[id] {
-		outline: 5px solid yellow;
-	}
-
-	[class^="o-"],
-	[class*=" o-"] {
-		outline: 5px solid orange;
-	}
-
-	[class^="c-"],
-	[class*=" c-"] {
-		outline: 5px solid cyan;
-	}
-
-	[class^="u-"],
-	[class*=" u-"] {
-		outline: 5px solid violet;
-	}
-
-	[class^="__"],
-	[class*="__"] {
-		outline: 5px solid red;
-	}
-
-
-[class] {
-  outline: 5px solid lightgrey;
-}
-
-/**
- * Outline all BEM Elements.
- */
-[class*="__"] {
-  outline: 5px solid grey;
-}
-
-/**
- * Outline all BEM Modifiers.
- */
-[class*="--"] {
-  outline: 5px solid darkgrey;
-}
-
-/**
- * Outline all Object classes.
- */
-[class^="o-"],
-[class*=" o-"] {
-  outline: 5px solid orange;
-}
-
-/**
- * Outline all Component classes.
- */
-[class^="c-"],
-[class*=" c-"] {
-  outline: 5px solid cyan;
-}
-
-/**
- * Outline all Responsive classes.
- */
-[class*="@"] {
-  outline: 5px solid rosybrown;
-}
-
-/**
- * Outline all Hack classes.
- */
-[class^="_"] {
-  outline: 5px solid red;
 }
 
 
-[class] {
-  outline: 5px solid lightgrey;
-}
+// Output
+// --------------------------------------------------
 
-/**
- * Outline all BEM Elements.
- */
-[class*="__"] {
-  outline: 5px solid grey;
-}
-
-/**
- * Outline all BEM Modifiers.
- */
-[class*="--"] {
-  outline: 5px solid darkgrey;
-}
-
-/**
- * Outline all Object classes.
- */
-[class^="o-"],
-[class*=" o-"] {
-  outline: 5px solid orange;
-}
-
-/**
- * Outline all Component classes.
- */
-[class^="c-"],
-[class*=" c-"] {
-  outline: 5px solid cyan;
-}
-
-/**
- * Outline all Responsive classes.
- */
-[class*="@"] {
-  outline: 5px solid rosybrown;
-}
-
-/**
- * Outline all Hack classes.
- */
-[class^="_"] {
-  outline: 5px solid red;
-}
-
+@if ($s-config__debug) {
+	@include u-debug();
 }

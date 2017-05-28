@@ -8,7 +8,6 @@
 |
 */
 
-
 /*
 | LAYOUT COLUMNS
 | See 05_objects/_objects__layout.scss
@@ -30,14 +29,13 @@ $s-config__print:                   true !default;
 | See 07_utilities/_utilities__debug.scss
 */
 
-$s-config__debug:                   false !default;
+$s-config__debug:                   true !default;
 
 
 /*
 | PATHS
 | Define assets paths here
 */
-
 
 $s-config__path--img:               "../images" !default;
 $s-config__path--fonts:             "../fonts" !default;
@@ -48,14 +46,21 @@ $s-config__path--fonts:             "../fonts" !default;
 | Define assets paths here
 */
 
-$s-config__namespace--elements:		  "e-" !default;
 $s-config__namespace--objects:		  "o-" !default;
 $s-config__namespace--components:   "c-" !default;
-$s-config__namespace--utilities:    "t-" !default;
+$s-config__namespace--utilities:    "u-" !default;
 
 $s-config__namespace: (
-  'elements':     $s-config__namespace--elements,
   'objects':      $s-config__namespace--objects,
   'components':   $s-config__namespace--components,
   'utilities':    $s-config__namespace--utilities
 ) !default;
+
+
+/*
+| BEM (BEMIT) SYNTAX
+| Define a bem (bemit) syntax
+*/
+
+$s-config__bem--element:      "__" !default;
+$s-config__bem--modifier:     "--" !default;
