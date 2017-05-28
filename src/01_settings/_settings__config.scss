@@ -1,28 +1,61 @@
-//
-// Settings: Config
-// --------------------------------------------------
-
-//## Config...
-
-// See objects/_objects.layout.scss
-$config-layout-cols:	12 !default; // Number of columns
-
-// See generic/_generic.print.scss
-$config-enable-print:	true !default;
-
-// See trumps/_trumps.debug.scss
-$config-enable-debug:	false !default;
+/*
+|--------------------------------------------------------------------------
+| Settings: CONFIG
+|--------------------------------------------------------------------------
+|
+| In this document all the configuration variables referring
+| to the project are declared.
+|
+*/
 
 
-$s-namespace--elements:		  "e-" !default;
-$s-namespace--objects:		  "o-" !default;
-$s-namespace--components:   "c-" !default;
-$s-namespace--utilities:    "t-" !default;
+/*
+| LAYOUT COLUMNS
+| See 05_objects/_objects__layout.scss
+*/
+
+$s-config__layout--cols:            12 !default;
 
 
-$s-namespaces: (
-  'elements':     $s-namespace--elements,
-  'objects':      $s-namespace--objects,
-  'components':   $s-namespace--components,
-  'utilities':    $s-namespace--utilities
+/*
+| ENABLE PRINT FUNCTIONS
+| See 03_generic/_generic__print.scss
+*/
+
+$s-config__print:                   true !default;
+
+
+/*
+| DEBUG UTILITIES TRUMP
+| See 07_utilities/_utilities__debug.scss
+*/
+
+$s-config__debug:                   false !default;
+
+
+/*
+| PATHS
+| Define assets paths here
+*/
+
+
+$s-config__path--img:               "../images" !default;
+$s-config__path--fonts:             "../fonts" !default;
+
+
+/*
+| NAMESPACING
+| Define assets paths here
+*/
+
+$s-config__namespace--elements:		  "e-" !default;
+$s-config__namespace--objects:		  "o-" !default;
+$s-config__namespace--components:   "c-" !default;
+$s-config__namespace--utilities:    "t-" !default;
+
+$s-config__namespace: (
+  'elements':     $s-config__namespace--elements,
+  'objects':      $s-config__namespace--objects,
+  'components':   $s-config__namespace--components,
+  'utilities':    $s-config__namespace--utilities
 ) !default;

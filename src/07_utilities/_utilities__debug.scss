@@ -6,7 +6,7 @@
 //
 //   See var $config-enable-debug in "settings/_settings.config.scss"
 
-@if $config-enable-debug == true {
+@if $s-config__debug {
 
 	// Remove inline styles if posible
 	[style] {

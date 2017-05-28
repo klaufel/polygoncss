@@ -6,7 +6,7 @@
 //
 //   See var $config-enable-print in "settings/_settings.config.scss"
 
-@if $config-enable-print {
+@if $s-config__print {
 
 	@media print {
 
