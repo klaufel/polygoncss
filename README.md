@@ -4,7 +4,7 @@ Basic blank structure of a project based on ITCSS (Scalable and Maintainable CSS
 
 ## Installation
 
-Clone the repository in local and install the dependencies, then run gulp. 
+Clone the repository in local and install the dependencies, then run gulp.
 
 **git:**
 
