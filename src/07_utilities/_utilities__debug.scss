@@ -23,31 +23,31 @@ $u-debug__color__breakpoint-separator:    red !default;
 $u-debug__color__hack-class:              red !default;
 
 $u-debug: (
-	'[style]':                                          $u-debug__color__style,
-	'[id]':                                             $u-debug__color__id,
-	'[class]':                                          $u-debug__color__class,
+  '[style]':                                          $u-debug__color__style,
+  '[id]':                                             $u-debug__color__id,
+  '[class]':                                          $u-debug__color__class,
 
-	'[class^="#{$s-config__namespace--objects}"]':      $u-debug__color__namespace--objects,
-	'[class*=" #{$s-config__namespace--objects}"]':     $u-debug__color__namespace--objects,
-	'[class^="#{$s-config__namespace--components}"]':   $u-debug__color__namespace--components,
-	'[class*=" #{$s-config__namespace--components}"]':  $u-debug__color__namespace--components,
-	'[class^="#{$s-config__namespace--utilities}"]':    $u-debug__color__namespace--utilities,
-	'[class*=" #{$s-config__namespace--utilities}"]':   $u-debug__color__namespace--utilities,
+  '[class^="#{$s-config__namespace--objects}"]':      $u-debug__color__namespace--objects,
+  '[class*=" #{$s-config__namespace--objects}"]':     $u-debug__color__namespace--objects,
+  '[class^="#{$s-config__namespace--components}"]':   $u-debug__color__namespace--components,
+  '[class*=" #{$s-config__namespace--components}"]':  $u-debug__color__namespace--components,
+  '[class^="#{$s-config__namespace--utilities}"]':    $u-debug__color__namespace--utilities,
+  '[class*=" #{$s-config__namespace--utilities}"]':   $u-debug__color__namespace--utilities,
 
-	'[class*="#{$s-config__bem--element}"]':            $u-debug__color__bem--element,
-	'[class*="#{$s-config__bem--modifier}"]':           $u-debug__color__bem--modifier,
+  '[class*="#{$s-config__bem--element}"]':            $u-debug__color__bem--element,
+  '[class*="#{$s-config__bem--modifier}"]':           $u-debug__color__bem--modifier,
 
-	'[class*="#{$s-config__breakpoint-separator}"]':    $u-debug__color__breakpoint-separator,
-	'[class^="_"]':                                     $u-debug__color__hack-class
+  '[class*="#{$s-config__breakpoint-separator}"]':    $u-debug__color__breakpoint-separator,
+  '[class^="_"]':                                     $u-debug__color__hack-class
 ) !default;
 
 
 @mixin u-debug() {
-	@each $u-debug__element, $u-debug__color in $u-debug {
-		#{$u-debug__element} {
-			outline: $u-debug__outline-size solid $u-debug__color !important;
-		}
-	}
+  @each $u-debug__element, $u-debug__color in $u-debug {
+    #{$u-debug__element} {
+      outline: $u-debug__outline-size solid $u-debug__color !important;
+    }
+  }
 }
 
 
@@ -55,5 +55,5 @@ $u-debug: (
 // --------------------------------------------------
 
 @if ($s-config__debug) {
-	@include u-debug();
+  @include u-debug();
 }
