@@ -1,10 +1,12 @@
-//
-// Utilities: Debug
-// --------------------------------------------------
+/*
+|--------------------------------------------------------------------------
+| UTILITIES: DEBUG
+|--------------------------------------------------------------------------
+|
+| See var $s-config__debug in "settings/_settings__config.scss"
+|
+*/
 
-//## Debug...
-//
-//   See var $config-enable-debug in "settings/_settings.config.scss"
 
 $u-debug__outline-size:                                 2px !default;
 
@@ -29,11 +31,11 @@ $u-debug: (
   '[class]':                                            $u-debug__color__class,
 
   '[class^="#{$s-config__namespace--objects}"]':        $u-debug__color__namespace--objects,
-  '[class*=" #{$s-config__namespace--objects}"]':       $u-debug__color__namespace--objects,
+  '[class*="#{$s-config__namespace--objects}"]':       $u-debug__color__namespace--objects,
   '[class^="#{$s-config__namespace--components}"]':     $u-debug__color__namespace--components,
-  '[class*=" #{$s-config__namespace--components}"]':    $u-debug__color__namespace--components,
+  '[class*="#{$s-config__namespace--components}"]':    $u-debug__color__namespace--components,
   '[class^="#{$s-config__namespace--utilities}"]':      $u-debug__color__namespace--utilities,
-  '[class*=" #{$s-config__namespace--utilities}"]':     $u-debug__color__namespace--utilities,
+  '[class*="#{$s-config__namespace--utilities}"]':     $u-debug__color__namespace--utilities,
 
   '[class*="#{$s-config__bem--element}"]':              $u-debug__color__bem--element,
   '[class*="#{$s-config__bem--modifier}"]':             $u-debug__color__bem--modifier,
@@ -43,7 +45,7 @@ $u-debug: (
 ) !default;
 
 
-@mixin u-debug() {
+@mixin u-debug__make() {
   @each $u-debug__element, $u-debug__color in $u-debug {
     #{$u-debug__element} {
       outline: $u-debug__outline-size solid $u-debug__color !important;
@@ -52,9 +54,11 @@ $u-debug: (
 }
 
 
-// Output
-// --------------------------------------------------
+/*
+| Output CSS
+|--------------------------------------------------------------------------
+*/
 
 @if ($s-config__debug) {
-  @include u-debug();
+  @include u-debug__make();
 }

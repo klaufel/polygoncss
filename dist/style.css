@@ -83,13 +83,25 @@
 | Import all the scss files in the objects layer.
 |
 */
+/**
+ * ------------------------------------------------------------------------
+ * UTILITIES
+ * ------------------------------------------------------------------------
+ *
+ * Import all the scss files in the utlities layer.
+ *
+**/
 /*
 |--------------------------------------------------------------------------
-| Utilities
+| UTILITIES: DEBUG
 |--------------------------------------------------------------------------
 |
-| Import all the scss files in the utlities layer.
+| See var $s-config__debug in "settings/_settings__config.scss"
 |
+*/
+/*
+| Output CSS
+|--------------------------------------------------------------------------
 */
 [style] {
   outline: 2px solid yellow !important; }
@@ -103,19 +115,19 @@
 [class^="o-"] {
   outline: 2px solid blue !important; }
 
-[class*=" o-"] {
+[class*="o-"] {
   outline: 2px solid blue !important; }
 
 [class^="c-"] {
   outline: 2px solid blue !important; }
 
-[class*=" c-"] {
+[class*="c-"] {
   outline: 2px solid blue !important; }
 
 [class^="u-"] {
   outline: 2px solid blue !important; }
 
-[class*=" u-"] {
+[class*="u-"] {
   outline: 2px solid blue !important; }
 
 [class*="__"] {
