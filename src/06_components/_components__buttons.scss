@@ -1,96 +1,85 @@
-/*
-|
-| Components: Buttons
-|--------------------------------------------------------------------------
-|
-| The Laravel configuration loader is responsible for returning an array
-| of configuration options for a given bundle and file. By default, we
-| use the files provided with Laravel; however, you are free to use
-| your own storage mechanism for configuration arrays.
-|
-*/
+/* ============================================================
+ * Components: Buttons
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
 
+$c-button__font-size:              16px !default;
+$c-button__line-height:            auto !default;
+$c-button__font-weight:            20px !default;
 
-$c-button__font-size:				16px !default;
-$c-button__line-height:				auto !default;
-$c-button__font-weight:				20px !default;
+$c-button__border-width:           0 !default;
+$c-button__border-color:           transparent !default;
+$c-button__border-radius:          30px !default;
 
-$c-button__border-width:			0 !default;
-$c-button__border-color:			transparent !default;
-$c-button__border-radius:			30px !default;
+$c-button__padding-x:              20px !default;
+$c-button__padding-y:              15px !default;
 
-$c-button__padding-x:				20px !default;
-$c-button__padding-y:				15px !default;
+$c-button__color:                  #ffffff !default;
+$c-button__background:             #00aeef !default;
 
-$c-button__color:					#ffffff !default;
-$c-button__background:				#00aeef !default;
+$c-button__cursor--default:        pointer !default;
+$c-button__cursor--disabled:       not-allowed !default;
 
-$c-button__cursor-default:			pointer !default;
-$c-button__cursor-disabled:			not-allowed !default;
+$c-button__color-hover:            #ffffff !default;
+$c-button__background-hover:       #404044 !default;
 
-$c-button__color-hover:				#ffffff !default;
-$c-button__background-hover:		#404044 !default;
+$c-button__color-active:           #ffffff !default;
+$c-button__background-active:      #27272a !default;
 
-$c-button__color-active:			#ffffff !default;
-$c-button__background-active:		#27272a !default;
-
-
-// --------------------------------------------------------------------------
-
+// ============================================================
 
 .c-button {
-	font-family: inherit;
+  font-family: inherit;
 	display: inline-block;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	user-select: none;
-	border: $c-button__border-width solid $c-button__border-color;
-	border-radius: $c-button__border-radius;
-	cursor: $c-button__cursor-default;
-	padding: $c-button__padding-y $c-button__padding-x;
-	background: $c-button__background;
-	color: $c-button__color;
-	font-weight: $c-button__font-weight;
-	@include font-size($c-button__font-size, $c-button__line-height);
-	@include transition(background .2s);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $c-button__border-width solid $c-button__border-color;
+  border-radius: $c-button__border-radius;
+  cursor: $c-button__cursor--default;
+  padding: $c-button__padding-y $c-button__padding-x;
+  background: $c-button__background;
+  color: $c-button__color;
+  font-weight: $c-button__font-weight;
+  @include font-size($c-button__font-size, $c-button__line-height);
+  @include transition(background .2s);
 
+  // Share hover and focus styles
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
 
-	min-width: 208px;
+  &:hover {
+    background-color: $c-button__background-hover;
+    color: $c-button__color-hover;
+  }
 
+  &:focus{
+    outline: 0;
+    @include box-shadow(none);
+  }
 
-	// Share hover and focus styles
-	&,
-	&:hover,
-	&:focus,
-	&:active {
-		text-decoration: none;
-	}
+  &:active {
+    background-image: none;
+    background-color: $c-button__background-active;
+    color: $c-button__color-active;
+    @include box-shadow(none);
+  }
 
-	&:hover {
-		background-color: $c-button__background-hover;
-		color: $c-button__color-hover;
-	}
-
-	&:focus{
-		outline: 0;
-		@include box-shadow(none);
-	}
-
-	&:active {
-		background-image: none;
-		background-color: $c-button__background-active;
-		color: $c-button__color-active;
-		@include box-shadow(none);
-	}
-
-	// Disabled comes first so active can properly restyle
-	&:disabled,
-	&.is-disabled {
-		cursor: $c-button__cursor-disabled;
-		opacity: .5;
-		@include box-shadow(none);
-	}
-
+  // Disabled comes first so active can properly restyle
+  &:disabled,
+  &.is-disabled {
+    cursor: $c-button__cursor--disabled;
+    opacity: .5;
+    @include box-shadow(none);
+  }
 
 }

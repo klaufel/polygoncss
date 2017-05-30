@@ -1,14 +1,13 @@
-/*
-|--------------------------------------------------------------------------
-| STYLES FOR SASS PROJECT / MAIN FILE TO COMPILE
-|--------------------------------------------------------------------------
-|
-| Imports all styles (scss) to the main file for compile.
-|
-| This project uses ITCSS: Scalable and Maintainable CSS Architecture
-| and BEMIT (BEM) Methodology.
-|
-*/
+/* ============================================================
+ * STRUCTURE ITCSS AND BEMIT (BEM)
+ * ============================================================
+ * Repo: https://github.com/klaufel/structure-itcss-bemit
+ *
+ * This project uses ITCSS: Scalable and Maintainable
+ * CSS Architecture and BEMIT (BEM) Methodology.
+ *
+ * This file imports all styles (scss) to the main file for compile.
+ */
 /*
 |--------------------------------------------------------------------------
 | SETTINGS
@@ -72,15 +71,77 @@
 |
 */
 /*
-| CSS OUTPUT
-| From here a CSS output is generated
-*/
-/*
 |--------------------------------------------------------------------------
 | Objects
 |--------------------------------------------------------------------------
 |
 | Import all the scss files in the objects layer.
+|
+*/
+/*
+|--------------------------------------------------------------------------
+| Components
+|--------------------------------------------------------------------------
+|
+| Import all the scss files in the components layer.
+|
+*/
+/* ============================================================
+ * Components: Buttons
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+.c-button {
+  font-family: inherit;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 0 solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 15px 20px;
+  background: #00aeef;
+  color: #ffffff;
+  font-weight: 20px;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  transition: background 0.2s; }
+  .c-button, .c-button:hover, .c-button:focus, .c-button:active {
+    text-decoration: none; }
+  .c-button:hover {
+    background-color: #404044;
+    color: #ffffff; }
+  .c-button:focus {
+    outline: 0;
+    box-shadow: none; }
+  .c-button:active {
+    background-image: none;
+    background-color: #27272a;
+    color: #ffffff;
+    box-shadow: none; }
+  .c-button:disabled, .c-button.is-disabled {
+    cursor: not-allowed;
+    opacity: .5;
+    box-shadow: none; }
+
+/*
+|--------------------------------------------------------------------------
+|  Components: Forms
+|--------------------------------------------------------------------------
+|
+| The Laravel configuration loader is responsible for returning an array
+| of configuration options for a given bundle and file. By default, we
+| use the files provided with Laravel; however, you are free to use
+| your own storage mechanism for configuration arrays.
 |
 */
 /**

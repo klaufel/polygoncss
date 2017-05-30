@@ -1,28 +1,20 @@
-/*
-|--------------------------------------------------------------------------
-| STYLES FOR SASS PROJECT / MAIN FILE TO COMPILE
-|--------------------------------------------------------------------------
-|
-| Imports all styles (scss) to the main file for compile.
-|
-| This project uses ITCSS: Scalable and Maintainable CSS Architecture
-| and BEMIT (BEM) Methodology.
-|
-*/
+/* ============================================================
+ * STRUCTURE ITCSS AND BEMIT (BEM)
+ * ============================================================
+ * Repo: https://github.com/klaufel/structure-itcss-bemit
+ *
+ * This project uses ITCSS: Scalable and Maintainable
+ * CSS Architecture and BEMIT (BEM) Methodology.
+ *
+ * This file imports all styles (scss) to the main file for compile.
+ */
 
-@charset "utf-8";
 
 // Settings
 @import "01_settings/settings";
 
 // Tools
 @import "02_tools/tools";
-
-
-/*
-| CSS OUTPUT
-| From here a CSS output is generated
-*/
 
 // Generic
 //@import "03_generic/generic";
@@ -34,7 +26,7 @@
 @import "05_objects/objects";
 
 // Components
-//@import "06_components/components";
+@import "06_components/components";
 
 // Utilities
 @import "07_utilities/utilities";
