@@ -46,11 +46,11 @@ $c-button__background-active:      #27272a !default;
   background: $c-button__background;
   color: $c-button__color;
   font-weight: $c-button__font-weight;
+  text-decoration: none;
   @include font-size($c-button__font-size, $c-button__line-height);
   @include transition(background .2s);
 
   // Share hover and focus styles
-  &,
   &:hover,
   &:focus,
   &:active {
