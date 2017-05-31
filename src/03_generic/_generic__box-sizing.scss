@@ -1,20 +1,24 @@
-//
-// Generic: Box sizing
-// --------------------------------------------------
+/* ============================================================
+ * Generic: Box sizing
+ * ============================================================
+ *
+ * Modify the default properties of the box model
+ *
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ *
+ */
 
-//## Modify the default properties of the box model
-//
-//   More sensible default box-sizing:
-//   css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+
 * {
-	&,
-	&:before,
-	&:after {
-		box-sizing: inherit;
-	}
+&,
+  &:before,
+  &:after {
+   box-sizing: inherit;
+  }
 }

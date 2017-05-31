@@ -1,58 +1,61 @@
-/*
-|--------------------------------------------------------------------------
-| SETTINGS: CONFIG
-|--------------------------------------------------------------------------
-|
-| In this document all the configuration variables referring
-| to the project are declared.
-|
-*/
+/* ============================================================
+ * Settings: Config
+ * ============================================================
+ *
+ * In this document all the configuration variables referring
+ * to the project are declared.
+ *
+ */
 
-/*
-| LAYOUT COLUMNS
-| See 05_objects/_objects__layout.scss
-*/
+
+// LAYOUT COLUMNS
+// See 05_objects/_objects__layout.scss
 
 $s-config__layout--cols:            12 !default;
 
 
-/*
-| ENABLE PRINT FUNCTIONS
-| See 03_generic/_generic__print.scss
-*/
+// ============================================================
+
+
+// ENABLE PRINT FUNCTIONS
+// See 03_generic/_generic__print.scss
 
 $s-config__print:                   true !default;
 
 
-/*
-| DEBUG UTILITIES TRUMP
-| See 07_utilities/_utilities__debug.scss
-*/
+// ============================================================
+
+
+// DEBUG UTILITIES TRUMP
+// See 07_utilities/_utilities__debug.scss
 
 $s-config__debug:                   true !default;
 
 
-/*
-| PATHS
-| Define assets paths here
-*/
+// ============================================================
+
+
+// PATHS
+// Define assets paths here
 
 $s-config__path--img:               "../images" !default;
 $s-config__path--fonts:             "../fonts" !default;
 
 
-/*
-| BREAKPOINT SEPARATOR
-| Define the breakpoint separator
-*/
+// ============================================================
+
+
+// BREAKPOINT SEPARATOR
+// Define the breakpoint separator
 
 $s-config__breakpoint-separator:   "\@" !default;
 
 
-/*
-| NAMESPACING
-| Define assets paths here
-*/
+// ============================================================
+
+
+// NAMESPACING
+// Define assets paths here
 
 $s-config__namespace--objects:		  "o-" !default;
 $s-config__namespace--components:   "c-" !default;
@@ -65,10 +68,11 @@ $s-config__namespace: (
 ) !default;
 
 
-/*
-| BEM (BEMIT) SYNTAX
-| Define a bem (bemit) syntax
-*/
+// ============================================================
+
+
+// BEM (BEMIT) SYNTAX
+// Define a bem (bemit) syntax
 
 $s-config__bem--element:      "__" !default;
 $s-config__bem--modifier:     "--" !default;

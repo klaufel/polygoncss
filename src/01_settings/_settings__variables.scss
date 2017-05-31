@@ -1,24 +1,31 @@
-//
-// Settings: Variables
-// --------------------------------------------------
-
-//## Variables...
-
-$font-size-base: 16px !default; // Default
-
-$base-font-size: 16px !default;
-$base-line-height: 20px !default;
+/* ============================================================
+ * Settings: Variables
+ * ============================================================
+ *
+ * Global variables which affect the elements of the project
+ *
+ */
 
 
-//## Breakpoints (s-breakpoint)
+// Variables
 
-$s-breakpoint--xs:		600px;	 // Extra small
-$s-breakpoint--sm:		768px;	 // Small
-$s-breakpoint--md:		992px;   // Medium
-$s-breakpoint--lg:		1299px;  // Large
-$s-breakpoint--xl:		1400px;	 // Extra large
+$font-size-base:        16px !default; // Default
 
-$s-breakpoint:  (
+$base-font-size:        16px !default;
+$base-line-height:      20px !default;
+
+
+// ============================================================
+
+// Breakpoints
+
+$s-breakpoint--xs:      600px !default;	     // Extra small
+$s-breakpoint--sm:      768px !default;      // Small
+$s-breakpoint--md:      992px !default;      // Medium
+$s-breakpoint--lg:      1299px !default;     // Large
+$s-breakpoint--xl:      1400px !default;     // Extra large
+
+$s-breakpoint: (
   'xs': $s-breakpoint--xs,
   'sm': $s-breakpoint--sm,
   'md': $s-breakpoint--md,
@@ -26,9 +33,13 @@ $s-breakpoint:  (
   'xl': $s-breakpoint--xl
 ) !default;
 
-//## Spacing
 
-$s-spacing--tiny:		5px;
-$s-spacing--small:	10px;
-$s-spacing--large:	15px;
-$s-spacing--huge:		20px;
+// ============================================================
+
+
+//Spacing
+
+$s-spacing--tiny:        5px !default;
+$s-spacing--small:       10px !default;
+$s-spacing--large:       15px !default;
+$s-spacing--huge:        20px !default;

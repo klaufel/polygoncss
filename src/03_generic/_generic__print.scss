@@ -1,89 +1,90 @@
-//
-// Generic: Print
-// --------------------------------------------------
-
-//## Print styles
-//
-//   See var $config-enable-print in "settings/_settings.config.scss"
+/* ============================================================
+ * Generic: Print
+ * ============================================================
+ *
+ * Print styles
+ * See var $s-config__print in "settings/_settings__config.scss"
+ *
+ */
 
 @if $s-config__print {
 
-	@media print {
+@media print {
 
-		*,
-		*::before,
-		*::after,
-		p::first-letter,
-		div::first-letter,
-		blockquote::first-letter,
-		li::first-letter,
-		p::first-line,
-		div::first-line,
-		blockquote::first-line,
-		li::first-line {
-			color: #000 !important; // Black prints faster
-			text-shadow: none !important;
-			background: transparent !important;
-			box-shadow: none !important;
-		}
+  *,
+  *::before,
+  *::after,
+  p::first-letter,
+  div::first-letter,
+  blockquote::first-letter,
+  li::first-letter,
+  p::first-line,
+  div::first-line,
+  blockquote::first-line,
+  li::first-line {
+    color: #000 !important; // Black prints faster
+    text-shadow: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
 
-		a,
-		a:visited {
-			text-decoration: underline;
-		}
+  a,
+  a:visited {
+   text-decoration: underline;
+  }
 
-		// Bootstrap specific; comment the following selector out
-		a[href]::after {
-			content: " (" attr(href) ")";
-		}
+  // Bootstrap specific; comment the following selector out
+  a[href]::after {
+   content: " (" attr(href) ")";
+  }
 
-		abbr[title]::after {
-			content: " (" attr(title) ")";
-		}
+  abbr[title]::after {
+   content: " (" attr(title) ")";
+  }
 
-		// Don't show links that are fragment identifiers,
-		// or use the `javascript:` pseudo protocol
+  // Don't show links that are fragment identifiers,
+  // or use the `javascript:` pseudo protocol
 
-		a[href^="#"]::after,
-		a[href^="javascript:"]::after {
-			content: "";
-		}
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+   content: "";
+  }
 
-		pre {
-			white-space: pre-wrap !important;
-		}
+  pre {
+    white-space: pre-wrap !important;
+  }
 
-		pre,
-		blockquote {
-			border: 1px solid #999;   // Bootstrap custom code; using `1px` instead of 1px
-			page-break-inside: avoid;
-		}
+  pre,
+  blockquote {
+    border: 1px solid #999;   // Bootstrap custom code; using `1px` instead of 1px
+    page-break-inside: avoid;
+  }
 
 
-		// Printing Tables:
-		// http://css-discuss.incutio.com/wiki/Printing_Tables
+  // Printing Tables:
+  // http://css-discuss.incutio.com/wiki/Printing_Tables
 
-		thead {
-			display: table-header-group;
-		}
+  thead {
+   display: table-header-group;
+  }
 
-		tr,
-		img {
-			page-break-inside: avoid;
-		}
+  tr,
+  img {
+   page-break-inside: avoid;
+  }
 
-		p,
-		h2,
-		h3 {
-			orphans: 3;
-			widows: 3;
-		}
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-		h2,
-		h3 {
-			page-break-after: avoid;
-		}
+  h2,
+  h3 {
+   page-break-after: avoid;
+  }
 
-	}
+  }
 
 }

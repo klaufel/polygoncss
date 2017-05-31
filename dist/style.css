@@ -1,91 +1,80 @@
 /* ============================================================
  * STRUCTURE ITCSS AND BEMIT (BEM)
  * ============================================================
- * Repo: https://github.com/klaufel/structure-itcss-bemit
  *
  * This project uses ITCSS: Scalable and Maintainable
  * CSS Architecture and BEMIT (BEM) Methodology.
  *
  * This file imports all styles (scss) to the main file for compile.
+ *
  */
-/*
-|--------------------------------------------------------------------------
-| SETTINGS
-|--------------------------------------------------------------------------
-|
-| Import all the scss files in the settings layer.
-|
-*/
-/*
-|--------------------------------------------------------------------------
-| SETTINGS: CONFIG
-|--------------------------------------------------------------------------
-|
-| In this document all the configuration variables referring
-| to the project are declared.
-|
-*/
-/*
-| LAYOUT COLUMNS
-| See 05_objects/_objects__layout.scss
-*/
-/*
-| ENABLE PRINT FUNCTIONS
-| See 03_generic/_generic__print.scss
-*/
-/*
-| DEBUG UTILITIES TRUMP
-| See 07_utilities/_utilities__debug.scss
-*/
-/*
-| PATHS
-| Define assets paths here
-*/
-/*
-| BREAKPOINT SEPARATOR
-| Define the breakpoint separator
-*/
-/*
-| NAMESPACING
-| Define assets paths here
-*/
-/*
-| BEM (BEMIT) SYNTAX
-| Define a bem (bemit) syntax
-*/
-/*
-|--------------------------------------------------------------------------
-| SETTINGS: FONTS
-|--------------------------------------------------------------------------
-|
-| Fonts utilized by the project brand
-|
-*/
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-/*
-|--------------------------------------------------------------------------
-| Tools
-|--------------------------------------------------------------------------
-|
-| Import all the scss files in the tools layer.
-|
-*/
-/*
-|--------------------------------------------------------------------------
-| Objects
-|--------------------------------------------------------------------------
-|
-| Import all the scss files in the objects layer.
-|
-*/
-/*
-|--------------------------------------------------------------------------
-| Components
-|--------------------------------------------------------------------------
-|
-| Import all the scss files in the components layer.
-|
-*/
+/* ============================================================
+ * Settings
+ * ============================================================
+ *
+ * Import all the scss files in the settings layer.
+ *
+ */
+/* ============================================================
+ * Settings: Config
+ * ============================================================
+ *
+ * In this document all the configuration variables referring
+ * to the project are declared.
+ *
+ */
+/* ============================================================
+ * Settings: Variables
+ * ============================================================
+ *
+ * Global variables which affect the elements of the project
+ *
+ */
+/* ============================================================
+ * Settings: Fonts
+ * ============================================================
+ *
+ * Fonts utilized by the project brand
+ *
+ */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+/* ============================================================
+ * Tools
+ * ============================================================
+ *
+ * Import all the scss files in the tools layer.
+ *
+ */
+/* ============================================================
+ * Tools: Mixins
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+/* ============================================================
+ * Tools: Media Queries
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+/* ============================================================
+ * Objects
+ * ============================================================
+ *
+ * Import all the scss files in the objects layer.
+ *
+ */
+/* ============================================================
+ * Components
+ * ============================================================
+ *
+ * Import all the scss files in the components layer.
+ *
+ */
 /* ============================================================
  * Components: Buttons
  * ============================================================
@@ -111,11 +100,12 @@
   background: #00aeef;
   color: #ffffff;
   font-weight: 20px;
+  text-decoration: none;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.25;
   transition: background 0.2s; }
-  .c-button, .c-button:hover, .c-button:focus, .c-button:active {
+  .c-button:hover, .c-button:focus, .c-button:active {
     text-decoration: none; }
   .c-button:hover {
     background-color: #404044;
@@ -133,37 +123,28 @@
     opacity: .5;
     box-shadow: none; }
 
-/*
-|--------------------------------------------------------------------------
-|  Components: Forms
-|--------------------------------------------------------------------------
-|
-| The Laravel configuration loader is responsible for returning an array
-| of configuration options for a given bundle and file. By default, we
-| use the files provided with Laravel; however, you are free to use
-| your own storage mechanism for configuration arrays.
-|
-*/
-/**
- * ------------------------------------------------------------------------
- * UTILITIES
- * ------------------------------------------------------------------------
+/* ============================================================
+ * Components: Forms
+ * ============================================================
  *
- * Import all the scss files in the utlities layer.
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
  *
-**/
-/*
-|--------------------------------------------------------------------------
-| UTILITIES: DEBUG
-|--------------------------------------------------------------------------
-|
-| See var $s-config__debug in "settings/_settings__config.scss"
-|
-*/
-/*
-| Output CSS
-|--------------------------------------------------------------------------
-*/
+ */
+/* ============================================================
+ * Utilities
+ * ============================================================
+ *
+ * Import all the scss files in the utilities layer.
+ *
+ */
+/* ============================================================
+ * Utilities: Debug
+ * ============================================================
+ *
+ * See var $s-config__debug in "settings/_settings__config.scss"
+ *
+ */
 [style] {
   outline: 2px solid yellow !important; }
 
@@ -171,7 +152,7 @@
   outline: 2px solid blue !important; }
 
 [class] {
-  outline: 2px solid lightgrey !important; }
+  outline: 2px solid green !important; }
 
 [class^="o-"] {
   outline: 2px solid blue !important; }

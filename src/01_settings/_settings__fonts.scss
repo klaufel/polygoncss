@@ -1,46 +1,53 @@
-/*
-|--------------------------------------------------------------------------
-| SETTINGS: FONTS
-|--------------------------------------------------------------------------
-|
-| Fonts utilized by the project brand
-|
-*/
+/* ============================================================
+ * Settings: Fonts
+ * ============================================================
+ *
+ * Fonts utilized by the project brand
+ *
+ */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-$s-fonts__font-family:      'Montserrat', sans-serif !default;
-$s-fonts__font-size:        16px !default;
-$s-fonts__line-height:      20px !default;
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-$s-fonts__font-size--sm:        16px !default;
-$s-fonts__line-height--sm:      20px !default;
 
-$s-fonts__font-size--md:        16px !default;
-$s-fonts__line-height--md:      20px !default;
+// ============================================================ 
+
+
+$s-fonts__font-family:            'Montserrat', sans-serif !default;
+$s-fonts__font-size:              16px !default;
+$s-fonts__line-height:            20px !default;
+
+$s-fonts__font-size--sm:          16px !default;
+$s-fonts__line-height--sm:        20px !default;
+
+$s-fonts__font-size--md:          16px !default;
+$s-fonts__line-height--md:        20px !default;
+
+
+// ============================================================ 
 
 
 $s-fonts: (
-  'font-family':    $s-fonts__font-family,
-  'font-size':      $s-fonts__font-size,
-  'line-height':    $s-fonts__line-height
+  'font-family':        $s-fonts__font-family,
+  'font-size':          $s-fonts__font-size,
+  'line-height':        $s-fonts__line-height
 ) !default;
 
 
 $s-fonts--viewport: (
   'default': (
-    'font-family':    $s-fonts__font-family,
-    'font-size':      $s-fonts__font-size,
-    'line-height':    $s-fonts__line-height
+    'font-family':      $s-fonts__font-family,
+    'font-size':        $s-fonts__font-size,
+    'line-height':      $s-fonts__line-height
   ),
   'small': (
-    'font-family':    $s-fonts__font-family,
-    'font-size':      $s-fonts__font-size--sm,
-    'line-height':    $s-fonts__line-height--sm
+    'font-family':      $s-fonts__font-family,
+    'font-size':        $s-fonts__font-size--sm,
+    'line-height':      $s-fonts__line-height--sm
   ),
   'medium': (
-    'font-family':    $s-fonts__font-family,
-    'font-size':      $s-fonts__font-size--md,
-    'line-height':    $s-fonts__line-height--md
+    'font-family':      $s-fonts__font-family,
+    'font-size':        $s-fonts__font-size--md,
+    'line-height':      $s-fonts__line-height--md
   )
 ) !default;

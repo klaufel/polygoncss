@@ -1,12 +1,14 @@
-//
-// Generic: Global
-// --------------------------------------------------
-
-//## General global styles
+/* ============================================================
+ * Generic: Global
+ * ============================================================
+ *
+ * General global styles
+ *
+ */
 
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: $font-global;
-	font-size: $font-size-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $font-global;
+  font-size: $font-size-base;
 }
