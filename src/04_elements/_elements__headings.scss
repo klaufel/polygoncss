@@ -1,0 +1,28 @@
+/* ============================================================
+ * Elements: Headings
+ * ============================================================
+ *
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * (http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
+ *
+ */
+
+
+// Headings variables
+
+$e-headings__font-size:        16px !default;
+$e-headings__line-height:      20px !default;
+$e-headings__font-weight:      400 !default;
+
+
+// Headings output
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  @include t-font-size($e-headings__font-size, $e-headings__line-height);
+  font-weight: $e-headings__font-weight;
+}

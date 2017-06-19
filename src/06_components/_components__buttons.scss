@@ -8,32 +8,40 @@
  */
 
 
+// Variables
+
 $c-button__font-size:              16px !default;
 $c-button__line-height:            auto !default;
 $c-button__font-weight:            20px !default;
 
 $c-button__border-width:           0 !default;
 $c-button__border-color:           transparent !default;
-$c-button__border-radius:          30px !default;
+$c-button__border-radius:          5px !default;
 
+
+$c-button__padding-y:              10px !default;
 $c-button__padding-x:              20px !default;
-$c-button__padding-y:              15px !default;
 
 $c-button__color:                  #ffffff !default;
-$c-button__background:             #00aeef !default;
+$c-button__background:             #3498db !default;
 
 $c-button__cursor--default:        pointer !default;
 $c-button__cursor--disabled:       not-allowed !default;
 
-$c-button__color-hover:            #ffffff !default;
-$c-button__background-hover:       #404044 !default;
 
-$c-button__color-active:           #ffffff !default;
-$c-button__background-active:      #27272a !default;
+// Hover
+$c-button__color--hover:            #ffffff !default;
+$c-button__background--hover:       rgba($c-button__background, .8) !default;
+
+// Active
+$c-button__color--active:           #ffffff !default;
+$c-button__background--active:      darken($c-button__background, 10) !default;
 
 
 // ============================================================ 
 
+
+// CSS Output
 
 .c-button {
   font-family: inherit;
@@ -50,8 +58,11 @@ $c-button__background-active:      #27272a !default;
   color: $c-button__color;
   font-weight: $c-button__font-weight;
   text-decoration: none;
-  @include font-size($c-button__font-size, $c-button__line-height);
+  @include t-font-size($c-button__font-size, $c-button__line-height);
   @include transition(background .2s);
+
+
+  margin-bottom: 20px;
 
   // Share hover, focus and active styles
   &:hover,
@@ -61,8 +72,8 @@ $c-button__background-active:      #27272a !default;
   }
 
   &:hover {
-    background-color: $c-button__background-hover;
-    color: $c-button__color-hover;
+    background-color: $c-button__background--hover;
+    color: $c-button__color--hover;
   }
 
   &:focus{
@@ -72,8 +83,8 @@ $c-button__background-active:      #27272a !default;
 
   &:active {
     background-image: none;
-    background-color: $c-button__background-active;
-    color: $c-button__color-active;
+    background-color: $c-button__background--active;
+    color: $c-button__color--active;
     @include box-shadow(none);
   }
 

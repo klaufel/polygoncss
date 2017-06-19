@@ -1,0 +1,21 @@
+/* ============================================================
+ * Elements: Anchors
+ * ============================================================
+ *
+ * Simple default styles for anchor elements.
+ *
+ */
+
+
+// Anchors variables
+
+$e-anchors__color:                #f00 !default;
+$e-anchors__text-decoration:      underline !default;
+
+
+// Anchors output
+
+a {
+  color: $e-anchors__color;
+  text-decoration: $e-anchors__text-decoration;
+}

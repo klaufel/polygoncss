@@ -16,7 +16,7 @@
 // ============================================================
 
 
-@mixin font-size($font-size, $line-height: auto) {
+@mixin t-font-size($font-size, $line-height: auto) {
   font-size: $font-size;
   font-size: rem($font-size);
 

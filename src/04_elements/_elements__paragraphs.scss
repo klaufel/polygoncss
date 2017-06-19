@@ -1,0 +1,19 @@
+/* ============================================================
+ * Elements: Paragraphs
+ * ============================================================
+ *
+ * Simple default styles for paragraphs.
+ *
+ */
+
+
+// Paragraphs variables
+
+$e-paragraphs__margin-bottom:     30px !default;
+
+
+// Paragraphs output
+
+p {
+  margin-bottom: $e-paragraphs__margin-bottom;
+}

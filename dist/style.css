@@ -62,6 +62,528 @@
  *
  */
 /* ============================================================
+ * Generic
+ * ============================================================
+ *
+ * Import all the scss files in the generic layer.
+ *
+ */
+/* ============================================================
+ * Generic: Normalize
+ * ============================================================
+ *
+ * normalize.css v6.0.0
+ * License: MIT License 
+ * Repo: github.com/necolas/normalize.css
+ *
+ */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+* {
+  box-sizing: border-box; }
+
+/* ============================================================
+ * Generic: Global
+ * ============================================================
+ *
+ * General global styles
+ *
+ */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px; }
+
+/* ============================================================
+ * Generic: Print
+ * ============================================================
+ *
+ * Print styles
+ * See var $s-config__print in "settings/_settings__config.scss"
+ *
+ */
+@media print {
+  *,
+  *::before,
+  *::after,
+  p::first-letter,
+  div::first-letter,
+  blockquote::first-letter,
+  li::first-letter,
+  p::first-line,
+  div::first-line,
+  blockquote::first-line,
+  li::first-line {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    box-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]::after {
+    content: " (" attr(href) ")"; }
+  abbr[title]::after {
+    content: " (" attr(title) ")"; }
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: ""; }
+  pre {
+    white-space: pre-wrap !important; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/* ============================================================
+ * Elements
+ * ============================================================
+ *
+ * Import all the scss files in the elements layer.
+ *
+ */
+/* ============================================================
+ * Elements: Headings
+ * ============================================================
+ *
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * (http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
+ *
+ */
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  font-weight: 400; }
+
+/* ============================================================
+ * Elements: Paragraphs
+ * ============================================================
+ *
+ * Simple default styles for paragraphs.
+ *
+ */
+p {
+  margin-bottom: 30px; }
+
+/* ============================================================
+ * Elements: Anchors
+ * ============================================================
+ *
+ * Simple default styles for anchor elements.
+ *
+ */
+a {
+  color: #f00;
+  text-decoration: underline; }
+
+/* ============================================================
+ * Elements: Images
+ * ============================================================
+ *
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ *
+ */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */ }
+
+/* ============================================================
  * Objects
  * ============================================================
  *
@@ -94,28 +616,29 @@
       -ms-user-select: none;
           user-select: none;
   border: 0 solid transparent;
-  border-radius: 30px;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 15px 20px;
-  background: #00aeef;
+  padding: 10px 20px;
+  background: #3498db;
   color: #ffffff;
   font-weight: 20px;
   text-decoration: none;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.25;
-  transition: background 0.2s; }
+  transition: background 0.2s;
+  margin-bottom: 20px; }
   .c-button:hover, .c-button:focus, .c-button:active {
     text-decoration: none; }
   .c-button:hover {
-    background-color: #404044;
+    background-color: rgba(52, 152, 219, 0.8);
     color: #ffffff; }
   .c-button:focus {
     outline: 0;
     box-shadow: none; }
   .c-button:active {
     background-image: none;
-    background-color: #27272a;
+    background-color: #217dbb;
     color: #ffffff;
     box-shadow: none; }
   .c-button:disabled, .c-button.is-disabled {
@@ -131,6 +654,118 @@
  * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
  *
  */
+.c-form {
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  text-align: left;
+  border: 0;
+  border: 2px solid #ccc;
+  border-radius: 0;
+  padding: 10px 10px;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  color: #000;
+  font-weight: 400;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: border .3s, color .3s;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 18px; }
+
+.c-form__input {
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  text-align: left;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  padding: 10px 10px;
+  background-color: transparent;
+  background-image: none;
+  background-clip: padding-box;
+  color: #000;
+  font-weight: 400;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: border .3s, color .3s;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 18px; }
+  .c-form__input, .c-form__input:hover, .c-form__input:focus, .c-form__input:active {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    box-shadow: none;
+    outline: none; }
+  .c-form__input::-ms-expand {
+    background-color: transparent;
+    border: 0; }
+  .c-form__input::-webkit-input-placeholder {
+    color: #ccc;
+    opacity: 1;
+    transition: color .3s; }
+  .c-form__input::-moz-placeholder {
+    color: #ccc;
+    opacity: 1;
+    transition: color .3s; }
+  .c-form__input:-ms-input-placeholder {
+    color: #ccc;
+    opacity: 1;
+    transition: color .3s; }
+  .c-form__input::placeholder {
+    color: #ccc;
+    opacity: 1;
+    transition: color .3s; }
+  .c-form__input:disabled, .c-form__input[readonly] {
+    opacity: 1;
+    cursor: not-allowed; }
+  .c-form__input:hover {
+    border-color: #000; }
+  .c-form__input:focus {
+    border-color: #000;
+    color: #000;
+    font-weight: 400; }
+    .c-form__input:focus::-webkit-input-placeholder {
+      color: #000;
+      opacity: 1; }
+    .c-form__input:focus::-moz-placeholder {
+      color: #000;
+      opacity: 1; }
+    .c-form__input:focus:-ms-input-placeholder {
+      color: #000;
+      opacity: 1; }
+    .c-form__input:focus::placeholder {
+      color: #000;
+      opacity: 1; }
+  .c-form__input.has-valid {
+    color: red;
+    border-color: red; }
+    .c-form__input.has-valid::-webkit-input-placeholder {
+      color: red; }
+    .c-form__input.has-valid::-moz-placeholder {
+      color: red; }
+    .c-form__input.has-valid:-ms-input-placeholder {
+      color: red; }
+    .c-form__input.has-valid::placeholder {
+      color: red; }
+  .c-form__input.has-error {
+    color: #ff0000;
+    border-color: #ff0000; }
+    .c-form__input.has-error::-webkit-input-placeholder {
+      color: #ff0000; }
+    .c-form__input.has-error::-moz-placeholder {
+      color: #ff0000; }
+    .c-form__input.has-error:-ms-input-placeholder {
+      color: #ff0000; }
+    .c-form__input.has-error::placeholder {
+      color: #ff0000; }
+
 /* ============================================================
  * Utilities
  * ============================================================
@@ -145,41 +780,3 @@
  * See var $s-config__debug in "settings/_settings__config.scss"
  *
  */
-[style] {
-  outline: 2px solid yellow !important; }
-
-[id] {
-  outline: 2px solid blue !important; }
-
-[class] {
-  outline: 2px solid green !important; }
-
-[class^="o-"] {
-  outline: 2px solid blue !important; }
-
-[class*="o-"] {
-  outline: 2px solid blue !important; }
-
-[class^="c-"] {
-  outline: 2px solid blue !important; }
-
-[class*="c-"] {
-  outline: 2px solid blue !important; }
-
-[class^="u-"] {
-  outline: 2px solid blue !important; }
-
-[class*="u-"] {
-  outline: 2px solid blue !important; }
-
-[class*="__"] {
-  outline: 2px solid black !important; }
-
-[class*="--"] {
-  outline: 2px solid black !important; }
-
-[class*="@"] {
-  outline: 2px solid red !important; }
-
-[class^="_"] {
-  outline: 2px solid red !important; }
