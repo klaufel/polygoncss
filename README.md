@@ -23,43 +23,65 @@ $ gulp
 ## Folder structure
 
 ```
+
+
+
+
+
 src/
 ├── 01_settings/
-│   ├── _settings.scss
-│   ├── _settings__config.scss
-│   ├── _settings__fonts.scss
-│   └── _settings__variables.scss
+│   ├── settings.scss
+│   ├── 01_settings__config.scss
+│   ├── 02_settings__variables.scss
+│   ├── 03_settings__breakpoints.scss
+│   ├── 04_settings__colors.scss
+│   └── 05_settings__fonts.scss
 │ 
 ├── 02_tools/
-│   ├── _tools.scss
-│   ├── _tools__media-queries.scss
-│   ├── _tools__mixins.scss
+│   ├── tools.scss
+│   ├── 01_tools__mixins.scss
+│   └── 02_tools__media-queries.scss
 │ 
 ├── 03_generic/
-│   ├── _generic.scss
-│   ├── _generic__box-sizing.scss
-│   ├── _generic__global.scss
-│   ├── _generic__normalize.scss
-│   └── _generic__print.scss
+│   ├── generic.scss
+│   ├── 01_generic__normalize.scss
+│   ├── 02_generic__box-sizing.scss
+│   ├── 03_generic__global.scss
+│   └── 04_generic__print.scss
 │ 
 ├── 04_elements/
-│   ├── _elements.scss
-│   └── _elements__elements.scss
+│   ├── elements.scss
+│   ├── 01_elements__headings.scss
+│   ├── 02_elements__paragraphs.scss
+│   ├── 03_elements__anchors.scss
+│   └── 04_elements__images.scss
+│
+├── 05_headings/
+│   ├── headings.scss
+│   ├── 01_headings__title.scss
+│   ├── 02_headings__heading.scss
+│   ├── 03_headings__headline.scss
+│   └── 04_headings__subtitle.scss
 │ 
-├── 05_objects/
-│   ├── _objects.scss
-│   ├── _objects__layout.scss
-│   └── _objects__tables.scss
+├── 06_objects/
+│   ├── objects.scss
+│   ├── 01_objects__layout.scss
+│   ├── 02_objects__section.scss
+│   ├── 03_objects__tables.scss
+│   └── 04_objects__title-group.scss
 │ 
-├── 06_components/
-│   ├── _components.scss
-│   ├── _components__buttons.scss
-│   └── _components__forms.scss
+├── 07_components/
+│   ├── components.scss
+│   ├── 01_components__buttons.scss
+│   ├── 02_components__forms.scss
+│   └── structure/
+│       ├── 01_components__header.scss
+│       └── 02_components__footer.scss
 │ 
-├── 07_utilities/
-│   ├── _utilities.scss
-│   ├── _utilities__debug.scss
-│   └── _utilities__trumps.scss
+├── 08_utilities/
+│   ├── utilities.scss
+│   ├── 01_utilities__trumps.scss
+│   └── 02_utilities__debug.scss
 │ 
 └── style.scss
 ```

@@ -31,13 +31,27 @@
  *
  */
 /* ============================================================
+ * Settings: Breakpoints
+ * ============================================================
+ *
+ * Global variables which affect the elements of the project
+ *
+ */
+/* ============================================================
+ * Settings: Colors
+ * ============================================================
+ *
+ * Global variables which affect the elements of the project
+ *
+ */
+/* ============================================================
  * Settings: Fonts
  * ============================================================
  *
  * Fonts utilized by the project brand
  *
  */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url("https://fonts.googleapis.com/css?family=Cousine:400,700");
 /* ============================================================
  * Tools
  * ============================================================
@@ -61,6 +75,17 @@
  * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
  *
  */
+/*
+
+.c-component {
+  width: 100%;
+
+  @include t-mq('sm') {
+    width: 50%;
+  }
+}
+
+*/
 /* ============================================================
  * Generic
  * ============================================================
@@ -451,6 +476,22 @@ template {
   box-sizing: border-box; }
 
 /* ============================================================
+ * Generic: Box sizing
+ * ============================================================
+ *
+ * Modify the default properties of the box model
+ *
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ *
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* ============================================================
  * Generic: Global
  * ============================================================
  *
@@ -460,8 +501,23 @@ template {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px; }
+  font-family: "Cousine", monospace;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  font-size: 14px;
+  line-height: 24px; }
+  @media only screen and (min-width: 768px) {
+    body {
+      font-size: 16px;
+      line-height: 30px; } }
+  @media only screen and (min-width: 992px) {
+    body {
+      font-size: 18px;
+      line-height: 32px; } }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
 
 /* ============================================================
  * Generic: Print
@@ -539,9 +595,9 @@ h4,
 h5,
 h6 {
   font-size: 16px;
-  font-size: 1rem;
   line-height: 20px;
-  font-weight: 400; }
+  font-weight: 400;
+  margin-top: 0; }
 
 /* ============================================================
  * Elements: Paragraphs
@@ -551,6 +607,7 @@ h6 {
  *
  */
 p {
+  margin-top: 0;
   margin-bottom: 30px; }
 
 /* ============================================================
@@ -561,8 +618,8 @@ p {
  *
  */
 a {
-  color: #f00;
-  text-decoration: underline; }
+  color: #1e1e1e;
+  text-decoration: none; }
 
 /* ============================================================
  * Elements: Images
@@ -584,6 +641,98 @@ img {
   /* [3] */ }
 
 /* ============================================================
+ * Headings
+ * ============================================================
+ *
+ * Import all the scss files in the headings layer.
+ *
+ */
+/* ============================================================
+ * Headings: Title
+ * ============================================================
+ *
+ * Lorem ipsum dolor sit amet
+ *
+ */
+.h-title {
+  font-family: "Cousine", monospace;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 34px; }
+  @media only screen and (min-width: 768px) {
+    .h-title {
+      font-size: 50px;
+      line-height: 52px; } }
+  @media only screen and (min-width: 992px) {
+    .h-title {
+      font-size: 60px;
+      line-height: 62px; } }
+
+/* ============================================================
+ * Headings: Heading
+ * ============================================================
+ *
+ * Lorem ipsum dolor sit amet
+ *
+ */
+.h-heading {
+  font-family: "Cousine", monospace;
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-size: 30px;
+  line-height: 32px; }
+  @media only screen and (min-width: 768px) {
+    .h-heading {
+      font-size: 44px;
+      line-height: 46px; } }
+  @media only screen and (min-width: 992px) {
+    .h-heading {
+      font-size: 48px;
+      line-height: 50px; } }
+
+/* ============================================================
+ * Headings: Headline
+ * ============================================================
+ *
+ * Lorem ipsum dolor sit amet
+ *
+ */
+.h-headline {
+  font-family: "Cousine", monospace;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px; }
+  @media only screen and (min-width: 768px) {
+    .h-headline {
+      font-size: 20px;
+      line-height: 34px; } }
+  @media only screen and (min-width: 992px) {
+    .h-headline {
+      font-size: 22px;
+      line-height: 36px; } }
+
+/* ============================================================
+ * Headings: Subtitle
+ * ============================================================
+ *
+ * Lorem ipsum dolor sit amet
+ *
+ */
+.h-subtitle {
+  font-family: "Cousine", monospace;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px; }
+  @media only screen and (min-width: 768px) {
+    .h-subtitle {
+      font-size: 18px;
+      line-height: 32px; } }
+  @media only screen and (min-width: 992px) {
+    .h-subtitle {
+      font-size: 20px;
+      line-height: 34px; } }
+
+/* ============================================================
  * Objects
  * ============================================================
  *
@@ -591,10 +740,832 @@ img {
  *
  */
 /* ============================================================
+ * Objects: Layout
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+.o-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10px;
+  padding-left: 10px; }
+  .o-container--intern {
+    padding-right: 5px;
+    padding-left: 5px; }
+  .o-container--center {
+    text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .o-container {
+      max-width: 768px;
+      padding-right: 30px;
+      padding-left: 30px; }
+      .o-container--intern {
+        padding-right: 15px;
+        padding-left: 15px; }
+      .o-container--inner {
+        max-width: 874px; }
+      .o-container--tiny {
+        max-width: 768px; } }
+  @media only screen and (min-width: 992px) {
+    .o-container {
+      max-width: 977px; }
+      .o-container--inner {
+        max-width: 889px; }
+      .o-container--tiny {
+        max-width: 769px; } }
+  @media only screen and (min-width: 1299px) {
+    .o-container {
+      max-width: 1206px; }
+      .o-container--inner {
+        max-width: 1070px; }
+      .o-container--tiny {
+        max-width: 814px; } }
+
+.o-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  margin-right: -5px;
+  margin-left: -5px;
+  /*&--no-padding {
+		padding: 0;
+
+		& > .column {
+			padding: 0;
+		}
+	}*/ }
+  .o-row--intern {
+    margin-right: inherit;
+    margin-left: inherit; }
+  @media only screen and (min-width: 768px) {
+    .o-row {
+      margin-right: -15px;
+      margin-left: -15px; } }
+  .o-row--wrap {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .o-row--top {
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .o-row--bottom {
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .o-row--center {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .o-row--stretch {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+  .o-row--baseline {
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
+
+.o-col {
+  display: block;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 0;
+  max-width: 100%;
+  width: 100%;
+  font-size: em(14px);
+  padding: 0 5px;
+  position: relative; }
+  .o-col--top {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
+  .o-col--bottom {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+  .o-col--center {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+            align-self: center; }
+  .o-col--no-padding {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .o-col--1 {
+    -webkit-flex: 0 0 1;
+        -ms-flex: 0 0 1;
+            flex: 0 0 1;
+    width: 8.33333%;
+    max-width: 8.33333%; }
+  .o-col--2 {
+    -webkit-flex: 0 0 2;
+        -ms-flex: 0 0 2;
+            flex: 0 0 2;
+    width: 16.66667%;
+    max-width: 16.66667%; }
+  .o-col--3 {
+    -webkit-flex: 0 0 3;
+        -ms-flex: 0 0 3;
+            flex: 0 0 3;
+    width: 25%;
+    max-width: 25%; }
+  .o-col--4 {
+    -webkit-flex: 0 0 4;
+        -ms-flex: 0 0 4;
+            flex: 0 0 4;
+    width: 33.33333%;
+    max-width: 33.33333%; }
+  .o-col--5 {
+    -webkit-flex: 0 0 5;
+        -ms-flex: 0 0 5;
+            flex: 0 0 5;
+    width: 41.66667%;
+    max-width: 41.66667%; }
+  .o-col--6 {
+    -webkit-flex: 0 0 6;
+        -ms-flex: 0 0 6;
+            flex: 0 0 6;
+    width: 50%;
+    max-width: 50%; }
+  .o-col--7 {
+    -webkit-flex: 0 0 7;
+        -ms-flex: 0 0 7;
+            flex: 0 0 7;
+    width: 58.33333%;
+    max-width: 58.33333%; }
+  .o-col--8 {
+    -webkit-flex: 0 0 8;
+        -ms-flex: 0 0 8;
+            flex: 0 0 8;
+    width: 66.66667%;
+    max-width: 66.66667%; }
+  .o-col--9 {
+    -webkit-flex: 0 0 9;
+        -ms-flex: 0 0 9;
+            flex: 0 0 9;
+    width: 75%;
+    max-width: 75%; }
+  .o-col--10 {
+    -webkit-flex: 0 0 10;
+        -ms-flex: 0 0 10;
+            flex: 0 0 10;
+    width: 83.33333%;
+    max-width: 83.33333%; }
+  .o-col--11 {
+    -webkit-flex: 0 0 11;
+        -ms-flex: 0 0 11;
+            flex: 0 0 11;
+    width: 91.66667%;
+    max-width: 91.66667%; }
+  .o-col--12 {
+    -webkit-flex: 0 0 12;
+        -ms-flex: 0 0 12;
+            flex: 0 0 12;
+    width: 100%;
+    max-width: 100%; }
+  @media only screen and (min-width: 600px) {
+    .o-col--1\@xs {
+      -webkit-flex: 0 0 1;
+          -ms-flex: 0 0 1;
+              flex: 0 0 1;
+      width: 8.33333%;
+      max-width: 8.33333%; }
+    .o-col--2\@xs {
+      -webkit-flex: 0 0 2;
+          -ms-flex: 0 0 2;
+              flex: 0 0 2;
+      width: 16.66667%;
+      max-width: 16.66667%; }
+    .o-col--3\@xs {
+      -webkit-flex: 0 0 3;
+          -ms-flex: 0 0 3;
+              flex: 0 0 3;
+      width: 25%;
+      max-width: 25%; }
+    .o-col--4\@xs {
+      -webkit-flex: 0 0 4;
+          -ms-flex: 0 0 4;
+              flex: 0 0 4;
+      width: 33.33333%;
+      max-width: 33.33333%; }
+    .o-col--5\@xs {
+      -webkit-flex: 0 0 5;
+          -ms-flex: 0 0 5;
+              flex: 0 0 5;
+      width: 41.66667%;
+      max-width: 41.66667%; }
+    .o-col--6\@xs {
+      -webkit-flex: 0 0 6;
+          -ms-flex: 0 0 6;
+              flex: 0 0 6;
+      width: 50%;
+      max-width: 50%; }
+    .o-col--7\@xs {
+      -webkit-flex: 0 0 7;
+          -ms-flex: 0 0 7;
+              flex: 0 0 7;
+      width: 58.33333%;
+      max-width: 58.33333%; }
+    .o-col--8\@xs {
+      -webkit-flex: 0 0 8;
+          -ms-flex: 0 0 8;
+              flex: 0 0 8;
+      width: 66.66667%;
+      max-width: 66.66667%; }
+    .o-col--9\@xs {
+      -webkit-flex: 0 0 9;
+          -ms-flex: 0 0 9;
+              flex: 0 0 9;
+      width: 75%;
+      max-width: 75%; }
+    .o-col--10\@xs {
+      -webkit-flex: 0 0 10;
+          -ms-flex: 0 0 10;
+              flex: 0 0 10;
+      width: 83.33333%;
+      max-width: 83.33333%; }
+    .o-col--11\@xs {
+      -webkit-flex: 0 0 11;
+          -ms-flex: 0 0 11;
+              flex: 0 0 11;
+      width: 91.66667%;
+      max-width: 91.66667%; }
+    .o-col--12\@xs {
+      -webkit-flex: 0 0 12;
+          -ms-flex: 0 0 12;
+              flex: 0 0 12;
+      width: 100%;
+      max-width: 100%; } }
+  @media only screen and (min-width: 768px) {
+    .o-col--1\@sm {
+      -webkit-flex: 0 0 1;
+          -ms-flex: 0 0 1;
+              flex: 0 0 1;
+      width: 8.33333%;
+      max-width: 8.33333%; }
+    .o-col--2\@sm {
+      -webkit-flex: 0 0 2;
+          -ms-flex: 0 0 2;
+              flex: 0 0 2;
+      width: 16.66667%;
+      max-width: 16.66667%; }
+    .o-col--3\@sm {
+      -webkit-flex: 0 0 3;
+          -ms-flex: 0 0 3;
+              flex: 0 0 3;
+      width: 25%;
+      max-width: 25%; }
+    .o-col--4\@sm {
+      -webkit-flex: 0 0 4;
+          -ms-flex: 0 0 4;
+              flex: 0 0 4;
+      width: 33.33333%;
+      max-width: 33.33333%; }
+    .o-col--5\@sm {
+      -webkit-flex: 0 0 5;
+          -ms-flex: 0 0 5;
+              flex: 0 0 5;
+      width: 41.66667%;
+      max-width: 41.66667%; }
+    .o-col--6\@sm {
+      -webkit-flex: 0 0 6;
+          -ms-flex: 0 0 6;
+              flex: 0 0 6;
+      width: 50%;
+      max-width: 50%; }
+    .o-col--7\@sm {
+      -webkit-flex: 0 0 7;
+          -ms-flex: 0 0 7;
+              flex: 0 0 7;
+      width: 58.33333%;
+      max-width: 58.33333%; }
+    .o-col--8\@sm {
+      -webkit-flex: 0 0 8;
+          -ms-flex: 0 0 8;
+              flex: 0 0 8;
+      width: 66.66667%;
+      max-width: 66.66667%; }
+    .o-col--9\@sm {
+      -webkit-flex: 0 0 9;
+          -ms-flex: 0 0 9;
+              flex: 0 0 9;
+      width: 75%;
+      max-width: 75%; }
+    .o-col--10\@sm {
+      -webkit-flex: 0 0 10;
+          -ms-flex: 0 0 10;
+              flex: 0 0 10;
+      width: 83.33333%;
+      max-width: 83.33333%; }
+    .o-col--11\@sm {
+      -webkit-flex: 0 0 11;
+          -ms-flex: 0 0 11;
+              flex: 0 0 11;
+      width: 91.66667%;
+      max-width: 91.66667%; }
+    .o-col--12\@sm {
+      -webkit-flex: 0 0 12;
+          -ms-flex: 0 0 12;
+              flex: 0 0 12;
+      width: 100%;
+      max-width: 100%; } }
+  @media only screen and (min-width: 992px) {
+    .o-col--1\@md {
+      -webkit-flex: 0 0 1;
+          -ms-flex: 0 0 1;
+              flex: 0 0 1;
+      width: 8.33333%;
+      max-width: 8.33333%; }
+    .o-col--2\@md {
+      -webkit-flex: 0 0 2;
+          -ms-flex: 0 0 2;
+              flex: 0 0 2;
+      width: 16.66667%;
+      max-width: 16.66667%; }
+    .o-col--3\@md {
+      -webkit-flex: 0 0 3;
+          -ms-flex: 0 0 3;
+              flex: 0 0 3;
+      width: 25%;
+      max-width: 25%; }
+    .o-col--4\@md {
+      -webkit-flex: 0 0 4;
+          -ms-flex: 0 0 4;
+              flex: 0 0 4;
+      width: 33.33333%;
+      max-width: 33.33333%; }
+    .o-col--5\@md {
+      -webkit-flex: 0 0 5;
+          -ms-flex: 0 0 5;
+              flex: 0 0 5;
+      width: 41.66667%;
+      max-width: 41.66667%; }
+    .o-col--6\@md {
+      -webkit-flex: 0 0 6;
+          -ms-flex: 0 0 6;
+              flex: 0 0 6;
+      width: 50%;
+      max-width: 50%; }
+    .o-col--7\@md {
+      -webkit-flex: 0 0 7;
+          -ms-flex: 0 0 7;
+              flex: 0 0 7;
+      width: 58.33333%;
+      max-width: 58.33333%; }
+    .o-col--8\@md {
+      -webkit-flex: 0 0 8;
+          -ms-flex: 0 0 8;
+              flex: 0 0 8;
+      width: 66.66667%;
+      max-width: 66.66667%; }
+    .o-col--9\@md {
+      -webkit-flex: 0 0 9;
+          -ms-flex: 0 0 9;
+              flex: 0 0 9;
+      width: 75%;
+      max-width: 75%; }
+    .o-col--10\@md {
+      -webkit-flex: 0 0 10;
+          -ms-flex: 0 0 10;
+              flex: 0 0 10;
+      width: 83.33333%;
+      max-width: 83.33333%; }
+    .o-col--11\@md {
+      -webkit-flex: 0 0 11;
+          -ms-flex: 0 0 11;
+              flex: 0 0 11;
+      width: 91.66667%;
+      max-width: 91.66667%; }
+    .o-col--12\@md {
+      -webkit-flex: 0 0 12;
+          -ms-flex: 0 0 12;
+              flex: 0 0 12;
+      width: 100%;
+      max-width: 100%; } }
+  @media only screen and (min-width: 1299px) {
+    .o-col--1\@lg {
+      -webkit-flex: 0 0 1;
+          -ms-flex: 0 0 1;
+              flex: 0 0 1;
+      width: 8.33333%;
+      max-width: 8.33333%; }
+    .o-col--2\@lg {
+      -webkit-flex: 0 0 2;
+          -ms-flex: 0 0 2;
+              flex: 0 0 2;
+      width: 16.66667%;
+      max-width: 16.66667%; }
+    .o-col--3\@lg {
+      -webkit-flex: 0 0 3;
+          -ms-flex: 0 0 3;
+              flex: 0 0 3;
+      width: 25%;
+      max-width: 25%; }
+    .o-col--4\@lg {
+      -webkit-flex: 0 0 4;
+          -ms-flex: 0 0 4;
+              flex: 0 0 4;
+      width: 33.33333%;
+      max-width: 33.33333%; }
+    .o-col--5\@lg {
+      -webkit-flex: 0 0 5;
+          -ms-flex: 0 0 5;
+              flex: 0 0 5;
+      width: 41.66667%;
+      max-width: 41.66667%; }
+    .o-col--6\@lg {
+      -webkit-flex: 0 0 6;
+          -ms-flex: 0 0 6;
+              flex: 0 0 6;
+      width: 50%;
+      max-width: 50%; }
+    .o-col--7\@lg {
+      -webkit-flex: 0 0 7;
+          -ms-flex: 0 0 7;
+              flex: 0 0 7;
+      width: 58.33333%;
+      max-width: 58.33333%; }
+    .o-col--8\@lg {
+      -webkit-flex: 0 0 8;
+          -ms-flex: 0 0 8;
+              flex: 0 0 8;
+      width: 66.66667%;
+      max-width: 66.66667%; }
+    .o-col--9\@lg {
+      -webkit-flex: 0 0 9;
+          -ms-flex: 0 0 9;
+              flex: 0 0 9;
+      width: 75%;
+      max-width: 75%; }
+    .o-col--10\@lg {
+      -webkit-flex: 0 0 10;
+          -ms-flex: 0 0 10;
+              flex: 0 0 10;
+      width: 83.33333%;
+      max-width: 83.33333%; }
+    .o-col--11\@lg {
+      -webkit-flex: 0 0 11;
+          -ms-flex: 0 0 11;
+              flex: 0 0 11;
+      width: 91.66667%;
+      max-width: 91.66667%; }
+    .o-col--12\@lg {
+      -webkit-flex: 0 0 12;
+          -ms-flex: 0 0 12;
+              flex: 0 0 12;
+      width: 100%;
+      max-width: 100%; } }
+  @media only screen and (min-width: 1400px) {
+    .o-col--1\@xl {
+      -webkit-flex: 0 0 1;
+          -ms-flex: 0 0 1;
+              flex: 0 0 1;
+      width: 8.33333%;
+      max-width: 8.33333%; }
+    .o-col--2\@xl {
+      -webkit-flex: 0 0 2;
+          -ms-flex: 0 0 2;
+              flex: 0 0 2;
+      width: 16.66667%;
+      max-width: 16.66667%; }
+    .o-col--3\@xl {
+      -webkit-flex: 0 0 3;
+          -ms-flex: 0 0 3;
+              flex: 0 0 3;
+      width: 25%;
+      max-width: 25%; }
+    .o-col--4\@xl {
+      -webkit-flex: 0 0 4;
+          -ms-flex: 0 0 4;
+              flex: 0 0 4;
+      width: 33.33333%;
+      max-width: 33.33333%; }
+    .o-col--5\@xl {
+      -webkit-flex: 0 0 5;
+          -ms-flex: 0 0 5;
+              flex: 0 0 5;
+      width: 41.66667%;
+      max-width: 41.66667%; }
+    .o-col--6\@xl {
+      -webkit-flex: 0 0 6;
+          -ms-flex: 0 0 6;
+              flex: 0 0 6;
+      width: 50%;
+      max-width: 50%; }
+    .o-col--7\@xl {
+      -webkit-flex: 0 0 7;
+          -ms-flex: 0 0 7;
+              flex: 0 0 7;
+      width: 58.33333%;
+      max-width: 58.33333%; }
+    .o-col--8\@xl {
+      -webkit-flex: 0 0 8;
+          -ms-flex: 0 0 8;
+              flex: 0 0 8;
+      width: 66.66667%;
+      max-width: 66.66667%; }
+    .o-col--9\@xl {
+      -webkit-flex: 0 0 9;
+          -ms-flex: 0 0 9;
+              flex: 0 0 9;
+      width: 75%;
+      max-width: 75%; }
+    .o-col--10\@xl {
+      -webkit-flex: 0 0 10;
+          -ms-flex: 0 0 10;
+              flex: 0 0 10;
+      width: 83.33333%;
+      max-width: 83.33333%; }
+    .o-col--11\@xl {
+      -webkit-flex: 0 0 11;
+          -ms-flex: 0 0 11;
+              flex: 0 0 11;
+      width: 91.66667%;
+      max-width: 91.66667%; }
+    .o-col--12\@xl {
+      -webkit-flex: 0 0 12;
+          -ms-flex: 0 0 12;
+              flex: 0 0 12;
+      width: 100%;
+      max-width: 100%; } }
+  .o-col--offset-1 {
+    margin-left: 8.33333%; }
+  .o-col--offset-2 {
+    margin-left: 16.66667%; }
+  .o-col--offset-3 {
+    margin-left: 25%; }
+  .o-col--offset-4 {
+    margin-left: 33.33333%; }
+  .o-col--offset-5 {
+    margin-left: 41.66667%; }
+  .o-col--offset-6 {
+    margin-left: 50%; }
+  .o-col--offset-7 {
+    margin-left: 58.33333%; }
+  .o-col--offset-8 {
+    margin-left: 66.66667%; }
+  .o-col--offset-9 {
+    margin-left: 75%; }
+  .o-col--offset-10 {
+    margin-left: 83.33333%; }
+  .o-col--offset-11 {
+    margin-left: 91.66667%; }
+  .o-col--offset-12 {
+    margin-left: 100%; }
+  @media only screen and (min-width: 600px) {
+    .o-col--offset-1\@xs {
+      margin-left: 8.33333%; }
+    .o-col--offset-2\@xs {
+      margin-left: 16.66667%; }
+    .o-col--offset-3\@xs {
+      margin-left: 25%; }
+    .o-col--offset-4\@xs {
+      margin-left: 33.33333%; }
+    .o-col--offset-5\@xs {
+      margin-left: 41.66667%; }
+    .o-col--offset-6\@xs {
+      margin-left: 50%; }
+    .o-col--offset-7\@xs {
+      margin-left: 58.33333%; }
+    .o-col--offset-8\@xs {
+      margin-left: 66.66667%; }
+    .o-col--offset-9\@xs {
+      margin-left: 75%; }
+    .o-col--offset-10\@xs {
+      margin-left: 83.33333%; }
+    .o-col--offset-11\@xs {
+      margin-left: 91.66667%; }
+    .o-col--offset-12\@xs {
+      margin-left: 100%; } }
+  @media only screen and (min-width: 768px) {
+    .o-col--offset-1\@sm {
+      margin-left: 8.33333%; }
+    .o-col--offset-2\@sm {
+      margin-left: 16.66667%; }
+    .o-col--offset-3\@sm {
+      margin-left: 25%; }
+    .o-col--offset-4\@sm {
+      margin-left: 33.33333%; }
+    .o-col--offset-5\@sm {
+      margin-left: 41.66667%; }
+    .o-col--offset-6\@sm {
+      margin-left: 50%; }
+    .o-col--offset-7\@sm {
+      margin-left: 58.33333%; }
+    .o-col--offset-8\@sm {
+      margin-left: 66.66667%; }
+    .o-col--offset-9\@sm {
+      margin-left: 75%; }
+    .o-col--offset-10\@sm {
+      margin-left: 83.33333%; }
+    .o-col--offset-11\@sm {
+      margin-left: 91.66667%; }
+    .o-col--offset-12\@sm {
+      margin-left: 100%; } }
+  @media only screen and (min-width: 992px) {
+    .o-col--offset-1\@md {
+      margin-left: 8.33333%; }
+    .o-col--offset-2\@md {
+      margin-left: 16.66667%; }
+    .o-col--offset-3\@md {
+      margin-left: 25%; }
+    .o-col--offset-4\@md {
+      margin-left: 33.33333%; }
+    .o-col--offset-5\@md {
+      margin-left: 41.66667%; }
+    .o-col--offset-6\@md {
+      margin-left: 50%; }
+    .o-col--offset-7\@md {
+      margin-left: 58.33333%; }
+    .o-col--offset-8\@md {
+      margin-left: 66.66667%; }
+    .o-col--offset-9\@md {
+      margin-left: 75%; }
+    .o-col--offset-10\@md {
+      margin-left: 83.33333%; }
+    .o-col--offset-11\@md {
+      margin-left: 91.66667%; }
+    .o-col--offset-12\@md {
+      margin-left: 100%; } }
+  @media only screen and (min-width: 1299px) {
+    .o-col--offset-1\@lg {
+      margin-left: 8.33333%; }
+    .o-col--offset-2\@lg {
+      margin-left: 16.66667%; }
+    .o-col--offset-3\@lg {
+      margin-left: 25%; }
+    .o-col--offset-4\@lg {
+      margin-left: 33.33333%; }
+    .o-col--offset-5\@lg {
+      margin-left: 41.66667%; }
+    .o-col--offset-6\@lg {
+      margin-left: 50%; }
+    .o-col--offset-7\@lg {
+      margin-left: 58.33333%; }
+    .o-col--offset-8\@lg {
+      margin-left: 66.66667%; }
+    .o-col--offset-9\@lg {
+      margin-left: 75%; }
+    .o-col--offset-10\@lg {
+      margin-left: 83.33333%; }
+    .o-col--offset-11\@lg {
+      margin-left: 91.66667%; }
+    .o-col--offset-12\@lg {
+      margin-left: 100%; } }
+  @media only screen and (min-width: 1400px) {
+    .o-col--offset-1\@xl {
+      margin-left: 8.33333%; }
+    .o-col--offset-2\@xl {
+      margin-left: 16.66667%; }
+    .o-col--offset-3\@xl {
+      margin-left: 25%; }
+    .o-col--offset-4\@xl {
+      margin-left: 33.33333%; }
+    .o-col--offset-5\@xl {
+      margin-left: 41.66667%; }
+    .o-col--offset-6\@xl {
+      margin-left: 50%; }
+    .o-col--offset-7\@xl {
+      margin-left: 58.33333%; }
+    .o-col--offset-8\@xl {
+      margin-left: 66.66667%; }
+    .o-col--offset-9\@xl {
+      margin-left: 75%; }
+    .o-col--offset-10\@xl {
+      margin-left: 83.33333%; }
+    .o-col--offset-11\@xl {
+      margin-left: 91.66667%; }
+    .o-col--offset-12\@xl {
+      margin-left: 100%; } }
+  @media only screen and (min-width: 768px) {
+    .o-col {
+      padding-left: 15px;
+      padding-right: 15px; } }
+
+/* ============================================================
+ * Objects: Section
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+.o-section {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+
+/* ============================================================
+ * Objects: Tables
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+/*
+
+.o-table {
+  width: 100%;
+
+  &--fixed {
+    table-layout: fixed;
+  }
+
+
+  &--tiny {
+    th,
+    td {
+      padding: $global-spacing-unit-tiny;
+    }
+  }
+
+  &--small {
+    th,
+    td {
+      padding: $global-spacing-unit-small;
+    }
+  }
+
+  &--large {
+    th,
+    td {
+     padding: $global-spacing-unit-large;
+    }
+  }
+
+  &--huge {
+    th,
+    td {
+      padding: $global-spacing-unit-huge;
+    }
+  }
+}*/
+/* ============================================================
+ * Components: Title group
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+.c-title-group {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto; }
+  @media only screen and (min-width: 768px) {
+    .c-title-group {
+      max-width: 66.66667%; } }
+
+@media only screen and (min-width: 768px) {
+  .c-title-group--left .c-title-group__title {
+    text-align: left; } }
+
+.c-title-group__title {
+  text-align: center; }
+
+.c-title-group__description {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .c-title-group__description {
+      display: block; } }
+
+.c-title-group__button {
+  margin-top: 30px; }
+
+/* ============================================================
  * Components
  * ============================================================
  *
  * Import all the scss files in the components layer.
+ *
+ */
+/* ============================================================
+ * Components: Header
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+/* ============================================================
+ * Components: Footer
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
  *
  */
 /* ============================================================
@@ -616,7 +1587,7 @@ img {
       -ms-user-select: none;
           user-select: none;
   border: 0 solid transparent;
-  border-radius: 5px;
+  border-radius: 0;
   cursor: pointer;
   padding: 10px 20px;
   background: #3498db;
@@ -624,9 +1595,8 @@ img {
   font-weight: 20px;
   text-decoration: none;
   font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.25;
-  transition: background 0.2s;
+  line-height: 1.5;
+  transition: background 0.3s;
   margin-bottom: 20px; }
   .c-button:hover, .c-button:focus, .c-button:active {
     text-decoration: none; }
@@ -654,117 +1624,142 @@ img {
  * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
  *
  */
-.c-form {
-  font-family: inherit;
-  width: 100%;
-  display: block;
-  text-align: left;
-  border: 0;
-  border: 2px solid #ccc;
-  border-radius: 0;
-  padding: 10px 10px;
-  background-color: transparent;
-  background-image: none;
-  background-clip: padding-box;
-  color: #000;
-  font-weight: 400;
-  height: 40px;
+.c-input {
   position: relative;
-  overflow: hidden;
-  transition: border .3s, color .3s;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 18px; }
+  display: block;
+  margin-bottom: 12px;
+  padding-top: 24px;
+  overflow-x: hidden; }
+  @media only screen and (min-width: 768px) {
+    .c-input {
+      margin-bottom: 20px; } }
+  .c-input:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: #333031;
+    z-index: 2;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    transition: background .3s, -webkit-transform .3s;
+    transition: transform .3s, background .3s;
+    transition: transform .3s, background .3s, -webkit-transform .3s; }
+  .c-input.has-filled:before {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0); }
+  .c-input.has-filled .c-input__label {
+    -webkit-transform: translateY(-26px) scale(0.86);
+        -ms-transform: translateY(-26px) scale(0.86);
+            transform: translateY(-26px) scale(0.86);
+    opacity: .4; }
+  .c-input.has-error:before {
+    background: #d55052; }
 
-.c-form__input {
+.c-input__label {
+  position: absolute;
+  bottom: 12px;
+  z-index: 10;
+  left: 0;
+  color: #5d595a;
+  font-size: 14px;
+  line-height: 1.71429;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  -webkit-transform-origin: left bottom;
+      -ms-transform-origin: left bottom;
+          transform-origin: left bottom;
+  transition: opacity .3s, -webkit-transform .3s;
+  transition: transform .3s, opacity .3s;
+  transition: transform .3s, opacity .3s, -webkit-transform .3s; }
+  @media only screen and (min-width: 768px) {
+    .c-input__label {
+      font-size: 16px;
+      line-height: 1.5; } }
+
+.c-input__field {
   font-family: inherit;
   width: 100%;
   display: block;
   text-align: left;
   border: 0;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 4px solid #d8d8d8;
   border-radius: 0;
-  padding: 10px 10px;
+  padding: 5px 0 8px;
   background-color: transparent;
   background-image: none;
   background-clip: padding-box;
-  color: #000;
-  font-weight: 400;
-  height: 40px;
+  color: #1e1e1e;
+  font-weight: 700;
+  height: auto;
   position: relative;
   overflow: hidden;
+  outline: none;
   transition: border .3s, color .3s;
   font-size: 16px;
-  font-size: 1rem;
-  line-height: 18px; }
-  .c-form__input, .c-form__input:hover, .c-form__input:focus, .c-form__input:active {
+  line-height: 1.5; }
+  .c-input__field, .c-input__field:hover, .c-input__field:focus, .c-input__field:active {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
     box-shadow: none;
     outline: none; }
-  .c-form__input::-ms-expand {
+  .c-input__field::-ms-expand {
     background-color: transparent;
     border: 0; }
-  .c-form__input::-webkit-input-placeholder {
-    color: #ccc;
-    opacity: 1;
-    transition: color .3s; }
-  .c-form__input::-moz-placeholder {
-    color: #ccc;
-    opacity: 1;
-    transition: color .3s; }
-  .c-form__input:-ms-input-placeholder {
-    color: #ccc;
-    opacity: 1;
-    transition: color .3s; }
-  .c-form__input::placeholder {
-    color: #ccc;
-    opacity: 1;
-    transition: color .3s; }
-  .c-form__input:disabled, .c-form__input[readonly] {
+  .c-input__field::-webkit-input-placeholder {
+    opacity: 1; }
+  .c-input__field::-moz-placeholder {
+    opacity: 1; }
+  .c-input__field:-ms-input-placeholder {
+    opacity: 1; }
+  .c-input__field::placeholder {
+    opacity: 1; }
+  .c-input__field:disabled, .c-input__field[readonly] {
     opacity: 1;
     cursor: not-allowed; }
-  .c-form__input:hover {
-    border-color: #000; }
-  .c-form__input:focus {
-    border-color: #000;
-    color: #000;
-    font-weight: 400; }
-    .c-form__input:focus::-webkit-input-placeholder {
-      color: #000;
+  .c-input__field:focus {
+    font-weight: 700; }
+    .c-input__field:focus::-webkit-input-placeholder {
       opacity: 1; }
-    .c-form__input:focus::-moz-placeholder {
-      color: #000;
+    .c-input__field:focus::-moz-placeholder {
       opacity: 1; }
-    .c-form__input:focus:-ms-input-placeholder {
-      color: #000;
+    .c-input__field:focus:-ms-input-placeholder {
       opacity: 1; }
-    .c-form__input:focus::placeholder {
-      color: #000;
+    .c-input__field:focus::placeholder {
       opacity: 1; }
-  .c-form__input.has-valid {
-    color: red;
-    border-color: red; }
-    .c-form__input.has-valid::-webkit-input-placeholder {
-      color: red; }
-    .c-form__input.has-valid::-moz-placeholder {
-      color: red; }
-    .c-form__input.has-valid:-ms-input-placeholder {
-      color: red; }
-    .c-form__input.has-valid::placeholder {
-      color: red; }
-  .c-form__input.has-error {
-    color: #ff0000;
-    border-color: #ff0000; }
-    .c-form__input.has-error::-webkit-input-placeholder {
-      color: #ff0000; }
-    .c-form__input.has-error::-moz-placeholder {
-      color: #ff0000; }
-    .c-form__input.has-error:-ms-input-placeholder {
-      color: #ff0000; }
-    .c-form__input.has-error::placeholder {
-      color: #ff0000; }
+  .c-input__field:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+    -webkit-text-fill-color: #1e1e1e; }
+
+select.c-input__field:after {
+  content: " ";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: blue; }
+
+.c-input--light:before {
+  background: #fff; }
+
+.c-input--light .c-input__label {
+  color: #fff; }
+
+.c-input--light .c-input__field {
+  border-color: #5d595a;
+  color: #fff; }
+  .c-input--light .c-input__field:-webkit-autofill {
+    -webkit-text-fill-color: #fff; }
+
+@-webkit-keyframes autofill {
+  to {
+    background: transparent; } }
 
 /* ============================================================
  * Utilities
@@ -773,6 +1768,69 @@ img {
  * Import all the scss files in the utilities layer.
  *
  */
+/* ============================================================
+ * Utilities: Trumps
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+.u-no-margin {
+  margin: 0 !important; }
+
+.u-bold {
+  font-weight: 700 !important; }
+
+.u-anchor-border {
+  border-bottom: 2px solid; }
+
+.u-hidden {
+  display: none; }
+
+@media (min-width: 600px) {
+  .u-hidden\@xs {
+    display: none; } }
+
+@media (min-width: 768px) {
+  .u-hidden\@sm {
+    display: none; } }
+
+@media (min-width: 992px) {
+  .u-hidden\@md {
+    display: none; } }
+
+@media (min-width: 1299px) {
+  .u-hidden\@lg {
+    display: none; } }
+
+@media (min-width: 1400px) {
+  .u-hidden\@xl {
+    display: none; } }
+
+.u-visible {
+  display: inline !important; }
+
+@media (min-width: 600px) {
+  .u-visible\@xs {
+    display: inline; } }
+
+@media (min-width: 768px) {
+  .u-visible\@sm {
+    display: inline; } }
+
+@media (min-width: 992px) {
+  .u-visible\@md {
+    display: inline; } }
+
+@media (min-width: 1299px) {
+  .u-visible\@lg {
+    display: inline; } }
+
+@media (min-width: 1400px) {
+  .u-visible\@xl {
+    display: inline; } }
+
 /* ============================================================
  * Utilities: Debug
  * ============================================================

@@ -1,0 +1,57 @@
+/* ============================================================
+ * Settings: Variables
+ * ============================================================
+ *
+ * Global variables which affect the elements of the project
+ *
+ */
+
+
+// Variables
+
+
+
+// ============================================================
+
+
+// Spacing
+
+$s-spacing--tiny:        5px !default;
+$s-spacing--small:       10px !default;
+$s-spacing--large:       15px !default;
+$s-spacing--huge:        20px !default;
+
+
+// ============================================================
+
+
+// Border width
+
+$s-border-width:         4px !default;
+$s-border-width--sm:     6px !default;
+$s-border-width--md:     6px !default;
+
+
+// Z-index
+
+
+$s-z-index--01:         100;
+$s-z-index--02:         90;
+$s-z-index--03:         80;
+$s-z-index--04:         70;
+$s-z-index--05:         60;
+
+
+$s-z-index__header:             50 !default;
+
+$s-z-index__user-nav:           40 !default;
+
+$s-z-index__cart-wrapper:       40 !default;
+
+$s-z-index__overlay:            20 !default;
+
+
+$s-z-index__user-singup:        30 !default;
+
+
+$s-z-index__account-admin:      90 !default;

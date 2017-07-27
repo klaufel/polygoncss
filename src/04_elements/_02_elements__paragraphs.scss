@@ -15,5 +15,6 @@ $e-paragraphs__margin-bottom:     30px !default;
 // Paragraphs output
 
 p {
+  margin-top: 0;
   margin-bottom: $e-paragraphs__margin-bottom;
 }

@@ -1,5 +1,5 @@
 /* ============================================================
- * Utilities: Trumps
+ * Components: Footer
  * ============================================================
  *
  * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
@@ -8,14 +8,15 @@
  */
 
 
-.o-row {
-  
-  > .o-col:nth-child(odd) {
-    background: #63a7d2 !important;
+// ============================================================
+// Variables
 
-  }
+$c-footer:              false !default;
 
-  > .o-col:nth-child(even) {
-    background: #64c3ff !important;
-  }
+
+// ============================================================
+// Output CSS
+
+.c-footer {
+
 }

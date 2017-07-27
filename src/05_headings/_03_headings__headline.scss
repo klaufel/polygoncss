@@ -1,0 +1,41 @@
+/* ============================================================
+ * Headings: Headline
+ * ============================================================
+ *
+ * Lorem ipsum dolor sit amet
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+$h-headline__font-family:            $s-fonts__font-family !default;
+$h-headline__font-weight:            700 !default;
+$h-headline__font-size:              18px !default;
+$h-headline__line-height:            26px !default;
+
+// Media queries (sm - small)
+$h-headline__font-size--sm:          20px !default;
+$h-headline__line-height--sm:        34px !default;
+
+// Media queries (md- medium)
+$h-headline__font-size--md:          22px !default;
+$h-headline__line-height--md:        36px !default;
+
+
+// ============================================================
+// Output CSS
+
+.h-headline {
+  font-family: $h-headline__font-family;  
+  font-weight: $h-headline__font-weight;
+  @include t-font-size($h-headline__font-size, $h-headline__line-height);
+
+  @include t-mq('sm') {
+    @include t-font-size($h-headline__font-size--sm, $h-headline__line-height--sm);
+  }
+  @include t-mq('md') {
+    @include t-font-size($h-headline__font-size--md, $h-headline__line-height--md);
+  }
+}

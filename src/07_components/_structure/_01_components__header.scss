@@ -1,5 +1,5 @@
 /* ============================================================
- * Tools: Media Queries
+ * Components: Header
  * ============================================================
  *
  * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
@@ -8,8 +8,14 @@
  */
 
 
-@mixin t-media-query($t-breakpoint) {
-  @media (min-width: $s-breakpoint($t-breakpoint)) {
-  	@content;
-  }
+// ============================================================
+// Variables
+
+$c-header:            false !default;
+
+// ============================================================
+// Output CSS
+
+.c-header {
+
 }

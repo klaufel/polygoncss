@@ -7,6 +7,8 @@
  */
 
 
-@import "settings__config";
-@import "settings__variables";
-@import "settings__fonts";
+@import "01_settings__config";
+@import "02_settings__variables";
+@import "03_settings__breakpoints";
+@import "04_settings__colors";
+@import "05_settings__fonts";

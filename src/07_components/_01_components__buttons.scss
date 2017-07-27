@@ -8,6 +8,7 @@
  */
 
 
+// ============================================================
 // Variables
 
 $c-button__font-size:              16px !default;
@@ -16,7 +17,7 @@ $c-button__font-weight:            20px !default;
 
 $c-button__border-width:           0 !default;
 $c-button__border-color:           transparent !default;
-$c-button__border-radius:          5px !default;
+$c-button__border-radius:          0 !default;
 
 
 $c-button__padding-y:              10px !default;
@@ -38,9 +39,7 @@ $c-button__color--active:           #ffffff !default;
 $c-button__background--active:      darken($c-button__background, 10) !default;
 
 
-// ============================================================ 
-
-
+// ============================================================
 // CSS Output
 
 .c-button {
@@ -59,7 +58,7 @@ $c-button__background--active:      darken($c-button__background, 10) !default;
   font-weight: $c-button__font-weight;
   text-decoration: none;
   @include t-font-size($c-button__font-size, $c-button__line-height);
-  @include transition(background .2s);
+  @include transition(background .3s);
 
 
   margin-bottom: 20px;
@@ -78,14 +77,14 @@ $c-button__background--active:      darken($c-button__background, 10) !default;
 
   &:focus{
     outline: 0;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 
   &:active {
     background-image: none;
     background-color: $c-button__background--active;
     color: $c-button__color--active;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 
   // Disabled comes first so active can properly restyle
@@ -93,7 +92,7 @@ $c-button__background--active:      darken($c-button__background, 10) !default;
   &.is-disabled {
     cursor: $c-button__cursor--disabled;
     opacity: .5;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 
 }

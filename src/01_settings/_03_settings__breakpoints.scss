@@ -1,21 +1,11 @@
 /* ============================================================
- * Settings: Variables
+ * Settings: Breakpoints
  * ============================================================
  *
  * Global variables which affect the elements of the project
  *
  */
 
-
-// Variables
-
-$font-size-base:        16px !default; // Default
-
-$base-font-size:        16px !default;
-$base-line-height:      20px !default;
-
-
-// ============================================================
 
 // Breakpoints
 
@@ -25,21 +15,11 @@ $s-breakpoint--md:      992px !default;      // Medium
 $s-breakpoint--lg:      1299px !default;     // Large
 $s-breakpoint--xl:      1400px !default;     // Extra large
 
-$s-breakpoint: (
+
+$s-breakpoints: (
   'xs': $s-breakpoint--xs,
   'sm': $s-breakpoint--sm,
   'md': $s-breakpoint--md,
   'lg': $s-breakpoint--lg,
   'xl': $s-breakpoint--xl
 ) !default;
-
-
-// ============================================================
-
-
-//Spacing
-
-$s-spacing--tiny:        5px !default;
-$s-spacing--small:       10px !default;
-$s-spacing--large:       15px !default;
-$s-spacing--huge:        20px !default;

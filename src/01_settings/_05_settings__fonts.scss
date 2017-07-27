@@ -7,21 +7,25 @@
  */
 
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('https://fonts.googleapis.com/css?family=Cousine:400,700');
 
 
 // ============================================================ 
 
 
-$s-fonts__font-family:            'Montserrat', sans-serif !default;
-$s-fonts__font-size:              16px !default;
-$s-fonts__line-height:            20px !default;
+$s-fonts__font-family:            'Cousine', monospace !default;
+
+$s-fonts__font-family--title:     'Cousine', monospace !default;
+
+
+$s-fonts__font-size:              14px !default;
+$s-fonts__line-height:            24px !default;
 
 $s-fonts__font-size--sm:          16px !default;
-$s-fonts__line-height--sm:        20px !default;
+$s-fonts__line-height--sm:        30px !default;
 
-$s-fonts__font-size--md:          16px !default;
-$s-fonts__line-height--md:        20px !default;
+$s-fonts__font-size--md:          18px !default;
+$s-fonts__line-height--md:        32px !default;
 
 
 // ============================================================ 
@@ -36,17 +40,14 @@ $s-fonts: (
 
 $s-fonts--viewport: (
   'default': (
-    'font-family':      $s-fonts__font-family,
     'font-size':        $s-fonts__font-size,
     'line-height':      $s-fonts__line-height
   ),
   'small': (
-    'font-family':      $s-fonts__font-family,
     'font-size':        $s-fonts__font-size--sm,
     'line-height':      $s-fonts__line-height--sm
   ),
   'medium': (
-    'font-family':      $s-fonts__font-family,
     'font-size':        $s-fonts__font-size--md,
     'line-height':      $s-fonts__line-height--md
   )

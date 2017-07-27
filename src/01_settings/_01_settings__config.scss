@@ -38,8 +38,16 @@ $s-config__debug:                   false !default;
 // PATHS
 // Define assets paths here
 
-$s-config__path--img:               "../images" !default;
-$s-config__path--fonts:             "../fonts" !default;
+$s-config__path--aws:               false !default;
+
+$s-config__path--base:              ".." !default;
+
+@if $s-config__path--aws {
+ $s-config__path--base:             "http://d34cxzs4mh88o1.cloudfront.net/public/assets";
+}
+
+$s-config__path--img:               #{$s-config__path--base}/images !default;
+$s-config__path--fonts:             #{$s-config__path--base}/fonts !default;
 
 
 // ============================================================
