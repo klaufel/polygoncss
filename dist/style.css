@@ -51,7 +51,7 @@
  * Fonts utilized by the project brand
  *
  */
-@import url("https://fonts.googleapis.com/css?family=Cousine:400,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
 /* ============================================================
  * Tools
  * ============================================================
@@ -501,20 +501,20 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Cousine", monospace;
+  font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
   background: #f0f0f0;
-  font-size: 14px;
-  line-height: 24px; }
+  font-size: 17px;
+  line-height: 26px; }
   @media only screen and (min-width: 768px) {
     body {
-      font-size: 16px;
-      line-height: 30px; } }
+      font-size: 17px;
+      line-height: 26px; } }
   @media only screen and (min-width: 992px) {
     body {
-      font-size: 18px;
-      line-height: 32px; } }
+      font-size: 17px;
+      line-height: 26px; } }
 
 * {
   -webkit-tap-highlight-color: transparent; }
@@ -655,18 +655,18 @@ img {
  *
  */
 .h-title {
-  font-family: "Cousine", monospace;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 34px; }
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 60px; }
   @media only screen and (min-width: 768px) {
     .h-title {
-      font-size: 50px;
-      line-height: 52px; } }
+      font-size: 60px;
+      line-height: 60px; } }
   @media only screen and (min-width: 992px) {
     .h-title {
       font-size: 60px;
-      line-height: 62px; } }
+      line-height: 60px; } }
 
 /* ============================================================
  * Headings: Heading
@@ -676,7 +676,7 @@ img {
  *
  */
 .h-heading {
-  font-family: "Cousine", monospace;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   margin-bottom: 24px;
   font-size: 30px;
@@ -698,18 +698,19 @@ img {
  *
  */
 .h-headline {
-  font-family: "Cousine", monospace;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 26px; }
+  font-style: italic;
+  font-size: 40px;
+  line-height: 46px; }
   @media only screen and (min-width: 768px) {
     .h-headline {
-      font-size: 20px;
-      line-height: 34px; } }
+      font-size: 40px;
+      line-height: 46px; } }
   @media only screen and (min-width: 992px) {
     .h-headline {
-      font-size: 22px;
-      line-height: 36px; } }
+      font-size: 40px;
+      line-height: 46px; } }
 
 /* ============================================================
  * Headings: Subtitle
@@ -719,18 +720,18 @@ img {
  *
  */
 .h-subtitle {
-  font-family: "Cousine", monospace;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px; }
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px; }
   @media only screen and (min-width: 768px) {
     .h-subtitle {
-      font-size: 18px;
-      line-height: 32px; } }
+      font-size: 20px;
+      line-height: 28px; } }
   @media only screen and (min-width: 992px) {
     .h-subtitle {
       font-size: 20px;
-      line-height: 34px; } }
+      line-height: 28px; } }
 
 /* ============================================================
  * Objects
@@ -746,6 +747,8 @@ img {
  * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
  * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
  *
+
+ 
  */
 .o-container {
   position: relative;
@@ -1452,6 +1455,7 @@ img {
       margin-left: 100%; } }
   @media only screen and (min-width: 768px) {
     .o-col {
+      width: auto;
       padding-left: 15px;
       padding-right: 15px; } }
 
@@ -1464,8 +1468,8 @@ img {
  *
  */
 .o-section {
-  padding-top: 80px;
-  padding-bottom: 80px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
 
 /* ============================================================
  * Objects: Tables
@@ -1595,7 +1599,7 @@ img {
   font-weight: 20px;
   text-decoration: none;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.625;
   transition: background 0.3s;
   margin-bottom: 20px; }
   .c-button:hover, .c-button:focus, .c-button:active {
@@ -1611,7 +1615,7 @@ img {
     background-color: #217dbb;
     color: #ffffff;
     box-shadow: none; }
-  .c-button:disabled, .c-button.is-disabled {
+  .c-button:disabled, .c-button.has-disabled {
     cursor: not-allowed;
     opacity: .5;
     box-shadow: none; }
@@ -1667,7 +1671,7 @@ img {
   left: 0;
   color: #5d595a;
   font-size: 14px;
-  line-height: 1.71429;
+  line-height: 1.85714;
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
@@ -1680,7 +1684,7 @@ img {
   @media only screen and (min-width: 768px) {
     .c-input__label {
       font-size: 16px;
-      line-height: 1.5; } }
+      line-height: 1.625; } }
 
 .c-input__field {
   font-family: inherit;
@@ -1702,7 +1706,7 @@ img {
   outline: none;
   transition: border .3s, color .3s;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.625; }
   .c-input__field, .c-input__field:hover, .c-input__field:focus, .c-input__field:active {
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -1830,6 +1834,13 @@ select.c-input__field:after {
 @media (min-width: 1400px) {
   .u-visible\@xl {
     display: inline; } }
+
+.u-box {
+  background: #3498db;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  font-weight: 700; }
 
 /* ============================================================
  * Utilities: Debug

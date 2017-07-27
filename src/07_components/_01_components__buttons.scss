@@ -24,7 +24,7 @@ $c-button__padding-y:              10px !default;
 $c-button__padding-x:              20px !default;
 
 $c-button__color:                  #ffffff !default;
-$c-button__background:             #3498db !default;
+$c-button__background:             $s-color--global !default;
 
 $c-button__cursor--default:        pointer !default;
 $c-button__cursor--disabled:       not-allowed !default;
@@ -89,7 +89,7 @@ $c-button__background--active:      darken($c-button__background, 10) !default;
 
   // Disabled comes first so active can properly restyle
   &:disabled,
-  &.is-disabled {
+  &.has-disabled {
     cursor: $c-button__cursor--disabled;
     opacity: .5;
     box-shadow: none;

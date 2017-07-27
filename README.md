@@ -23,11 +23,6 @@ $ gulp
 ## Folder structure
 
 ```
-
-
-
-
-
 src/
 ├── 01_settings/
 │   ├── settings.scss
