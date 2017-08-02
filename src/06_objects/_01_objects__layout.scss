@@ -32,60 +32,6 @@ $grid-max-width-tiny--lg:			  	754px + ($grid-gutter--lg*2) !default;
 
 
 
-.o-container {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-
-	padding-right: $grid-gutter;
-	padding-left: $grid-gutter;
-
-	&--intern {
-		padding-right: $grid-gutter/2;
-		padding-left: $grid-gutter/2;
-	}	
-
-	&--center {
-		text-align: center;
-	}
-	@include t-mq('sm') {
-		max-width: $grid-max-width--sm;
-		padding-right: $grid-gutter--sm;
-		padding-left: $grid-gutter--sm;
-		&--intern {
-			padding-right: $grid-gutter--sm/2;
-			padding-left: $grid-gutter--sm/2;
-		}
-		&--inner {
-			max-width: $grid-max-width-inner--sm;
-		}
-		&--tiny {
-			max-width: $grid-max-width-tiny--sm;
-		}
-	}
-	@include t-mq('md') {
-		max-width: $grid-max-width--md;
-		&--inner {
-			max-width: $grid-max-width-inner--md;
-		}
-		&--tiny {
-			max-width: $grid-max-width-tiny--md;
-		}
-	}
-	@include t-mq('lg') {
-		max-width: $grid-max-width--lg;
-		&--inner {
-			max-width: $grid-max-width-inner--lg;
-		}
-		&--tiny {
-			max-width: $grid-max-width-tiny--lg;
-		}
-	}
-}
-
-
-
-
 
 
 
