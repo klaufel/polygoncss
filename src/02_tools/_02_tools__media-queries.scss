@@ -41,6 +41,17 @@ $t-mq__breakpoints: $s-breakpoints !default;
 }
 
 
+@mixin t-mq-loop() {
+  @each $_mq__name, $_mq__unit in $t-mq__breakpoints {
+    @include t-mq($_mq__name) {
+
+      @content;
+      
+    }
+  }
+}
+
+
 
 // Usage
 // ------------------------------------------------------------

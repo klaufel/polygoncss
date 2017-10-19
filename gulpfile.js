@@ -10,7 +10,6 @@ var gulp                = require('gulp'),
 // Paths variables
 var paths = {
     dist       : 'dist',
-    mainsass   : ['src/style.scss'],
     sass       : ['src/**/*.scss' ]
 };
 
@@ -22,7 +21,7 @@ gulp.task('sass', function () {
         .pipe(autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions']}))
         //.pipe(cleanCss())
         .pipe(gulp.dest(paths.dist))
-        .pipe(notify({ title: 'SASS', message: 'Compiled successfully.', onLast: true}));
+        .pipe(notify({ title: 'SASS', message: 'Compiled successfully! 😎', onLast: true}));
 });
 
 // Rerun the task when a file changes

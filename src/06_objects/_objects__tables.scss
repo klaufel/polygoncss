@@ -11,9 +11,13 @@
 // ============================================================
 // Variables
 
-$o-table__padding:              10px !default;
-$o-table__padding--tiny:        5px !default;
+$o-table__padding:              15px !default;
+$o-table__padding--tiny:        10px !default;
 $o-table__padding--huge:        20px !default;
+
+$o-table__border-width:         2px !default;
+$o-table__border-color:         #ccc !default;
+
 
 
 // ============================================================
@@ -21,24 +25,26 @@ $o-table__padding--huge:        20px !default;
 
 .o-table {
   width: 100%;
+  text-align: left;
   th,
   td {
     padding: $o-table__padding;
+    border-bottom: $o-table__border-width solid $o-table__border-color;
   }
 }
 
+  //## Modifiers: Type of table layout
   .o-table--fixed {
     table-layout: fixed;
   }
 
-
+  //## Modifiers: Spacing columns
   .o-table--tiny {
     th,
     td {
       padding: $o-table__padding--tiny;
     }
   }
-
 
   .o-table--huge {
     th,

@@ -1,0 +1,33 @@
+/* ============================================================
+ * Utilities: Colors
+ * ============================================================
+ *
+ * Import the colors of your project and generate a color map
+ * to be used as a utility in to the document.
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+// Utility toggling
+$u-colors--enabled:         true !default;
+
+// Colors maps
+$u-colors__maps:            $s-colors !default;
+
+
+
+// ============================================================
+// CSS Output
+
+@if ($u-colors--enabled) {
+  @each $_color__name, $_color__value in $u-colors__maps {
+
+    .u-color--#{$_color__name} {
+      color: $_color__value !important;
+    }
+
+  } 
+}

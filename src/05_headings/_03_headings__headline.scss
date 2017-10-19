@@ -12,7 +12,6 @@
 
 $h-headline__font-family:            $s-fonts__font-family !default;
 $h-headline__font-weight:            700 !default;
-$h-headline__font-style:             italic !default;
 $h-headline__font-size:              40px !default;
 $h-headline__line-height:            46px !default;
 
@@ -31,7 +30,7 @@ $h-headline__line-height--md:        46px !default;
 .h-headline {
   font-family: $h-headline__font-family;  
   font-weight: $h-headline__font-weight;
-  font-style: $h-headline__font-style;
+
   @include t-font-size($h-headline__font-size, $h-headline__line-height);
 
   @include t-mq('sm') {
