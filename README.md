@@ -20,6 +20,13 @@ $ gulp
 
 ```
 
+## Specificity graph
+
+```
+$ specificity-graph dist/style.css
+
+```
+
 ## Folder structure
 
 ```
@@ -60,22 +67,24 @@ src/
 │ 
 ├── 06_objects/
 │   ├── objects.scss
-│   ├── 01_objects__layout.scss
-│   ├── 02_objects__section.scss
-│   ├── 03_objects__tables.scss
-│   └── 04_objects__title-group.scss
+│   ├── 01_objects__container.scss
+│   ├── 02_objects__grid.scss
+│   ├── 03_objects__section.scss
+│   └── 04_objects__table.scss
 │ 
 ├── 07_components/
 │   ├── components.scss
-│   ├── 01_components__buttons.scss
-│   ├── 02_components__forms.scss
+│   ├── 01_components__button.scss
+│   ├── 02_components__input.scss
 │   └── structure/
 │       ├── 01_components__header.scss
 │       └── 02_components__footer.scss
 │ 
 ├── 08_utilities/
 │   ├── utilities.scss
-│   ├── 01_utilities__trumps.scss
+│   ├── 01_utilities__widths.scss
+│   ├── 02_utilities__colors.scss
+│   ├── 03_utilities__trumps.scss
 │   └── 02_utilities__debug.scss
 │ 
 └── style.scss

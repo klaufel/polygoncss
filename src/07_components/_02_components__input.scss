@@ -1,5 +1,5 @@
 /* ============================================================
- * Components: Forms
+ * Components: Input
  * ============================================================
  *
  * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
@@ -52,67 +52,68 @@ $c-input__field__color--valid:               red !default;
 }
 
 
-  .c-input__label {
-    display: block;
-    color: $c-input__label__color;
-    margin: $c-input__label__margin;
-    //@include t-font-size($c-input__label__font-size, auto);
+//## Elements
+
+.c-input__label {
+  display: block;
+  color: $c-input__label__color;
+  margin: $c-input__label__margin;
+  //@include t-font-size($c-input__label__font-size, auto);
+}
+
+
+.c-input__field {
+  font-family: inherit;
+  width: 100%;
+  display: block;
+  text-align: left;
+  border: $c-input__field__border-width solid $c-input__field__border-color;
+  border-radius: $c-input__field__border-radius;  
+  padding: $c-input__field__padding; 
+  background-color: $c-input__field__background;
+  background-image: none;
+  background-clip: padding-box;
+  color: $c-input__field__color;
+  font-weight: $c-input__field__font-weight;
+  height: $c-input__field__height;
+  outline: none;
+  font-size: inherit;
+
+  //@include t-font-size($c-input__field__font-size, $c-input__field__line-height);
+  
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    appearance: none;
+    box-shadow: none;
+    outline: none;
+  }
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  // Placeholder
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &:disabled,
+  &[readonly] {
+    opacity: 1;
+    cursor: $c-input__field__cursor-disabled;
   }
 
 
-  .c-input__field {
-    font-family: inherit;
-    width: 100%;
-    display: block;
-    text-align: left;
-    border: $c-input__field__border-width solid $c-input__field__border-color;
-    border-radius: $c-input__field__border-radius;  
-    padding: $c-input__field__padding; 
-    background-color: $c-input__field__background;
-    background-image: none;
-    background-clip: padding-box;
-    color: $c-input__field__color;
+  &:focus {
     font-weight: $c-input__field__font-weight;
-    height: $c-input__field__height;
-    outline: none;
-    font-size: inherit;
-
-    //@include t-font-size($c-input__field__font-size, $c-input__field__line-height);
-
-    
-    &,
-    &:hover,
-    &:focus,
-    &:active {
-      appearance: none;
-      box-shadow: none;
-      outline: none;
-    }
-
-    // Unstyle the caret on `<select>`s in IE10+.
-    &::-ms-expand {
-      background-color: transparent;
-      border: 0;
-    }
 
     // Placeholder
     &::placeholder {
       opacity: 1;
     }
-
-    &:disabled,
-    &[readonly] {
-      opacity: 1;
-      cursor: $c-input__field__cursor-disabled;
-    }
-
-
-    &:focus {
-      font-weight: $c-input__field__font-weight;
-
-      // Placeholder
-      &::placeholder {
-        opacity: 1;
-      }
-    }
   }
+}
