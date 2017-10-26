@@ -1,0 +1,166 @@
+<!;DOCTYPE; html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' >
+
+    <title>Specificity Graph - Example</title>
+
+    <style>
+      * {
+        padding: 0; margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 100%;
+        font-family: 'Helvetica', sans-serif;
+        padding-top: 2em;
+        padding-bottom: 1em;
+      }
+      small {
+        font-size: 0.8em;
+      }
+      .abs-top-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .center-wrapper {
+        text-align: center;
+      }
+      .main-header {
+        padding: 0 0.5em;
+      }
+        .main-title {
+          font-family: 'Gill sans', sans-serif;
+          margin-bottom: 4px;
+        }
+        .main-info {
+          color: #606060;
+        }
+        .main-header-link {
+          text-decoration: none;
+          color: #999;
+        }
+
+      .svg-container {
+        margin-bottom: 1em;
+      }
+      @media(min-width: 1000px){
+        .svg-container {
+          width: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 2em;
+        }
+      }
+      .padding-height {
+        width: 100%;
+        height: 0;
+        padding-top: 40%;
+        position: relative;
+      }
+
+      .vis {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        font-family: sans-serif;
+        font-size: 1.6em;
+      }
+      @media(min-width: 500px){
+        .vis {
+          font-size: 1.3em;
+        }
+      }
+      @media(min-width: 700px){
+        .vis {
+          font-size: 0.9em;
+        }
+      }
+        .vis path {
+          fill: none;
+          stroke: steelblue;
+          stroke-width: 4px;
+        }
+
+        .vis .axis {
+          opacity: 0.6;
+        }
+          .vis .axis .tick {
+            display: none;
+          }
+          .vis .axis--show-ticks .tick {
+            display: block;
+          }
+
+        .vis .domain-label {
+          font-size: 0.9em;
+          fill: steelblue;
+        }
+
+
+        .vis .overlay {
+          fill: none;
+          pointer-events: all;
+        }
+        .vis .focus {
+          position: relative;
+        }
+          .vis .focus-text-background {
+            fill: #333;
+          }
+            .vis .focus-text {
+              font-size: 0.9em;
+              fill: #eee;
+            }
+
+          .vis .focus circle {
+            fill: none;
+            stroke-width: 2.5px;
+            stroke: #0c0;
+          }
+
+        @media(min-width: 600px){
+          .mobile-focus-controls {
+            display: none;
+          }
+        }
+
+        button {
+          display: inline-block;
+          width: 50%;
+          text-align: center;
+          background: #e0e0e0;
+          border: 0;
+          border-right: 1px solid white;
+          padding: 1em 0;
+          margin-bottom: 1em;
+        }
+    </style>
+  </head>
+  <body>
+    <header class='main-header center-wrapper'>
+      <h1 class='main-title'>CSS Specificity Graph</h1>
+      <p class="main-info">Spikes are bad, and the general trend should be towards higher specificity later in the stylesheet. <small><a class='main-header-link' href='http://csswizardry.com/2014/10/the-specificity-graph/'/>More info</a></small></p>
+    </header>
+
+    <div class='svg-container'>
+      <div class='padding-height'>
+        <svg class='vis js-graph' viewBox='0 0 1000 400'>
+        </svg>
+      </div>
+    </div>
+
+    <div class='mobile-focus-controls'>
+      <button type="button" class="js-prev">Previous</button><button type="button" class="js-next">Next</button>
+    </div>
+
+    <script src='specificity-graph-standalone.js'></script>
+    <script>var embeddedJsonData = [{"selectorIndex":0,"line":3,"specificity":1,"selectors":"html"},{"selectorIndex":1,"line":9,"specificity":1,"selectors":"article"},{"selectorIndex":2,"line":9,"specificity":1,"selectors":"aside"},{"selectorIndex":3,"line":9,"specificity":1,"selectors":"footer"},{"selectorIndex":4,"line":9,"specificity":1,"selectors":"header"},{"selectorIndex":5,"line":9,"specificity":1,"selectors":"nav"},{"selectorIndex":6,"line":9,"specificity":1,"selectors":"section"},{"selectorIndex":7,"line":13,"specificity":1,"selectors":"h1"},{"selectorIndex":8,"line":18,"specificity":1,"selectors":"figcaption"},{"selectorIndex":9,"line":18,"specificity":1,"selectors":"figure"},{"selectorIndex":10,"line":18,"specificity":1,"selectors":"main"},{"selectorIndex":11,"line":22,"specificity":1,"selectors":"figure"},{"selectorIndex":12,"line":26,"specificity":1,"selectors":"hr"},{"selectorIndex":13,"line":32,"specificity":1,"selectors":"pre"},{"selectorIndex":14,"line":37,"specificity":1,"selectors":"a"},{"selectorIndex":15,"line":42,"specificity":11,"selectors":"abbr[title]"},{"selectorIndex":16,"line":48,"specificity":1,"selectors":"b"},{"selectorIndex":17,"line":48,"specificity":1,"selectors":"strong"},{"selectorIndex":18,"line":52,"specificity":1,"selectors":"b"},{"selectorIndex":19,"line":52,"specificity":1,"selectors":"strong"},{"selectorIndex":20,"line":56,"specificity":1,"selectors":"code"},{"selectorIndex":21,"line":56,"specificity":1,"selectors":"kbd"},{"selectorIndex":22,"line":56,"specificity":1,"selectors":"samp"},{"selectorIndex":23,"line":61,"specificity":1,"selectors":"dfn"},{"selectorIndex":24,"line":65,"specificity":1,"selectors":"mark"},{"selectorIndex":25,"line":70,"specificity":1,"selectors":"small"},{"selectorIndex":26,"line":74,"specificity":1,"selectors":"sub"},{"selectorIndex":27,"line":74,"specificity":1,"selectors":"sup"},{"selectorIndex":28,"line":81,"specificity":1,"selectors":"sub"},{"selectorIndex":29,"line":85,"specificity":1,"selectors":"sup"},{"selectorIndex":30,"line":89,"specificity":1,"selectors":"audio"},{"selectorIndex":31,"line":89,"specificity":1,"selectors":"video"},{"selectorIndex":32,"line":93,"specificity":11,"selectors":"audio:not([controls])"},{"selectorIndex":33,"line":98,"specificity":1,"selectors":"img"},{"selectorIndex":34,"line":102,"specificity":11,"selectors":"svg:not(:root)"},{"selectorIndex":35,"line":106,"specificity":1,"selectors":"button"},{"selectorIndex":36,"line":106,"specificity":1,"selectors":"input"},{"selectorIndex":37,"line":106,"specificity":1,"selectors":"optgroup"},{"selectorIndex":38,"line":106,"specificity":1,"selectors":"select"},{"selectorIndex":39,"line":106,"specificity":1,"selectors":"textarea"},{"selectorIndex":40,"line":110,"specificity":1,"selectors":"button"},{"selectorIndex":41,"line":110,"specificity":1,"selectors":"input"},{"selectorIndex":42,"line":114,"specificity":1,"selectors":"button"},{"selectorIndex":43,"line":114,"specificity":1,"selectors":"select"},{"selectorIndex":44,"line":118,"specificity":10,"selectors":"[type=reset]"},{"selectorIndex":45,"line":118,"specificity":10,"selectors":"[type=submit]"},{"selectorIndex":46,"line":118,"specificity":1,"selectors":"button"},{"selectorIndex":47,"line":118,"specificity":11,"selectors":"html [type=button]"},{"selectorIndex":48,"line":122,"specificity":11,"selectors":"[type=button]::-moz-focus-inner"},{"selectorIndex":49,"line":122,"specificity":11,"selectors":"[type=reset]::-moz-focus-inner"},{"selectorIndex":50,"line":122,"specificity":11,"selectors":"[type=submit]::-moz-focus-inner"},{"selectorIndex":51,"line":122,"specificity":2,"selectors":"button::-moz-focus-inner"},{"selectorIndex":52,"line":127,"specificity":20,"selectors":"[type=button]:-moz-focusring"},{"selectorIndex":53,"line":127,"specificity":20,"selectors":"[type=reset]:-moz-focusring"},{"selectorIndex":54,"line":127,"specificity":20,"selectors":"[type=submit]:-moz-focusring"},{"selectorIndex":55,"line":127,"specificity":11,"selectors":"button:-moz-focusring"},{"selectorIndex":56,"line":131,"specificity":1,"selectors":"legend"},{"selectorIndex":57,"line":140,"specificity":1,"selectors":"progress"},{"selectorIndex":58,"line":145,"specificity":1,"selectors":"textarea"},{"selectorIndex":59,"line":149,"specificity":10,"selectors":"[type=checkbox]"},{"selectorIndex":60,"line":149,"specificity":10,"selectors":"[type=radio]"},{"selectorIndex":61,"line":154,"specificity":11,"selectors":"[type=number]::-webkit-inner-spin-button"},{"selectorIndex":62,"line":154,"specificity":11,"selectors":"[type=number]::-webkit-outer-spin-button"},{"selectorIndex":63,"line":158,"specificity":10,"selectors":"[type=search]"},{"selectorIndex":64,"line":163,"specificity":11,"selectors":"[type=search]::-webkit-search-cancel-button"},{"selectorIndex":65,"line":163,"specificity":11,"selectors":"[type=search]::-webkit-search-decoration"},{"selectorIndex":66,"line":167,"specificity":1,"selectors":"::-webkit-file-upload-button"},{"selectorIndex":67,"line":172,"specificity":1,"selectors":"details"},{"selectorIndex":68,"line":172,"specificity":1,"selectors":"menu"},{"selectorIndex":69,"line":176,"specificity":1,"selectors":"summary"},{"selectorIndex":70,"line":180,"specificity":1,"selectors":"canvas"},{"selectorIndex":71,"line":184,"specificity":1,"selectors":"template"},{"selectorIndex":72,"line":188,"specificity":10,"selectors":"[hidden]"},{"selectorIndex":73,"line":192,"specificity":0,"selectors":"*"},{"selectorIndex":74,"line":196,"specificity":1,"selectors":"html"},{"selectorIndex":75,"line":200,"specificity":0,"selectors":"*"},{"selectorIndex":76,"line":200,"specificity":1,"selectors":":after"},{"selectorIndex":77,"line":200,"specificity":1,"selectors":":before"},{"selectorIndex":78,"line":204,"specificity":1,"selectors":"body"},{"selectorIndex":79,"line":216,"specificity":1,"selectors":"body"},{"selectorIndex":80,"line":223,"specificity":1,"selectors":"body"},{"selectorIndex":81,"line":229,"specificity":0,"selectors":"*"},{"selectorIndex":82,"line":234,"specificity":0,"selectors":"*"},{"selectorIndex":83,"line":234,"specificity":1,"selectors":"::after"},{"selectorIndex":84,"line":234,"specificity":1,"selectors":"::before"},{"selectorIndex":85,"line":234,"specificity":2,"selectors":"blockquote::first-letter"},{"selectorIndex":86,"line":234,"specificity":2,"selectors":"blockquote::first-line"},{"selectorIndex":87,"line":234,"specificity":2,"selectors":"div::first-letter"},{"selectorIndex":88,"line":234,"specificity":2,"selectors":"div::first-line"},{"selectorIndex":89,"line":234,"specificity":2,"selectors":"li::first-letter"},{"selectorIndex":90,"line":234,"specificity":2,"selectors":"li::first-line"},{"selectorIndex":91,"line":234,"specificity":2,"selectors":"p::first-letter"},{"selectorIndex":92,"line":234,"specificity":2,"selectors":"p::first-line"},{"selectorIndex":93,"line":241,"specificity":1,"selectors":"a"},{"selectorIndex":94,"line":241,"specificity":11,"selectors":"a:visited"},{"selectorIndex":95,"line":245,"specificity":12,"selectors":"a[href]::after"},{"selectorIndex":96,"line":249,"specificity":12,"selectors":"abbr[title]::after"},{"selectorIndex":97,"line":253,"specificity":12,"selectors":"a[href^=\"#\"]::after"},{"selectorIndex":98,"line":253,"specificity":12,"selectors":"a[href^=\"javascript:\"]::after"},{"selectorIndex":99,"line":257,"specificity":1,"selectors":"pre"},{"selectorIndex":100,"line":261,"specificity":1,"selectors":"blockquote"},{"selectorIndex":101,"line":261,"specificity":1,"selectors":"pre"},{"selectorIndex":102,"line":266,"specificity":1,"selectors":"thead"},{"selectorIndex":103,"line":270,"specificity":1,"selectors":"img"},{"selectorIndex":104,"line":270,"specificity":1,"selectors":"tr"},{"selectorIndex":105,"line":274,"specificity":1,"selectors":"h2"},{"selectorIndex":106,"line":274,"specificity":1,"selectors":"h3"},{"selectorIndex":107,"line":274,"specificity":1,"selectors":"p"},{"selectorIndex":108,"line":279,"specificity":1,"selectors":"h2"},{"selectorIndex":109,"line":279,"specificity":1,"selectors":"h3"},{"selectorIndex":110,"line":284,"specificity":1,"selectors":"h1"},{"selectorIndex":111,"line":284,"specificity":1,"selectors":"h2"},{"selectorIndex":112,"line":284,"specificity":1,"selectors":"h4"},{"selectorIndex":113,"line":284,"specificity":1,"selectors":"h5"},{"selectorIndex":114,"line":284,"specificity":1,"selectors":"h6"},{"selectorIndex":115,"line":291,"specificity":1,"selectors":"p"},{"selectorIndex":116,"line":296,"specificity":1,"selectors":"a"},{"selectorIndex":117,"line":301,"specificity":1,"selectors":"img"},{"selectorIndex":118,"line":307,"specificity":10,"selectors":".h-title"},{"selectorIndex":119,"line":315,"specificity":10,"selectors":".h-title"},{"selectorIndex":120,"line":322,"specificity":10,"selectors":".h-title"},{"selectorIndex":121,"line":328,"specificity":10,"selectors":".h-heading"},{"selectorIndex":122,"line":336,"specificity":10,"selectors":".h-heading"},{"selectorIndex":123,"line":343,"specificity":10,"selectors":".h-heading"},{"selectorIndex":124,"line":349,"specificity":10,"selectors":".h-headline"},{"selectorIndex":125,"line":357,"specificity":10,"selectors":".h-headline"},{"selectorIndex":126,"line":364,"specificity":10,"selectors":".h-headline"},{"selectorIndex":127,"line":370,"specificity":10,"selectors":".h-subtitle"},{"selectorIndex":128,"line":378,"specificity":10,"selectors":".h-subtitle"},{"selectorIndex":129,"line":385,"specificity":10,"selectors":".h-subtitle"},{"selectorIndex":130,"line":391,"specificity":10,"selectors":".o-container"},{"selectorIndex":131,"line":399,"specificity":10,"selectors":".o-container"},{"selectorIndex":132,"line":407,"specificity":10,"selectors":".o-container"},{"selectorIndex":133,"line":415,"specificity":10,"selectors":".o-container"},{"selectorIndex":134,"line":422,"specificity":10,"selectors":".o-container--fluid"},{"selectorIndex":135,"line":426,"specificity":10,"selectors":".o-grid"},{"selectorIndex":136,"line":443,"specificity":10,"selectors":".o-grid"},{"selectorIndex":137,"line":450,"specificity":10,"selectors":".o-grid"},{"selectorIndex":138,"line":457,"specificity":10,"selectors":".o-grid"},{"selectorIndex":139,"line":463,"specificity":10,"selectors":".o-grid--reverse"},{"selectorIndex":140,"line":469,"specificity":10,"selectors":".o-grid--top"},{"selectorIndex":141,"line":475,"specificity":10,"selectors":".o-grid--bottom"},{"selectorIndex":142,"line":481,"specificity":10,"selectors":".o-grid--center"},{"selectorIndex":143,"line":487,"specificity":10,"selectors":".o-grid--stretch"},{"selectorIndex":144,"line":493,"specificity":10,"selectors":".o-grid--baseline"},{"selectorIndex":145,"line":499,"specificity":10,"selectors":".o-grid__col"},{"selectorIndex":146,"line":514,"specificity":10,"selectors":".o-grid__col"},{"selectorIndex":147,"line":522,"specificity":10,"selectors":".o-grid__col"},{"selectorIndex":148,"line":529,"specificity":10,"selectors":".o-grid__col"},{"selectorIndex":149,"line":535,"specificity":10,"selectors":".o-grid__col--top"},{"selectorIndex":150,"line":541,"specificity":10,"selectors":".o-grid__col--bottom"},{"selectorIndex":151,"line":547,"specificity":10,"selectors":".o-grid__col--center"},{"selectorIndex":152,"line":554,"specificity":10,"selectors":".o-section"},{"selectorIndex":153,"line":560,"specificity":10,"selectors":".o-section"},{"selectorIndex":154,"line":567,"specificity":10,"selectors":".o-section"},{"selectorIndex":155,"line":574,"specificity":10,"selectors":".o-section"},{"selectorIndex":156,"line":580,"specificity":10,"selectors":".o-table"},{"selectorIndex":157,"line":585,"specificity":11,"selectors":".o-table td"},{"selectorIndex":158,"line":585,"specificity":11,"selectors":".o-table th"},{"selectorIndex":159,"line":590,"specificity":10,"selectors":".o-table--fixed"},{"selectorIndex":160,"line":594,"specificity":11,"selectors":".o-table--tiny td"},{"selectorIndex":161,"line":594,"specificity":11,"selectors":".o-table--tiny th"},{"selectorIndex":162,"line":598,"specificity":11,"selectors":".o-table--huge td"},{"selectorIndex":163,"line":598,"specificity":11,"selectors":".o-table--huge th"},{"selectorIndex":164,"line":602,"specificity":10,"selectors":".c-button"},{"selectorIndex":165,"line":625,"specificity":20,"selectors":".c-button:active"},{"selectorIndex":166,"line":625,"specificity":20,"selectors":".c-button:focus"},{"selectorIndex":167,"line":625,"specificity":20,"selectors":".c-button:hover"},{"selectorIndex":168,"line":629,"specificity":20,"selectors":".c-button:hover"},{"selectorIndex":169,"line":634,"specificity":20,"selectors":".c-button:focus"},{"selectorIndex":170,"line":639,"specificity":20,"selectors":".c-button:active"},{"selectorIndex":171,"line":646,"specificity":20,"selectors":".c-button.has-disabled"},{"selectorIndex":172,"line":646,"specificity":20,"selectors":".c-button:disabled"},{"selectorIndex":173,"line":652,"specificity":10,"selectors":".c-input"},{"selectorIndex":174,"line":657,"specificity":10,"selectors":".c-input__label"},{"selectorIndex":175,"line":663,"specificity":10,"selectors":".c-input__field"},{"selectorIndex":176,"line":681,"specificity":10,"selectors":".c-input__field"},{"selectorIndex":177,"line":681,"specificity":20,"selectors":".c-input__field:active"},{"selectorIndex":178,"line":681,"specificity":20,"selectors":".c-input__field:focus"},{"selectorIndex":179,"line":681,"specificity":20,"selectors":".c-input__field:hover"},{"selectorIndex":180,"line":689,"specificity":11,"selectors":".c-input__field::-ms-expand"},{"selectorIndex":181,"line":694,"specificity":11,"selectors":".c-input__field::-webkit-input-placeholder"},{"selectorIndex":182,"line":698,"specificity":11,"selectors":".c-input__field::-moz-placeholder"},{"selectorIndex":183,"line":702,"specificity":20,"selectors":".c-input__field:-ms-input-placeholder"},{"selectorIndex":184,"line":706,"specificity":11,"selectors":".c-input__field::placeholder"},{"selectorIndex":185,"line":710,"specificity":20,"selectors":".c-input__field:disabled"},{"selectorIndex":186,"line":710,"specificity":20,"selectors":".c-input__field[readonly]"},{"selectorIndex":187,"line":715,"specificity":20,"selectors":".c-input__field:focus"},{"selectorIndex":188,"line":719,"specificity":21,"selectors":".c-input__field:focus::-webkit-input-placeholder"},{"selectorIndex":189,"line":723,"specificity":21,"selectors":".c-input__field:focus::-moz-placeholder"},{"selectorIndex":190,"line":727,"specificity":30,"selectors":".c-input__field:focus:-ms-input-placeholder"},{"selectorIndex":191,"line":731,"specificity":21,"selectors":".c-input__field:focus::placeholder"},{"selectorIndex":192,"line":735,"specificity":10,"selectors":".u-no-margin"},{"selectorIndex":193,"line":739,"specificity":10,"selectors":".u-bold"},{"selectorIndex":194,"line":743,"specificity":10,"selectors":".u-anchor-border"},{"selectorIndex":195,"line":747,"specificity":10,"selectors":".u-hidden"},{"selectorIndex":196,"line":752,"specificity":10,"selectors":".u-hidden\\@xs"},{"selectorIndex":197,"line":758,"specificity":10,"selectors":".u-hidden\\@sm"},{"selectorIndex":198,"line":764,"specificity":10,"selectors":".u-hidden\\@md"},{"selectorIndex":199,"line":770,"specificity":10,"selectors":".u-hidden\\@lg"},{"selectorIndex":200,"line":776,"specificity":10,"selectors":".u-hidden\\@xl"},{"selectorIndex":201,"line":781,"specificity":10,"selectors":".u-visible"},{"selectorIndex":202,"line":786,"specificity":10,"selectors":".u-visible\\@xs"},{"selectorIndex":203,"line":792,"specificity":10,"selectors":".u-visible\\@sm"},{"selectorIndex":204,"line":798,"specificity":10,"selectors":".u-visible\\@md"},{"selectorIndex":205,"line":804,"specificity":10,"selectors":".u-visible\\@lg"},{"selectorIndex":206,"line":810,"specificity":10,"selectors":".u-visible\\@xl"},{"selectorIndex":207,"line":815,"specificity":10,"selectors":".u-box"},{"selectorIndex":208,"line":823,"specificity":10,"selectors":".u-1\\/1"},{"selectorIndex":209,"line":828,"specificity":10,"selectors":".u-1\\/2"},{"selectorIndex":210,"line":833,"specificity":10,"selectors":".u-1\\/6"},{"selectorIndex":211,"line":838,"specificity":10,"selectors":".u-2\\/6"},{"selectorIndex":212,"line":843,"specificity":10,"selectors":".u-3\\/6"},{"selectorIndex":213,"line":848,"specificity":10,"selectors":".u-4\\/6"},{"selectorIndex":214,"line":853,"specificity":10,"selectors":".u-5\\/6"},{"selectorIndex":215,"line":858,"specificity":10,"selectors":".u-1\\/12"},{"selectorIndex":216,"line":863,"specificity":10,"selectors":".u-2\\/12"},{"selectorIndex":217,"line":868,"specificity":10,"selectors":".u-3\\/12"},{"selectorIndex":218,"line":873,"specificity":10,"selectors":".u-4\\/12"},{"selectorIndex":219,"line":878,"specificity":10,"selectors":".u-5\\/12"},{"selectorIndex":220,"line":883,"specificity":10,"selectors":".u-6\\/12"},{"selectorIndex":221,"line":888,"specificity":10,"selectors":".u-7\\/12"},{"selectorIndex":222,"line":893,"specificity":10,"selectors":".u-8\\/12"},{"selectorIndex":223,"line":898,"specificity":10,"selectors":".u-9\\/12"},{"selectorIndex":224,"line":903,"specificity":10,"selectors":".u-10\\/12"},{"selectorIndex":225,"line":908,"specificity":10,"selectors":".u-11\\/12"},{"selectorIndex":226,"line":914,"specificity":10,"selectors":".u-1\\/1\\@xs"},{"selectorIndex":227,"line":919,"specificity":10,"selectors":".u-1\\/2\\@xs"},{"selectorIndex":228,"line":924,"specificity":10,"selectors":".u-1\\/6\\@xs"},{"selectorIndex":229,"line":929,"specificity":10,"selectors":".u-2\\/6\\@xs"},{"selectorIndex":230,"line":934,"specificity":10,"selectors":".u-3\\/6\\@xs"},{"selectorIndex":231,"line":939,"specificity":10,"selectors":".u-4\\/6\\@xs"},{"selectorIndex":232,"line":944,"specificity":10,"selectors":".u-5\\/6\\@xs"},{"selectorIndex":233,"line":949,"specificity":10,"selectors":".u-1\\/12\\@xs"},{"selectorIndex":234,"line":954,"specificity":10,"selectors":".u-2\\/12\\@xs"},{"selectorIndex":235,"line":959,"specificity":10,"selectors":".u-3\\/12\\@xs"},{"selectorIndex":236,"line":964,"specificity":10,"selectors":".u-4\\/12\\@xs"},{"selectorIndex":237,"line":969,"specificity":10,"selectors":".u-5\\/12\\@xs"},{"selectorIndex":238,"line":974,"specificity":10,"selectors":".u-6\\/12\\@xs"},{"selectorIndex":239,"line":979,"specificity":10,"selectors":".u-7\\/12\\@xs"},{"selectorIndex":240,"line":984,"specificity":10,"selectors":".u-8\\/12\\@xs"},{"selectorIndex":241,"line":989,"specificity":10,"selectors":".u-9\\/12\\@xs"},{"selectorIndex":242,"line":994,"specificity":10,"selectors":".u-10\\/12\\@xs"},{"selectorIndex":243,"line":999,"specificity":10,"selectors":".u-11\\/12\\@xs"},{"selectorIndex":244,"line":1006,"specificity":10,"selectors":".u-1\\/1\\@sm"},{"selectorIndex":245,"line":1011,"specificity":10,"selectors":".u-1\\/2\\@sm"},{"selectorIndex":246,"line":1016,"specificity":10,"selectors":".u-1\\/6\\@sm"},{"selectorIndex":247,"line":1021,"specificity":10,"selectors":".u-2\\/6\\@sm"},{"selectorIndex":248,"line":1026,"specificity":10,"selectors":".u-3\\/6\\@sm"},{"selectorIndex":249,"line":1031,"specificity":10,"selectors":".u-4\\/6\\@sm"},{"selectorIndex":250,"line":1036,"specificity":10,"selectors":".u-5\\/6\\@sm"},{"selectorIndex":251,"line":1041,"specificity":10,"selectors":".u-1\\/12\\@sm"},{"selectorIndex":252,"line":1046,"specificity":10,"selectors":".u-2\\/12\\@sm"},{"selectorIndex":253,"line":1051,"specificity":10,"selectors":".u-3\\/12\\@sm"},{"selectorIndex":254,"line":1056,"specificity":10,"selectors":".u-4\\/12\\@sm"},{"selectorIndex":255,"line":1061,"specificity":10,"selectors":".u-5\\/12\\@sm"},{"selectorIndex":256,"line":1066,"specificity":10,"selectors":".u-6\\/12\\@sm"},{"selectorIndex":257,"line":1071,"specificity":10,"selectors":".u-7\\/12\\@sm"},{"selectorIndex":258,"line":1076,"specificity":10,"selectors":".u-8\\/12\\@sm"},{"selectorIndex":259,"line":1081,"specificity":10,"selectors":".u-9\\/12\\@sm"},{"selectorIndex":260,"line":1086,"specificity":10,"selectors":".u-10\\/12\\@sm"},{"selectorIndex":261,"line":1091,"specificity":10,"selectors":".u-11\\/12\\@sm"},{"selectorIndex":262,"line":1098,"specificity":10,"selectors":".u-1\\/1\\@md"},{"selectorIndex":263,"line":1103,"specificity":10,"selectors":".u-1\\/2\\@md"},{"selectorIndex":264,"line":1108,"specificity":10,"selectors":".u-1\\/6\\@md"},{"selectorIndex":265,"line":1113,"specificity":10,"selectors":".u-2\\/6\\@md"},{"selectorIndex":266,"line":1118,"specificity":10,"selectors":".u-3\\/6\\@md"},{"selectorIndex":267,"line":1123,"specificity":10,"selectors":".u-4\\/6\\@md"},{"selectorIndex":268,"line":1128,"specificity":10,"selectors":".u-5\\/6\\@md"},{"selectorIndex":269,"line":1133,"specificity":10,"selectors":".u-1\\/12\\@md"},{"selectorIndex":270,"line":1138,"specificity":10,"selectors":".u-2\\/12\\@md"},{"selectorIndex":271,"line":1143,"specificity":10,"selectors":".u-3\\/12\\@md"},{"selectorIndex":272,"line":1148,"specificity":10,"selectors":".u-4\\/12\\@md"},{"selectorIndex":273,"line":1153,"specificity":10,"selectors":".u-5\\/12\\@md"},{"selectorIndex":274,"line":1158,"specificity":10,"selectors":".u-6\\/12\\@md"},{"selectorIndex":275,"line":1163,"specificity":10,"selectors":".u-7\\/12\\@md"},{"selectorIndex":276,"line":1168,"specificity":10,"selectors":".u-8\\/12\\@md"},{"selectorIndex":277,"line":1173,"specificity":10,"selectors":".u-9\\/12\\@md"},{"selectorIndex":278,"line":1178,"specificity":10,"selectors":".u-10\\/12\\@md"},{"selectorIndex":279,"line":1183,"specificity":10,"selectors":".u-11\\/12\\@md"},{"selectorIndex":280,"line":1190,"specificity":10,"selectors":".u-1\\/1\\@lg"},{"selectorIndex":281,"line":1195,"specificity":10,"selectors":".u-1\\/2\\@lg"},{"selectorIndex":282,"line":1200,"specificity":10,"selectors":".u-1\\/6\\@lg"},{"selectorIndex":283,"line":1205,"specificity":10,"selectors":".u-2\\/6\\@lg"},{"selectorIndex":284,"line":1210,"specificity":10,"selectors":".u-3\\/6\\@lg"},{"selectorIndex":285,"line":1215,"specificity":10,"selectors":".u-4\\/6\\@lg"},{"selectorIndex":286,"line":1220,"specificity":10,"selectors":".u-5\\/6\\@lg"},{"selectorIndex":287,"line":1225,"specificity":10,"selectors":".u-1\\/12\\@lg"},{"selectorIndex":288,"line":1230,"specificity":10,"selectors":".u-2\\/12\\@lg"},{"selectorIndex":289,"line":1235,"specificity":10,"selectors":".u-3\\/12\\@lg"},{"selectorIndex":290,"line":1240,"specificity":10,"selectors":".u-4\\/12\\@lg"},{"selectorIndex":291,"line":1245,"specificity":10,"selectors":".u-5\\/12\\@lg"},{"selectorIndex":292,"line":1250,"specificity":10,"selectors":".u-6\\/12\\@lg"},{"selectorIndex":293,"line":1255,"specificity":10,"selectors":".u-7\\/12\\@lg"},{"selectorIndex":294,"line":1260,"specificity":10,"selectors":".u-8\\/12\\@lg"},{"selectorIndex":295,"line":1265,"specificity":10,"selectors":".u-9\\/12\\@lg"},{"selectorIndex":296,"line":1270,"specificity":10,"selectors":".u-10\\/12\\@lg"},{"selectorIndex":297,"line":1275,"specificity":10,"selectors":".u-11\\/12\\@lg"},{"selectorIndex":298,"line":1282,"specificity":10,"selectors":".u-1\\/1\\@xl"},{"selectorIndex":299,"line":1287,"specificity":10,"selectors":".u-1\\/2\\@xl"},{"selectorIndex":300,"line":1292,"specificity":10,"selectors":".u-1\\/6\\@xl"},{"selectorIndex":301,"line":1297,"specificity":10,"selectors":".u-2\\/6\\@xl"},{"selectorIndex":302,"line":1302,"specificity":10,"selectors":".u-3\\/6\\@xl"},{"selectorIndex":303,"line":1307,"specificity":10,"selectors":".u-4\\/6\\@xl"},{"selectorIndex":304,"line":1312,"specificity":10,"selectors":".u-5\\/6\\@xl"},{"selectorIndex":305,"line":1317,"specificity":10,"selectors":".u-1\\/12\\@xl"},{"selectorIndex":306,"line":1322,"specificity":10,"selectors":".u-2\\/12\\@xl"},{"selectorIndex":307,"line":1327,"specificity":10,"selectors":".u-3\\/12\\@xl"},{"selectorIndex":308,"line":1332,"specificity":10,"selectors":".u-4\\/12\\@xl"},{"selectorIndex":309,"line":1337,"specificity":10,"selectors":".u-5\\/12\\@xl"},{"selectorIndex":310,"line":1342,"specificity":10,"selectors":".u-6\\/12\\@xl"},{"selectorIndex":311,"line":1347,"specificity":10,"selectors":".u-7\\/12\\@xl"},{"selectorIndex":312,"line":1352,"specificity":10,"selectors":".u-8\\/12\\@xl"},{"selectorIndex":313,"line":1357,"specificity":10,"selectors":".u-9\\/12\\@xl"},{"selectorIndex":314,"line":1362,"specificity":10,"selectors":".u-10\\/12\\@xl"},{"selectorIndex":315,"line":1367,"specificity":10,"selectors":".u-11\\/12\\@xl"},{"selectorIndex":316,"line":1373,"specificity":10,"selectors":".u-color--global"},{"selectorIndex":317,"line":1377,"specificity":10,"selectors":".u-color--red"},{"selectorIndex":318,"line":1381,"specificity":10,"selectors":".u-color--yellow"},{"selectorIndex":319,"line":1385,"specificity":10,"selectors":".u-color--dark"},{"selectorIndex":320,"line":1389,"specificity":10,"selectors":".u-color--light"},{"selectorIndex":321,"line":1393,"specificity":10,"selectors":".u-color--gray-01"},{"selectorIndex":322,"line":1397,"specificity":10,"selectors":".u-color--gray-02"},{"selectorIndex":323,"line":1401,"specificity":10,"selectors":".u-color--gray-03"},{"selectorIndex":324,"line":1405,"specificity":10,"selectors":".u-color--gray-04"},{"selectorIndex":325,"line":1409,"specificity":10,"selectors":".u-color--gray-05"}];</script>
+    <script src='example.js'></script>
+  </body>
+</html>

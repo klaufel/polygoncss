@@ -11,7 +11,7 @@
 // Variables
 
 $h-subtitle__font-family:            $s-fonts__font-family !default;
-$h-subtitle__font-weight:            400 !default;
+$h-subtitle__font-weight:            700 !default;
 $h-subtitle__font-size:              20px !default;
 $h-subtitle__line-height:            28px !default;
 
@@ -25,11 +25,12 @@ $h-subtitle__line-height--md:        28px !default;
 
 
 // ============================================================
-// Output CSS
+// CSS output
 
 .h-subtitle {
   font-family: $h-subtitle__font-family;  
   font-weight: $h-subtitle__font-weight;
+
   @include t-font-size($h-subtitle__font-size, $h-subtitle__line-height);
 
   @include t-mq('sm') {

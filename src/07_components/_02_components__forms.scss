@@ -11,23 +11,25 @@
 // ============================================================
 // Variables
 
-$c-input__margin-bottom:                     20px;
+$c-input__padding:                           0 0 40px !default;
+
+//## Label
+$c-input__label__color:                      $s-color--gray-03 !default;
+$c-input__label__font-size:                  inherit !default;
+$c-input__label__margin:                     0 0 5px !default;
+
 
 //## Field
 $c-input__field__font-size:                  16px !default;
 $c-input__field__line-height:                auto !default;
 $c-input__field__font-weight:                700 !default;
-
-$c-input__field__border-width:               $s-border-width !default;
-$c-input__field__border-color:               $s-color--gray-04 !default;
+$c-input__field__border-width:               2px !default;
+$c-input__field__border-color:               #ccc !default;
 $c-input__field__border-radius:              0 !default;
-
-$c-input__field__padding:                    5px 0 8px !default;
+$c-input__field__padding:                    10px 15px 12px !default;
 $c-input__field__height:                     auto !default;
-
 $c-input__field__color:                      $s-color--gray-01 !default;
 $c-input__field__background:                 transparent !default;
-
 $c-input__field__cursor-default:             pointer !default;
 $c-input__field__cursor-disabled:            not-allowed !default;
 
@@ -40,37 +42,21 @@ $c-input__field__color--error:               #ff0000 !default;
 $c-input__field__color--valid:               red !default;
 
 
-//## Label
-$c-input__label__color:                      $s-color--gray-03 !default;
-$c-input__label__font-size:                  14px !default;
-
-$c-input__label__font-size--sm:              16px !default;
-
-$c-input__field__color--light:               $s-color--light !default;
-$c-input__field__border-color--light:        $s-color--gray-03 !default;
-
-$c-input__label__color--light:               $s-color--light !default;
-
-
 
 // ============================================================
 // Output CSS
 
 .c-input {
-  position: relative;
   display: block;
-  margin-bottom: $c-input__margin-bottom;
-  overflow-x: hidden;
+  padding: $c-input__padding;
 }
 
 
   .c-input__label {
-    position: absolute;
-    bottom: 12px;
-    z-index: 10;
-    left: 0;
+    display: block;
     color: $c-input__label__color;
-    @include t-font-size($c-input__label__font-size, auto);
+    margin: $c-input__label__margin;
+    //@include t-font-size($c-input__label__font-size, auto);
   }
 
 
@@ -79,8 +65,7 @@ $c-input__label__color--light:               $s-color--light !default;
     width: 100%;
     display: block;
     text-align: left;
-    border: 0;
-    border-bottom: $c-input__field__border-width solid $c-input__field__border-color;
+    border: $c-input__field__border-width solid $c-input__field__border-color;
     border-radius: $c-input__field__border-radius;  
     padding: $c-input__field__padding; 
     background-color: $c-input__field__background;
@@ -89,11 +74,10 @@ $c-input__label__color--light:               $s-color--light !default;
     color: $c-input__field__color;
     font-weight: $c-input__field__font-weight;
     height: $c-input__field__height;
-    position: relative;
-    overflow: hidden;
     outline: none;
-    transition: border .3s, color .3s;
-    @include t-font-size($c-input__field__font-size, $c-input__field__line-height);
+    font-size: inherit;
+
+    //@include t-font-size($c-input__field__font-size, $c-input__field__line-height);
 
     
     &,
@@ -130,18 +114,5 @@ $c-input__label__color--light:               $s-color--light !default;
       &::placeholder {
         opacity: 1;
       }
-    }
-
-    &:-webkit-autofill {
-      -webkit-animation-name: autofill;
-      -webkit-animation-fill-mode: both;
-      -webkit-text-fill-color: $c-input__field__color;
-    }
-  }
-
-
-  @-webkit-keyframes autofill {
-    to {
-      background: transparent;
     }
   }

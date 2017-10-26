@@ -34,7 +34,7 @@
 // ============================================================
 // Variables
 
-$u-widths__fractions:                    1 2 $o-grid__cols/2 $o-grid__cols !default;
+$u-widths__fractions:                    1 2 $s-config__grid--cols/2 $s-config__grid--cols !default;
 
 // Option Breakpoints
 $u-widths__breakpoints--enabled:         true !default;
@@ -64,7 +64,7 @@ $u-widths__breakpoints:                  $s-breakpoints !default;
 
 
 // ============================================================
-// CSS Output
+// CSS output
 
 @include u-widths($u-widths__fractions);
 

@@ -66,7 +66,7 @@ $u-debug: (
 
 
 // ============================================================
-// CSS Output
+// CSS output
 
 @if ($s-config__debug) {
   @include u-debug__make();

@@ -15,7 +15,6 @@ $h-heading__font-weight:            600 !default;
 $h-heading__font-size:              30px !default;
 $h-heading__line-height:            32px !default;
 
-
 // Media queries (sm - small)
 $h-heading__font-size--sm:          44px !default;
 $h-heading__line-height--sm:        46px !default;
@@ -26,7 +25,7 @@ $h-heading__line-height--md:        50px !default;
 
 
 // ============================================================
-// Output CSS
+// CSS output
 
 .h-heading {
   font-family: $h-heading__font-family;  

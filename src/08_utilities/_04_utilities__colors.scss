@@ -20,7 +20,7 @@ $u-colors__maps:            $s-colors !default;
 
 
 // ============================================================
-// CSS Output
+// CSS output
 
 @if ($u-colors--enabled) {
   @each $_color__name, $_color__value in $u-colors__maps {

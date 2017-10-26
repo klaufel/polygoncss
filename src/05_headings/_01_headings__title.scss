@@ -11,10 +11,9 @@
 // Variables
 
 $h-title__font-family:            $s-fonts__font-family--title !default;
-$h-title__font-weight:            900 !default;
-
 $h-title__font-size:              20px !default;
 $h-title__line-height:            20px !default;
+$h-title__font-weight:            900 !default;
 
 // Media queries (sm - small)
 $h-title__font-size--sm:          40px !default;
@@ -24,21 +23,6 @@ $h-title__line-height--sm:        40px !default;
 $h-title__font-size--md:          60px !default;
 $h-title__line-height--md:        60px !default;
 
-
-$h-title__fonts: (
-  'default': (
-    'font-size':        $h-title__font-size,
-    'line-height':      $h-title__line-height
-  ),
-  'sm': (
-    'font-size':        $h-title__font-size--sm,
-    'line-height':      $h-title__line-height--sm
-  ),
-  'md': (
-    'font-size':        $h-title__font-size--md,
-    'line-height':      $h-title__line-height--md
-  )
-) !default;
 
 
 // ============================================================

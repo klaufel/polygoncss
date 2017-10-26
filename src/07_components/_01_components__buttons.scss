@@ -19,11 +19,10 @@ $c-button__border-width:           0 !default;
 $c-button__border-color:           transparent !default;
 $c-button__border-radius:          0 !default;
 
-
 $c-button__padding-y:              10px !default;
 $c-button__padding-x:              20px !default;
 
-$c-button__color:                  #ffffff !default;
+$c-button__color:                  $s-color--light !default;
 $c-button__background:             $s-color--global !default;
 
 $c-button__cursor--default:        pointer !default;
@@ -31,12 +30,13 @@ $c-button__cursor--disabled:       not-allowed !default;
 
 
 // Hover
-$c-button__color--hover:            #ffffff !default;
+$c-button__color--hover:            $s-color--light !default;
 $c-button__background--hover:       rgba($c-button__background, .8) !default;
 
 // Active
-$c-button__color--active:           #ffffff !default;
+$c-button__color--active:           $s-color--light !default;
 $c-button__background--active:      darken($c-button__background, 10) !default;
+
 
 
 // ============================================================
@@ -58,10 +58,7 @@ $c-button__background--active:      darken($c-button__background, 10) !default;
   font-weight: $c-button__font-weight;
   text-decoration: none;
   @include t-font-size($c-button__font-size, $c-button__line-height);
-  @include transition(background .3s);
-
-
-  margin-bottom: 20px;
+  @include t-transition(background .3s);
 
   // Share hover, focus and active styles
   &:hover,

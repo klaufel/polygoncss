@@ -11,7 +11,7 @@
 // LAYOUT COLUMNS
 // See 05_objects/_objects__layout.scss
 
-$s-config__layout--cols:            12 !default;
+$s-config__grid--cols:            12 !default;
 
 
 // ============================================================
@@ -42,8 +42,8 @@ $s-config__path--aws:               false !default;
 
 $s-config__path--base:              ".." !default;
 
-@if $s-config__path--aws {
- $s-config__path--base:             "http://d34cxzs4mh88o1.cloudfront.net/public/assets";
+@if ($s-config__path--aws) {
+  $s-config__path--base:             "http://d34cxzs4mh88o1.cloudfront.net/public/assets";
 }
 
 $s-config__path--img:               #{$s-config__path--base}/images !default;
@@ -65,11 +65,13 @@ $s-config__breakpoint-separator:   "\@" !default;
 // NAMESPACING
 // Define assets paths here
 
-$s-config__namespace--objects:		  "o-" !default;
+$s-config__namespace--headings:      "h-" !default;
+$s-config__namespace--objects:      "o-" !default;
 $s-config__namespace--components:   "c-" !default;
 $s-config__namespace--utilities:    "u-" !default;
 
 $s-config__namespace: (
+  'headings':     $s-config__namespace--headings,
   'objects':      $s-config__namespace--objects,
   'components':   $s-config__namespace--components,
   'utilities':    $s-config__namespace--utilities
