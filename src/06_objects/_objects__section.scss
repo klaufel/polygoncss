@@ -11,14 +11,14 @@
 // ============================================================
 // Variables
 
-$o-section__padding-top:                60px !default;
-$o-section__padding-bottom:             60px !default;
+$o-section__padding-top:                20px !default;
+$o-section__padding-bottom:             20px !default;
 
-$o-section__padding-top--sm:            60px !default;
-$o-section__padding-bottom--sm:         60px !default;
+$o-section__padding-top--sm:            40px !default;
+$o-section__padding-bottom--sm:         40px !default;
 
-$o-section__padding-top--md:            60px !default;
-$o-section__padding-bottom--md:         60px !default;
+$o-section__padding-top--md:            40px !default;
+$o-section__padding-bottom--md:         40px !default;
 
 $o-section__padding-top--lg:            60px !default;
 $o-section__padding-bottom--lg:         60px !default;
@@ -26,7 +26,7 @@ $o-section__padding-bottom--lg:         60px !default;
 
 
 // ============================================================
-// Output CSS
+// CSS output 
 
 .o-section {
 	padding-top: $o-section__padding-top;

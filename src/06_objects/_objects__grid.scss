@@ -11,7 +11,7 @@
 // ============================================================
 // Variables
 
-$o-grid__cols:                    $s-config__layout--cols !default;
+$o-grid__cols:                    $s-config__grid--cols !default;
 
 $o-grid__gutter:                  $o-container__gutter-single !default;
 $o-grid__gutter--sm:              $o-container__gutter-single--sm !default;
@@ -36,7 +36,7 @@ $o-grid__gutter--lg:              $o-container__gutter-single--lg !default;
 
 
 // ============================================================
-// CSS Output
+// CSS output 
 
 .o-grid {
   display: flex;
