@@ -56,18 +56,20 @@ $u-widths__breakpoints:                  $s-breakpoints !default;
           max-width: ($_numerator / $_denominator) * 100% !important;
         }
 
+        .u-offset-#{$_numerator}\/#{$_denominator}#{$_bp-suffix} {
+          margin-left: ($_numerator / $_denominator) * 100% !important;
+        }
+
       }
     }
   }
 }
 
 
-
 // ============================================================
 // CSS output
 
 @include u-widths($u-widths__fractions);
-
 
 @if ($u-widths__breakpoints--enabled) {
   @each $_breakpoint-name, $_breakpoint-unit in $u-widths__breakpoints {
@@ -76,6 +78,34 @@ $u-widths__breakpoints:                  $s-breakpoints !default;
       $_breakpoint-name: \@#{$_breakpoint-name};
       @include u-widths($u-widths__fractions, $_breakpoint-name);
 
+      .u-100#{$_breakpoint-name} {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
     }
   }
 }
+
+.u-pull {
+  margin-left: 0 !important;
+}
+
+.u-pull\@sm {
+  @include t-mq('sm') {
+    margin-left: 0 !important;  
+  }  
+}
+
+.u-pull\@md {
+  @include t-mq('md') {
+    margin-left: 0 !important;  
+  }  
+}
+
+.u-pull\@lg {
+  @include t-mq('lg') {
+    margin-left: 0 !important;  
+  }  
+}
+

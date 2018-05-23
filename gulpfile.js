@@ -4,6 +4,7 @@
 var gulp                = require('gulp'),
     sass                = require('gulp-sass'),
     autoprefixer        = require('gulp-autoprefixer'),
+    postcss             = require('gulp-postcss'),
     cleanCss            = require('gulp-clean-css'),
     notify              = require('gulp-notify'),
     specificityGraph    = require('specificity-graph');

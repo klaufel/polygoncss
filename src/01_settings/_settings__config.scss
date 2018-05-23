@@ -9,7 +9,7 @@
 
 
 // LAYOUT COLUMNS
-// See 05_objects/_objects__layout.scss
+// See 05_objects/_objects__grid.scss
 
 $s-config__grid--cols:            12 !default;
 
@@ -38,12 +38,12 @@ $s-config__debug:                   false !default;
 // PATHS
 // Define assets paths here
 
-$s-config__path--aws:               false !default;
+$s-config__path--cdn:               false !default;
 
-$s-config__path--base:              ".." !default;
+$s-config__path--base:              '..' !default;
 
-@if ($s-config__path--aws) {
-  $s-config__path--base:             "http://d34cxzs4mh88o1.cloudfront.net/public/assets";
+@if ($s-config__path--cdn) {
+  $s-config__path--base:             'http://d34cxzs4mh88o1.cloudfront.net/public/assets';
 }
 
 $s-config__path--img:               #{$s-config__path--base}/images !default;
@@ -56,7 +56,7 @@ $s-config__path--fonts:             #{$s-config__path--base}/fonts !default;
 // BREAKPOINT SEPARATOR
 // Define the breakpoint separator
 
-$s-config__breakpoint-separator:   "\@" !default;
+$s-config__breakpoint-separator:   '\@' !default;
 
 
 // ============================================================
@@ -65,10 +65,10 @@ $s-config__breakpoint-separator:   "\@" !default;
 // NAMESPACING
 // Define assets paths here
 
-$s-config__namespace--headings:      "h-" !default;
-$s-config__namespace--objects:      "o-" !default;
-$s-config__namespace--components:   "c-" !default;
-$s-config__namespace--utilities:    "u-" !default;
+$s-config__namespace--headings:     'h-' !default;
+$s-config__namespace--objects:      'o-' !default;
+$s-config__namespace--components:   'c-' !default;
+$s-config__namespace--utilities:    'u-' !default;
 
 $s-config__namespace: (
   'headings':     $s-config__namespace--headings,
@@ -84,5 +84,5 @@ $s-config__namespace: (
 // BEM (BEMIT) SYNTAX
 // Define a bem (bemit) syntax
 
-$s-config__bem--element:      "__" !default;
-$s-config__bem--modifier:     "--" !default;
+$s-config__bem--element:      '__' !default;
+$s-config__bem--modifier:     '--' !default;
