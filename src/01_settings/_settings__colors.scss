@@ -1,0 +1,71 @@
+/* ============================================================
+ * Settings: Colors
+ * ============================================================
+ *
+ * General colors to use in project development
+ *
+ */
+
+
+// ============================================================
+// Brand colors
+
+
+$s-color--global:           #3d3bee !default;
+$s-color--red:              #d55052 !default;
+$s-color--yellow:           #fcc75f !default;
+$s-color--blue:             #0bb7cd !default;
+
+$s-color--dark:             #000 !default;
+$s-color--light:            #fff !default;
+
+$s-color--gray-01:          #1e1e1e !default; // Darker
+$s-color--gray-02:          #333031 !default;
+$s-color--gray-03:          #5d595a !default;
+$s-color--gray-04:          #d8d8d8 !default;
+$s-color--gray-05:          #f0f0f0 !default; // More light
+
+
+$s-colors: (
+  "global":           $s-color--global,
+  "red":              $s-color--red,
+  "yellow":           $s-color--yellow,
+
+  "dark":             $s-color--dark,
+  "light":            $s-color--light,
+
+  "gray-01":          $s-color--gray-01,
+  "gray-02":          $s-color--gray-02,
+  "gray-03":          $s-color--gray-03,
+  "gray-04":          $s-color--gray-04,
+  "gray-05":          $s-color--gray-05  
+) !default;
+
+
+
+// ============================================================
+// Social media colors
+
+$s-color__sm--facebook:     #1f579c !default;
+$s-color__sm--twitter:      #00aced !default;
+$s-color__sm--google:       #dd4b39 !default;
+$s-color__sm--youtube:      #ce1312 !default;
+$s-color__sm--instagram:    #125688 !default;
+$s-color__sm--linkedin:     #007bb5 !default;
+$s-color__sm--pinterest:    #cb2027 !default;
+$s-color__sm--spotify:      #17d85f !default;
+$s-color__sm--whatsapp:     #64d448 !default;
+$s-color__sm--feed:         #ff9a00 !default;
+
+
+$s-colors__sm: (
+  "facebook":        $s-color__sm--facebook,
+  "twitter":         $s-color__sm--twitter,
+  "google":          $s-color__sm--google,
+  "youtube":         $s-color__sm--youtube,
+  "instagram":       $s-color__sm--instagram,
+  "pinterest":       $s-color__sm--pinterest,
+  "spotify":         $s-color__sm--spotify,
+  "whatsapp":        $s-color__sm--whatsapp,
+  "feed":            $s-color__sm--feed  
+) !default;

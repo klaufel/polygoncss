@@ -1,0 +1,14 @@
+/* ============================================================
+ * Components
+ * ============================================================
+ *
+ * Import all the scss files in the components layer.
+ *
+ */
+
+
+@import "_structure/components__header";
+@import "_structure/components__footer";
+
+@import "components__button";
+@import "components__input";

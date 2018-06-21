@@ -1,0 +1,61 @@
+/* ============================================================
+ * Objects: Container
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+$o-container__gutter:                   30px !default;
+$o-container__gutter--sm:               30px !default;
+$o-container__gutter--md:               30px !default;
+$o-container__gutter--lg:               30px !default;
+
+$o-container__gutter-single:            $o-container__gutter/2 !default;
+$o-container__gutter-single--sm:        $o-container__gutter--sm/2 !default;
+$o-container__gutter-single--md:        $o-container__gutter--md/2 !default;
+$o-container__gutter-single--lg:        $o-container__gutter--lg/2 !default;
+
+//## Widths
+$o-container__max-width--sm:            768px - $o-container__gutter--sm !default;
+$o-container__max-width--md:            992px - $o-container__gutter--md !default;
+$o-container__max-width--lg:            1200px - $o-container__gutter--lg !default;
+
+
+
+// ============================================================
+// CSS output 
+
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: $o-container__gutter-single;
+  padding-left: $o-container__gutter-single;
+
+  @include t-mq('sm') {
+    max-width: $o-container__max-width--sm;
+    padding-right: $o-container__gutter-single--sm;
+    padding-left: $o-container__gutter-single--sm;
+  }
+  @include t-mq('md') {
+    max-width: $o-container__max-width--md;
+    padding-right: $o-container__gutter-single--md;
+    padding-left: $o-container__gutter-single--md;
+
+  }
+  @include t-mq('lg') {
+    max-width: $o-container__max-width--lg;
+    padding-right: $o-container__gutter-single--lg;
+    padding-left: $o-container__gutter-single--lg;
+  }
+}
+
+  //## Modifiers: Determinate width of container
+  .o-container--fluid {
+    max-width: 100%;
+  }

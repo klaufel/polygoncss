@@ -1,0 +1,98 @@
+/* ============================================================
+ * Components: Button
+ * ============================================================
+ *
+ * Button styles can be applied to any element. Typically you'll want to use
+ * either a `<button>` or an `<a>` element:
+ *
+ * Example:
+ * <button class="c-button">Click</button>
+ * <a class="c-button" href="#">Some page</a>
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+$c-button__font-size:              16px !default;
+$c-button__line-height:            auto !default;
+$c-button__font-weight:            20px !default;
+
+$c-button__border-width:           0 !default;
+$c-button__border-color:           transparent !default;
+$c-button__border-radius:          0 !default;
+
+$c-button__padding-y:              10px !default;
+$c-button__padding-x:              20px !default;
+
+$c-button__color:                  $s-color--light !default;
+$c-button__background:             $s-color--global !default;
+
+$c-button__cursor--default:        pointer !default;
+$c-button__cursor--disabled:       not-allowed !default;
+
+
+// Hover
+$c-button__color--hover:            $s-color--light !default;
+$c-button__background--hover:       rgba($c-button__background, .8) !default;
+
+// Active
+$c-button__color--active:           $s-color--light !default;
+$c-button__background--active:      darken($c-button__background, 10) !default;
+
+
+
+// ============================================================
+// CSS Output
+
+.c-button {
+  font-family: inherit;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $c-button__border-width solid $c-button__border-color;
+  border-radius: $c-button__border-radius;
+  cursor: $c-button__cursor--default;
+  padding: $c-button__padding-y $c-button__padding-x;
+  background: $c-button__background;
+  color: $c-button__color;
+  font-weight: $c-button__font-weight;
+  text-decoration: none;
+  @include t-font-size($c-button__font-size, $c-button__line-height);
+  @include t-transition(background .3s);
+
+  // Share hover, focus and active styles
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $c-button__background--hover;
+    color: $c-button__color--hover;
+  }
+
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+
+  &:active {
+    background-image: none;
+    background-color: $c-button__background--active;
+    color: $c-button__color--active;
+    box-shadow: none;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &:disabled,
+  &.has-disabled {
+    cursor: $c-button__cursor--disabled;
+    opacity: .5;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,54 @@
+/* ============================================================
+ * Settings: Fonts
+ * ============================================================
+ *
+ * Fonts utilized by the project brand
+ *
+ */
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+
+// ============================================================ 
+
+
+$s-fonts__font-family:            'Roboto', sans-serif !default;
+
+$s-fonts__font-family--title:     'Roboto', sans-serif !default;
+
+
+$s-fonts__font-size:              17px !default;
+$s-fonts__line-height:            26px !default;
+
+$s-fonts__font-size--sm:          17px !default;
+$s-fonts__line-height--sm:        26px !default;
+
+$s-fonts__font-size--md:          17px !default;
+$s-fonts__line-height--md:        26px !default;
+
+
+// ============================================================ 
+
+
+$s-fonts: (
+  'font-family':        $s-fonts__font-family,
+  'font-size':          $s-fonts__font-size,
+  'line-height':        $s-fonts__line-height
+) !default;
+
+
+$s-fonts--viewport: (
+  'default': (
+    'font-size':        $s-fonts__font-size,
+    'line-height':      $s-fonts__line-height
+  ),
+  'small': (
+    'font-size':        $s-fonts__font-size--sm,
+    'line-height':      $s-fonts__line-height--sm
+  ),
+  'medium': (
+    'font-size':        $s-fonts__font-size--md,
+    'line-height':      $s-fonts__line-height--md
+  )
+) !default;

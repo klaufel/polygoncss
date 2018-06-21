@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Structure ITCSS (BEMIT) for Testing</title>
+  <link href="../dist/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<div class="o-container o-container--fluid">
+
+
+  <section class="o-section">
+    <div class="o-container">
+
+      <h2 class="h-heading">01. Headings</h2>
+
+      <h1 class="h-title">Title (.h-title)</h1>
+      <h2 class="h-heading">Heading (.h-heading)</h2>
+      <h3 class="h-headline">Headline (.h-headline)</h3>
+      <p class="h-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis ipsum sed felis varius finibus ut id eros. Mauris at arcu vel arcu rhoncus imperdiet. (.h-subtitle)</p>
+      <p class="h-generic">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis ipsum sed felis varius finibus ut id eros. Mauris at arcu vel arcu rhoncus imperdiet. Ut vel ex in nunc consectetur consequat. Duis id nulla sed ligula maximus maximus. Curabitur id ante et est rhoncus facilisis. Sed finibus ligula non justo euismod imperdiet. Aliquam dapibus quam vitae lorem tempor, et pretium velit suscipit. Sed vitae orci tincidunt, ornare ante interdum, finibus odio. Donec vel diam nec urna laoreet posuere. (.h-generic)</p>
+    </div>
+  </section>
+
+  
+  <section class="o-section">
+    <div class="o-container">
+
+      <h2 class="h-heading">02. Layout columns system</h2>
+
+      <div class="o-grid">
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">1</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">2</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">3</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">4</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">5</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">6</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">7</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">8</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">9</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">10</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">11</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">12</div>
+        </div>
+      </div>
+
+      <div class="o-grid">
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">1</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">1</div>
+        </div>
+        <div class="o-grid__col u-1/12@md">
+          <div class="u-box">1</div>
+        </div>
+        <div class="o-grid__col u-3/12@md">
+          <div class="u-box">3</div>
+        </div>
+        <div class="o-grid__col u-6/12@md">
+          <div class="u-box">6</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="o-section">
+    <div class="o-container">
+
+      <h2 class="h-heading">03. Tables</h2>
+
+      <table class="o-table" cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+          </tr>
+          <tr>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+            <td>Content</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </section>
+
+
+  <section class="o-section">
+    <div class="o-container">
+      <h2 class="h-heading">04. Buttons group</h2>
+      <div class="o-grid">
+        <div class="o-grid__col">
+          <a class="c-button">Anchor</a>
+          <button class="c-button">Button</button>
+          <input class="c-button" type="submit" value="Input submit" />
+          <input class="c-button" type="button" value="Input button" />
+        </div>
+        <div class="o-grid__col">
+          <a class="c-button has-disabled">Anchor</a>
+          <button class="c-button has-disabled" disabled>Button</button>
+          <input class="c-button has-disabled" type="submit" value="Input submit" disabled />
+          <input class="c-button has-disabled" type="button" value="Input button" disabled />
+        </div>
+    </div>
+  </section>
+
+  <section class="o-section">
+    <div class="o-container">
+      <h2 class="h-heading">05. Forms</h2>
+            
+      <form>
+        <div class="o-grid">
+          <div class="o-grid__col">
+            <div class="c-input">
+              <label class="c-input__label" for="input01">Label</label>
+              <input class="c-input__field" type="text" id="input01" placeholder="Input placeholder" />
+            </div>            
+          </div>
+          <div class="o-grid__col">
+            <div class="c-input">
+              <label class="c-input__label" for="input01">Label</label>
+              <input class="c-input__field" type="text" id="input01" placeholder="Input placeholder" />
+            </div>            
+          </div>
+        </div>
+        <div class="o-grid">
+          <div class="o-grid__col">
+            <div class="c-input">
+              <label class="c-input__label" for="input01">Label</label>
+              <input class="c-input__field" type="text" id="input01" placeholder="Input placeholder" />
+            </div>            
+          </div>
+          <div class="o-grid__col">
+            <div class="c-input">
+              <label class="c-input__label" for="input01">Label</label>
+              <input class="c-input__field" type="text" id="input01" placeholder="Input placeholder" />
+            </div>            
+          </div>
+        </div>
+        <button class="c-button" type="submit">Send form</button>
+      </form>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
