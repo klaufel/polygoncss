@@ -1,0 +1,42 @@
+/* ============================================================
+ * Headings: Small
+ * ============================================================
+ *
+ * Lorem ipsum dolor sit amet
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+$h-small__font-family:            $s-fonts__font-family !default;
+$h-small__font-size:              14px !default;
+$h-small__line-height:            28px !default;
+$h-small__font-weight:            400 !default;
+
+// Media queries (sm - small)
+$h-small__font-size--sm:          16px !default;
+$h-small__line-height--sm:        28px !default;
+
+// Media queries (md- medium)
+$h-small__font-size--md:          18px !default;
+$h-small__line-height--md:        28px !default;
+
+
+
+// ============================================================
+// Output CSS
+
+.h-small {
+  font-family: $h-small__font-family;  
+  font-weight: $h-small__font-weight;
+  @include t-font-size($h-small__font-size, $h-small__line-height);
+
+  @include t-mq('sm') {
+    @include t-font-size($h-small__font-size--sm, $h-small__line-height--sm);
+  }
+  @include t-mq('md') {
+    @include t-font-size($h-small__font-size--md, $h-small__line-height--md);
+  }
+}

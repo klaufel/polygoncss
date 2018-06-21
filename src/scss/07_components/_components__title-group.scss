@@ -1,0 +1,88 @@
+/* ============================================================
+ * Components: Title group
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+
+
+
+// ============================================================
+// Output CSS
+
+.c-title-group {
+  padding-bottom: 30px;
+
+  @include t-mq('sm') {
+    padding-bottom: 50px;
+  }
+  @include t-mq('md') {
+    padding-bottom: 80px;
+  }
+}
+
+.c-title-group.a-global {
+  .c-title-group__title,
+  .c-title-group__description {
+    filter: blur(20px);
+    transition: filter 1.4s, opacity 1.4s;
+  }
+
+
+  .c-title-group__description {
+    transition-delay: .4s;
+  }
+
+  &.is-inview {
+    opacity: 1;
+
+    .c-title-group__title,
+    .c-title-group__description {
+      filter: none;
+      opacity: 1;
+    }
+
+  }
+}
+
+.c-title-group--collapsed {
+  padding-bottom: 0;
+}
+
+.c-title-group--light {
+  .c-title-group__title,
+  .c-title-group__description {
+    color: $s-color--light;
+  }
+}
+
+.c-title-group__title {
+  margin-bottom: 16px;
+  max-width: 80%;
+  @include t-mq('md') {
+    max-width: 100%;
+  }
+
+  @include t-mq('sm') {
+    margin-bottom: 20px;
+  }
+  @include t-mq('md') {
+    margin-bottom: 30px;
+  }
+}
+
+.c-title-group__description {
+  margin-bottom: 0;
+  max-width: 90%;
+
+  @include t-mq('md') {
+    max-width: 100%;
+  }
+}

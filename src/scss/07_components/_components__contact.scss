@@ -1,0 +1,154 @@
+/* ============================================================
+ * Components: Input
+ * ============================================================
+ *
+ * Minions ipsum baboiii hana dul sae butt. Uuuhhh jeje
+ * tulaliloo daa pepete jiji poulet tikka masala ti aamoo!
+ *
+ */
+
+
+// ============================================================
+// Variables
+
+
+
+
+// ============================================================
+// Output CSS
+
+.c-contact {
+  position: relative;
+  padding: 0;
+  
+  @include t-mq('sm') {
+    margin-bottom: 60px;
+    padding: 0 0 470px;
+  }
+  @include t-mq('md') {
+    margin-bottom: 60px;
+    padding: 60px 0;
+  }
+}
+
+.c-contact__grid {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: $o-container__gutter;
+
+  @include t-mq('sm') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include t-mq('md') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.c-contact__item {
+  &:nth-child(1) {
+    @include t-mq('sm') {
+      grid-column: 1 / 3;
+    }
+  }
+
+  &:nth-child(2) {
+    @include t-mq('sm') {
+      grid-column: 1 / 5;
+    }
+  }
+
+  &:nth-child(3) {
+    @include t-mq('sm') {
+      grid-row: 1 / 1;
+      grid-column: 3 / 5;
+    }
+    @include t-mq('md') {
+      grid-column: 3 / 4;
+    }
+  }
+
+}
+
+.c-contact__content {
+  background: $s-color--dark;
+  color: $s-color--light;
+  padding: 20px;
+
+  @include t-mq('md') {
+    padding: 20px 30px;
+  }
+}
+
+  .c-contact__content__item {
+    display: block;
+    a {
+      color: $s-color--light;
+    }
+  }
+
+    .c-contact__content__item--first {
+      padding-bottom: 10px;
+    }
+
+.c-contact__content--social-media {
+  background: transparent;
+  @include t-flexbox();
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.c-contact__map {
+  width: 100%;
+  height: 560px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #f7f7f7;
+  display: none;
+
+  @include t-mq('sm') {
+    display: block;
+  }
+
+
+  @include t-mq('md') {
+    width: 56%;
+    display: block;
+    top: 0;
+    height: 100%;
+    bottom: inherit;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -48px;
+    right: 76px;
+    width: 100%;
+    height: 100%;
+    background: $s-color--gray-04;
+    z-index: -1;
+
+    @include t-mq('sm') {
+      right: 30%;
+      bottom: -60px;
+    }
+    @include t-mq('md') {
+      right: 40%;
+    }
+  }
+}
+
+.c-contact__map__element {
+  width: 100%;
+  height: 100%;
+}
+

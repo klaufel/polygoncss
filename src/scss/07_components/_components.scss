@@ -1,0 +1,35 @@
+/* ============================================================
+ * Components
+ * ============================================================
+ *
+ * Import all the scss files in the components layer.
+ *
+ */
+
+
+@import "_structure/components__header";
+
+@import "_structure/components__nav-main";
+@import "_structure/components__nav-mobile";
+@import "_structure/components__nav-button";
+
+@import "_structure/components__wrapper";
+
+@import "_structure/components__footer";
+
+@import "components__cookie-consent";
+
+
+
+@import "components__button";
+@import "components__input";
+@import "components__social-media";
+@import "components__banner-top";
+@import "components__banner-brand";
+@import "components__brands-list";
+@import "components__instagram";
+@import "components__slider-container";
+@import "components__slider";
+@import "components__contact";
+@import "components__title-group";
+@import "components__form";
