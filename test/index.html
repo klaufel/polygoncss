@@ -14,6 +14,56 @@
 <div class="o-container o-container--fluid">
 
 
+<h3>The CSS framework for the web artisans.</h3>
+
+  <section class="o-section">
+    <div class="o-container">
+      <h2 class="h-heading">Buttons</h2>
+      <p>Button styles can be applied to any element. Typically you'll want to use either a <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;input&gt;</code> element:</p>
+
+      <a class="c-button" href="#" role="button">Anchor</a>
+      <button class="c-button" type="submit">Button</button>
+      <input class="c-button" type="button" value="Input">
+      <input class="c-button" type="submit" value="Submit">
+      <input class="c-button" type="reset" value="Reset">
+
+      <pre>
+        <code class="language-html" data-lang="html">
+&lt;a class=&quot;c-button&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Anchor&lt;/a&gt;
+&lt;button class=&quot;c-button&quot; type=&quot;submit&quot;&gt;Button&lt;/button&gt;
+&lt;input class=&quot;c-button&quot; type=&quot;button&quot; value=&quot;Input&quot;&gt;
+&lt;input class=&quot;c-button&quot; type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;input class=&quot;c-button&quot; type=&quot;reset&quot; value=&quot;Reset&quot;&gt;
+        </code>
+      </pre>
+
+      <h3 class="h-headline">Disabled state</h3>
+
+
+
+      <p>Make your buttons inactive by adding the "is-disabled" class to <code>&lt;a&gt;</code> element, and the disabled boolean attribute for the elements that support this attribute like <code>&lt;button&gt;</code> and <code>&lt;input&gt;</code> elements. You can use the two methods.</p>
+            
+      <a class="c-button is-disabled" href="#" role="button">Anchor</a>
+      <button class="c-button is-disabled" type="submit" disabled>Button</button>
+      <input class="c-button is-disabled" type="button" value="Input" disabled>
+      <input class="c-button is-disabled" type="submit" value="Submit" disabled>
+      <input class="c-button is-disabled" type="reset" value="Reset" disabled>
+
+       <pre>
+        <code class="language-html" data-lang="html">
+&lt;a class=&quot;c-button is-disabled&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;Anchor&lt;/a&gt;
+&lt;button class=&quot;c-button is-disabled&quot; type=&quot;submit&quot; disabled&gt;Button&lt;/button&gt;
+&lt;input class=&quot;c-button is-disabled&quot; type=&quot;button&quot; value=&quot;Input&quot; disabled&gt;
+&lt;input class=&quot;c-button is-disabled&quot; type=&quot;submit&quot; value=&quot;Submit&quot; disabled&gt;
+&lt;input class=&quot;c-button is-disabled&quot; type=&quot;reset&quot; value=&quot;Reset&quot; disabled&gt;
+        </code>
+      </pre>
+     
+    </div>
+  </section>
+
+
+
   <section class="o-section">
     <div class="o-container">
 
@@ -133,26 +183,6 @@
     </div>
   </section>
 
-
-  <section class="o-section">
-    <div class="o-container">
-      <h2 class="h-heading">04. Buttons group</h2>
-      <div class="o-grid">
-        <div class="o-grid__col">
-          <a class="c-button">Anchor</a>
-          <button class="c-button">Button</button>
-          <input class="c-button" type="submit" value="Input submit" />
-          <input class="c-button" type="button" value="Input button" />
-        </div>
-        <div class="o-grid__col">
-          <a class="c-button has-disabled">Anchor</a>
-          <button class="c-button has-disabled" disabled>Button</button>
-          <input class="c-button has-disabled" type="submit" value="Input submit" disabled />
-          <input class="c-button has-disabled" type="button" value="Input button" disabled />
-        </div>
-    </div>
-  </section>
-
   <section class="o-section">
     <div class="o-container">
       <h2 class="h-heading">05. Forms</h2>
@@ -199,8 +229,10 @@
 
 
 
-
-
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 
 </html>

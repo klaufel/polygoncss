@@ -88,9 +88,9 @@ $c-button__background--active:      darken($c-button__background, 10) !default;
     box-shadow: none;
   }
 
-  // Disabled comes first so active can properly restyle
+  // Make your buttons inactive by adding the class or disabled boolean attribute
   &:disabled,
-  &.has-disabled {
+  &.is-disabled {
     cursor: $c-button__cursor--disabled;
     opacity: .5;
     box-shadow: none;
