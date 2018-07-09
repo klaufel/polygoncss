@@ -15,23 +15,27 @@ $c-input__padding:                           0 0 40px !default;
 
 //## Label
 $c-input__label__color:                      $s-color--gray-03 !default;
-$c-input__label__font-size:                  inherit !default;
 $c-input__label__margin:                     0 0 5px !default;
+$c-input__label__font-size:                  14px !default;
+$c-input__label__font-weight:                400 !default;
+$c-input__label__line-height:                auto !default;
 
 
 //## Field
-$c-input__field__font-size:                  16px !default;
-$c-input__field__line-height:                auto !default;
-$c-input__field__font-weight:                700 !default;
-$c-input__field__border-width:               2px !default;
-$c-input__field__border-color:               #ccc !default;
-$c-input__field__border-radius:              0 !default;
-$c-input__field__padding:                    10px 15px 12px !default;
-$c-input__field__height:                     auto !default;
-$c-input__field__color:                      $s-color--gray-01 !default;
 $c-input__field__background:                 transparent !default;
+$c-input__field__border-color:               #ccc !default;
+$c-input__field__border-radius:              $s-global__border-radius !default;
+$c-input__field__border-width:               1px !default;
+$c-input__field__color:                      $s-color--gray-01 !default;
 $c-input__field__cursor-default:             pointer !default;
 $c-input__field__cursor-disabled:            not-allowed !default;
+$c-input__field__font-size:                  16px !default;
+$c-input__field__font-weight:                400 !default;
+$c-input__field__height:                     auto !default;
+$c-input__field__line-height:                auto !default;
+$c-input__field__padding:                    10px 15px 12px !default;
+
+$c-input__field__color--hover:               $s-color--global !default;
 
 // Placeholder
 $c-input__field__color-placeholder:          $s-color--gray-01 !default;
@@ -55,32 +59,34 @@ $c-input__field__color--valid:               red !default;
 //## Elements
 
 .c-input__label {
-  display: block;
+  @include t-font-size($c-input__label__font-size, $c-input__label__line-height);
   color: $c-input__label__color;
+  cursor: pointer;
+  display: block;
   margin: $c-input__label__margin;
-  //@include t-font-size($c-input__label__font-size, auto);
 }
 
 
 .c-input__field {
-  font-family: inherit;
-  width: 100%;
-  display: block;
-  text-align: left;
-  border: $c-input__field__border-width solid $c-input__field__border-color;
-  border-radius: $c-input__field__border-radius;  
-  padding: $c-input__field__padding; 
+  @include t-font-size($c-input__field__font-size, $c-input__field__line-height);
+  background-clip: padding-box;
   background-color: $c-input__field__background;
   background-image: none;
-  background-clip: padding-box;
+  border-radius: $c-input__field__border-radius;  
+  border: $c-input__field__border-width solid $c-input__field__border-color;
   color: $c-input__field__color;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: $c-input__field__font-weight;
   height: $c-input__field__height;
   outline: none;
-  font-size: inherit;
-
-  //@include t-font-size($c-input__field__font-size, $c-input__field__line-height);
+  padding: $c-input__field__padding; 
+  text-align: left;
+  transition: border .3s, color .3s;
+  width: 100%;
   
+  // Share hover, focus and active styles
   &,
   &:hover,
   &:focus,
@@ -88,6 +94,11 @@ $c-input__field__color--valid:               red !default;
     appearance: none;
     box-shadow: none;
     outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $c-input__field__color--hover;
   }
 
   // Unstyle the caret on `<select>`s in IE10+.
@@ -117,3 +128,21 @@ $c-input__field__color--valid:               red !default;
     }
   }
 }
+
+
+.c-input--select {
+  .c-input__field {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10"><path fill="#cccccc" d="M16.6.7c-.5-.5-1.4-.5-1.9 0l-5.7 5.8-5.7-5.8c-.5-.5-1.4-.5-1.9 0s-.5 1.4 0 1.9l6.7 6.7c.2.2.6.4.9.4.3 0 .7-.1.9-.4l6.7-6.7c.5-.5.5-1.4 0-1.9z"/></svg>');
+    background-position: center right 15px;
+  }
+}
+
+.c-input--textarea {
+  .c-input__field {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+

@@ -17,11 +17,11 @@
 
 $c-button__font-size:              16px !default;
 $c-button__line-height:            auto !default;
-$c-button__font-weight:            20px !default;
+$c-button__font-weight:            700 !default;
 
 $c-button__border-width:           0 !default;
 $c-button__border-color:           transparent !default;
-$c-button__border-radius:          0 !default;
+$c-button__border-radius:          $s-global__border-radius !default;
 
 $c-button__padding-y:              10px !default;
 $c-button__padding-x:              20px !default;
@@ -62,7 +62,7 @@ $c-button__background--active:      darken($c-button__background, 10) !default;
   font-weight: $c-button__font-weight;
   text-decoration: none;
   @include t-font-size($c-button__font-size, $c-button__line-height);
-  @include t-transition(background .3s);
+  transition: background .3s;
 
   // Share hover, focus and active styles
   &:hover,
