@@ -12,8 +12,6 @@ Clone the repository in local and install the dependencies, then run gulp.
 $ git clone https://github.com/klaufel/structure-itcss-bemit.git
 ```
 
-[component_button.md](component_button.md)
-
 **npm:**
 
 ```
@@ -90,4 +88,14 @@ src/
 │   └── 02_utilities__debug.scss
 │ 
 └── style.scss
+```
+
+
+
+## Preview your site
+
+Run the local server with `docsify serve`. You can preview your site in your browser on `http://localhost:3000`.
+
+```bash
+docsify serve docs
 ```

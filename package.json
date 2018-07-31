@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/klaufel/structure-itcss-bemit#readme",
   "scripts": {
-    "dev": "gulp default"
+    "dev": "gulp default",
+    "graph": "specificity-graph dist/style.css"
   },
   "dependencies": {},
   "devDependencies": {

@@ -1,7 +1,5 @@
 * Get Started
-  * [Bibliography](bibliography.md)
-  * [Resources](resources.md)
-  * [Changelog](changelog.md)
+  * [Introduction](introduction.md)
 
 * Objects
   * [Container](objects/container.md)

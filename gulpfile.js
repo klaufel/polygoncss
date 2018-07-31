@@ -6,14 +6,13 @@ var gulp                = require('gulp'),
     autoprefixer        = require('gulp-autoprefixer'),
     postcss             = require('gulp-postcss'),
     cleanCss            = require('gulp-clean-css'),
-    notify              = require('gulp-notify'),
-    specificityGraph    = require('specificity-graph');
+    notify              = require('gulp-notify');
 
 // Paths variables
 var paths = {
     dist       : 'dist',
     distCSS    : './dist/style.css',
-    graphDir   : '_specificity-graph',
+    graphDir   : 'specificity-graph',
     sass       : ['src/**/*.scss' ]
 };
 
@@ -31,12 +30,6 @@ gulp.task('sass', function () {
 // Rerun the task when a file changes
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['sass']);
-});
-
-gulp.task('graph', function() {
-    specificityGraph(paths.graphDir, paths.distCSS, function() {
-        console.log('Specificity graph generated!! Happy battlel with the specificity! 😎');
-    });
 });
 
 
