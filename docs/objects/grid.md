@@ -1,5 +1,9 @@
 # Grid object
 
+## Examples
+
+Simple way of using the grid object.
+
 <div class="c-code">
   <div class="o-container">
     <div class="o-grid">      

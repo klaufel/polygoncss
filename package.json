@@ -1,29 +1,10 @@
 {
-  "name": "pyramidcss",
-  "version": "1.0.0-alpha",
+  "name": "polygoncss",
+  "version": "1.0.1-alpha",
   "description": "Structured for a project based in ITCSS: Scalable and maintainable CSS architecture and BEM (BEMIT) methodology.",
-  "main": "dist/style.css",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/klaufel/structure-itcss-bemit.git"
-  },
-  "keywords": [
-    "itcss",
-    "css",
-    "sass",
-    "scss",
-    "bem",
-    "bemit"
-  ],
-  "author": "Juan Carlos Ruiz",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/klaufel/structure-itcss-bemit/issues"
-  },
-  "homepage": "https://github.com/klaufel/structure-itcss-bemit#readme",
-  "scripts": {
-    "dev": "gulp default",
-    "graph": "specificity-graph dist/style.css"
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
   },
   "dependencies": {},
   "devDependencies": {
@@ -34,5 +15,29 @@
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "4.0.1",
     "specificity-graph": "^0.1.7"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp default",
+    "graph": "specificity-graph dist/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klaufel/polygoncss.git"
+  },
+  "keywords": [
+    "itcss",
+    "framework",
+    "css",
+    "sass",
+    "scss",
+    "bem",
+    "bemit"
+  ],
+  "author": "Juan Carlos Ruiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/klaufel/polygoncss/issues"
+  },
+  "homepage": "https://github.com/klaufel/polygoncss#readme"
 }

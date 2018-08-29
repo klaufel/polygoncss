@@ -45,6 +45,7 @@ For more information you can visit the official documentation of polygonCSS- htt
 if you want to display the local docs, run the local server with `docsify serve`. You can preview your site in your browser on `http://localhost:3000`.
 
 ```bash
+npm i docsify-cli -g
 docsify serve docs
 ```
 

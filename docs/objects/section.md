@@ -1,11 +1,11 @@
-# Container object
+# Section object
 
-El objecto container sirve para crear el contenedor base de nuestra arquitectura. Consta de una anchura máxima y espaciados horizontales para separar el contenido.
+...
 
 
 ## Examples
 
-Forma simple de añadir el objeto container.
+Simple way of using the section object.
 
 <div class="c-code">
   <div class="o-section">
