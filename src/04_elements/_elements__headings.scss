@@ -9,14 +9,14 @@
  */
 
 
-// Headings variables
+// ============================================================
+// Variables
 
-$e-headings__font-size:        16px !default;
-$e-headings__line-height:      20px !default;
 $e-headings__font-weight:      400 !default;
 
 
-// Headings output
+// ============================================================
+// CSS output 
 
 h1,
 h2,
@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include t-font-size($e-headings__font-size, $e-headings__line-height);
+  font-size: inherit;
   font-weight: $e-headings__font-weight;
   margin-top: 0;
 }

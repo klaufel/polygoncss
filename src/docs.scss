@@ -23,14 +23,19 @@
 // Elements
 @import "04_elements/elements";
 
-// Headings
-@import "05_headings/headings";
+.c-code {
+  padding: 16px;
+  border: 1px solid #f6f8fa;
 
-// Objects
-@import "06_objects/objects";
+  // Headings
+  @import "05_headings/headings";
 
-// Components
-@import "07_components/components";
+  // Objects
+  @import "06_objects/objects";
 
-// Utilities
-@import "08_utilities/utilities";
+  // Components
+  @import "07_components/components";
+
+  // Utilities
+  @import "08_utilities/utilities";
+}

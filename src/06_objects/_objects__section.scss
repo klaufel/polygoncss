@@ -24,7 +24,6 @@ $o-section__padding-top--lg:            60px !default;
 $o-section__padding-bottom--lg:         60px !default;
 
 
-
 // ============================================================
 // CSS output 
 
@@ -45,3 +44,11 @@ $o-section__padding-bottom--lg:         60px !default;
     padding-bottom: $o-section__padding-bottom--lg;
   }
 }
+
+  .o-section--top {
+    padding-top: 0;
+  }
+
+  .o-section--bottom {
+    padding-bottom: 0;
+  }

@@ -1,43 +1,54 @@
-# Structured for a project based in ITCSS and BEMIT (BEM) Methodology
+# 🔷 PolygonCSS
 
 Basic blank structure of a project based on ITCSS (Scalable and Maintainable CSS Architecture) and BEMIT (BEM) Methodology.
 
-## Installation
+It is a CSS framework for web artisans. It is another framework to be able to start developing your project with a predefined base based on OOCSS, working through BEMIT (BEM + ITCSS). In this way we can develop our project in a coherent, clean and orderly way and can be maintained and scaled without any difficulty.
 
-Clone the repository in local and install the dependencies, then run gulp.
+The framework has some components developed to start working, the styles of each component are generic styles and are designed to be edited according to the needs of the project with which you use it, although if they seem beautiful, they are ready to use them!
 
-**git:**
+## Getting Started
 
-```
-$ git clone https://github.com/klaufel/structure-itcss-bemit.git
-```
+Clone the repository in local and install the dependencies, then run dev & build scripts.
 
-**npm:**
+**Install:**
 
-```
-$ npm install
-$ gulp
-
+```bash
+git clone https://github.com/klaufel/polygoncss.git
+cd polygoncss
+npm install
 ```
 
-## Specificity graph
+If you have a problem with install `node-sass`, use the next command line:
+```bash
+sudo npm i gulp-sass -ES --unsafe-perm=true
+```
 
-Generate a specificity graph in a `specificity-graph` folder.
+**Development script:**
+```bash
+npm run dev
+```
 
+**Build script:**
+```bash
+npm run build
+```
+
+**Specificity graph:** Generate a specificity graph in a `specificity-graph` folder.
 ```bash
 npm run graph
 ```
 
-## Preview docs
+## Documentation
 
-Run the local server with `docsify serve`. You can preview your site in your browser on `http://localhost:3000`.
+For more information you can visit the official documentation of polygonCSS- https://polygoncss.com/docs.
+
+if you want to display the local docs, run the local server with `docsify serve`. You can preview your site in your browser on `http://localhost:3000`.
 
 ```bash
 docsify serve docs
 ```
 
-
-## Folder structure
+## Project folder structure
 
 ```
 src/
