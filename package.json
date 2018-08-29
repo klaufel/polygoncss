@@ -1,5 +1,5 @@
 {
-  "name": "structure-itcss-bemit",
+  "name": "pyramidcss",
   "version": "1.0.0-alpha",
   "description": "Structured for a project based in ITCSS: Scalable and maintainable CSS architecture and BEM (BEMIT) methodology.",
   "main": "dist/style.css",

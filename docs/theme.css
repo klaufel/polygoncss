@@ -808,6 +808,7 @@ body {
     -webkit-font-smoothing: initial;
     line-height: 1.5rem;
     margin: 1.2em 0;
+    margin-top: 0;
     overflow: auto;
     padding: 0 1.4rem;
     position: relative;

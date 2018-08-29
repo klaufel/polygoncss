@@ -11,6 +11,7 @@ var gulp                = require('gulp'),
 // Paths variables
 var paths = {
     dist       : 'dist',
+    docs       : 'docs',
     distCSS    : './dist/style.css',
     graphDir   : 'specificity-graph',
     sass       : ['src/**/*.scss' ]
@@ -24,6 +25,7 @@ gulp.task('sass', function () {
         .pipe(autoprefixer({browsers: ['IE 8', 'IE 9', 'last 5 versions']}))
         .pipe(cleanCss())
         .pipe(gulp.dest(paths.dist))
+        .pipe(gulp.dest(paths.docs))
         .pipe(notify({ title: 'SASS', message: 'Compiled successfully!! Happy coding! 😎', onLast: true}));
 });
 

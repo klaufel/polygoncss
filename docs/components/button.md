@@ -1,12 +1,11 @@
 # Button component
 
-Generalmente se van a utilizar con 
-
 Button styles can be applied to any element. Typically you'll want to use either a `<a>`, `<button`, `<input>` element:
 
-## Examples
 
-Un simple botón realizado de múltiples formas.
+## Generic examples
+
+A simple button composed of different elements.
 
 
 <div class="c-code">
@@ -27,7 +26,7 @@ Un simple botón realizado de múltiples formas.
 <input class="c-button" type="reset" value="Reset">
 ```
 
-Puedes hacer tus botones inactivos añadiendo la clase `"is-disabled"` a los elementos `<a>` y añadir el atributo boleano `disabled` para los elementos que lo soporten tipo `<button>` y `<input>`. Puedes utilizar los dos métodos.
+You can make your buttons inactive by adding the class`"is-disabled"` to the `<a>` elements and add the boolean attribute `disabled` for the elements that support it type `<button>` and `<input>`. You can use both methods.
 
 <div class="c-code">
   <a class="c-button is-disabled" href="#" role="button">Anchor</a>

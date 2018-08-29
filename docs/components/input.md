@@ -1,8 +1,11 @@
-
 # Input component
+
+It is defined as an input component, an element that is input data to be used in a form, such as an own `<input>`, for the other elements of data input the same component is used but with a variation of class for `<textarea>`, `<select>` and `<input type= "radio">`, `<input type="checkbox">`. We can see here an example of a form using these components:
+
+
 ## Generic examples
 
-Se define como un componente input, un elemento que sea de entrada de datos para ser utilizados en un formulario, como pueda ser un propio < input >, para el resto de elementos de entrada de datos se utiliza el mismo componente pero con una variacion para < textarea >, < select >, y < input type="radio" >, < input type="checkbox" >. Podemos ver aquí un ejemplo de un formulario utilizando estos componentes:
+A simple form composed of different elements and components with variations.
 
 <div class="c-code">
   <div class="c-input">
@@ -25,7 +28,6 @@ Se define como un componente input, un elemento que sea de entrada de datos para
   </div>
   <button type="submit" class="c-button">Submit</button>
 </div>
-
       
 ```
 <div class="c-input">
